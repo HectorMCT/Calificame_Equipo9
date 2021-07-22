@@ -26,8 +26,8 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 
 ### Vistas
 
-- [ ] Login.
-- [ ] Sign In.
+- [ ] Login. @Esiel15
+- [ ] Sign In. @Esiel15
 - [ ] Recuperar contraseña. @HectorMCT
 - [ ] Menu principal.
 - [ ] Reseña.
