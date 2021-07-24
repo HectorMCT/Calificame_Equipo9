@@ -1,5 +1,5 @@
-# Kotlin_Intermedio_Equipo1
- Aquí se encontraran los works, postworks y todo lo relacionado al proyecto del modulo de Kotlin Intermedio Santander 2021
+# Kotlin Intermedio : Equipo 19
+ Aquí se encontraran todo lo relacionado al proyecto del modulo de Kotlin Intermedio Santander 2021
 
 ## Proyecto
  Califícame! es una aplicación nativa de Android en la que cualquier usuario podrá realizar y/o ver las reviews y las estadísticas de los profesores que laboran en su institución de nivel superior. De esta manera los usuarios estarán más informados para elegir con quienes tomar sus cursos mientras contribuyen con el contenido de la aplicación. 
