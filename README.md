@@ -1,29 +1,29 @@
 # Kotlin Intermedio : Equipo 19
  Aquí se encontraran todo lo relacionado al proyecto del modulo de Kotlin Intermedio Santander 2021
- ## Integrantes
+ ## Integrantes 🧑🏻‍💻
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
  
 
-## Proyecto
+## Proyecto 🚀
  Califícame! es una aplicación nativa de Android en la que cualquier usuario podrá realizar y/o ver las reviews y las estadísticas de los profesores que laboran en su institución de nivel superior. De esta manera los usuarios estarán más informados para elegir con quienes tomar sus cursos mientras contribuyen con el contenido de la aplicación. 
  
  Con la realización de una aplicación móvil, donde cualquier estudiante interesado en la búsqueda de información objetiva y subjetiva de los profesores que imparten cursos en su institución, se vería beneficiado en cuestión de eficiencia, comodidad y seguridad, debido a que podría encontrar suficiente información para tomar una decisión desde algún dispositivo Android, así como privacidad, garantizando que cualquier información que proporcione a la plataforma sea de forma anónima. El proyecto toma como base lo que implementa la pagina de [MisProfesores](https://www.misprofesores.com/).
 
-### Objetivo
+### Objetivo 🏹
 El objetivo a alcanzar es crear una aplicación para los dispositivos Android. En donde cualquier usuario que posea la aplicación podrá ver las opiniones de otros usuarios hacia los profesores, así como sus estadísticas generales. Además, podrá aportar opiniones y evaluar a los profesores en los distintos cursos que han impartido contribuyendo al repositorio de la aplicación.
 
-### Alcance
+### Alcance 🔥
 Contener un amplio repositorio de instituciones de nivel superior, profesores y opiniones inicialmente a nivel nacional y posteriormente en otros países sistemas educativos similares.
 
-### Limitaciones
+### Limitaciones ⛓
 Debido a que los estudiantes generalmente son autónomos en la toma de decisiones de profesores hasta alcanzar el nivel superior de estudios, la aplicación se limitará únicamente a tener información de universidades y posiblemente posgrados.
 
 No todas las instituciones que ofrecen educación superior cuentan con una gran oferta de profesores para impartir sus cursos, generalmente son las instituciones públicas y algunas pocas privadas, por lo que la aplicación sería de más utilidad para dichas universidades y carecería de utilidad en instituciones con baja densidad de alumnos y profesores.
 
 
  
-## Roadmap
+## Roadmap 📦
 
 Tarea | Descripción
 ------------ | -------------
@@ -31,13 +31,13 @@ Implementar UI | La implementación de una interfaz gráfica, no es algo que se 
 Mejorar UX | El mejoramiento de la experiencia de usuario va de la mano con la implementación de la interfaz gráfica. Pretendemos tomar en cuenta todo lo visto en el módulo de UI Fundamentals y tomar en cuenta siempre al usuario en la implementación de la interfaz gráfica.
 Integración de APIs con redes sociales | La integración de APIs con redes sociales va de la mano con la expansión de nuestros usuarios, ya que de hacerlo, la aplicación se haría más popular entre los estudiantes. Por otra parte, mejoraría la experiencia de usuario.
 
-## Mockups 
+## Mockups 🏞
 
 Se tienen generado el Mockup de la App, el cual nos servirá de guía para el desarrollo de la interfaz grafica.
 
 ![Gif de Mockups](https://github.com/HectorMCT/Kotlin_Intermedio_Equipo1/blob/main/Media/UI%20GIF.gif)
 
-### Vistas
+### Vistas 🌁
 
 - [ ] Login. @Esiel15
 - [ ] Sign In. @Esiel15
