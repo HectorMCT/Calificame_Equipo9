@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Califícame!</string>
+
+    <!-- Hints -->
+    <string name="username_hint">Username</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+
+    <!-- Labels -->
+    <string name="login_title_label">Welcome back!</string>
+    <string name="sign_up_title_label">Create an Account</string>
+    <string name="account_exists_label">Already have an account?</string>
+    <string name="account_does_not_exist_label">Don\'t have an account?</string>
+    <string name="sign_in_label">Sign In</string>
+    <string name="sign_up_label">Sign Up</string>
+    <string name="about_us_label">About Us</string>
+
+    <!-- Texts -->
+    <string name ="about_us_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <!-- Buttons -->
+    <string name="forgot_password_text_button">Forgot Password</string>
+    <string name="skip_sign_in_text_button">Skip Login</string>
+    <string name="skip_sign_up_text_button">Skip Sign Up</string>
+
+    <!-- Version -->
+    <string name="version">Versión 1.0</string>
+
+    <!-- Drawer -->
+        <!-- Header -->
+        <string name="drawer_header_title">Username</string>
+        <string name="drawer_header_subtitle">Email</string>
+
+    <string name="drawer_home">Home</string>
+    <string name="drawer_change_university">Change University</string>
+    <string name="drawer_change_faculty">Change University</string>
+
+    <string name="drawer_help">Help</string>
+    <string name="drawer_about_us">About Us</string>
+    <string name="drawer_sign_out">Sign out</string>
+</resources>

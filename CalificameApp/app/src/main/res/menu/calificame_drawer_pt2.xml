@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/item4"
+            android:icon="@drawable/ic_outline_help_outline_24"
+            android:title="@string/drawer_help" />
+        <item
+            android:id="@+id/item5"
+            android:icon="@drawable/ic_outline_info_24"
+            android:title="@string/drawer_about_us" />
+        <item
+            android:id="@+id/item6"
+            android:icon="@drawable/ic_outline_logout_24"
+            android:title="@string/drawer_sign_out" />
+    </group>
+</menu>
