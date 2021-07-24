@@ -9,6 +9,15 @@
 ### Objetivo
 El objetivo a alcanzar es crear una aplicación para los dispositivos Android. En donde cualquier usuario que posea la aplicación podrá ver las opiniones de otros usuarios hacia los profesores, así como sus estadísticas generales. Además, podrá aportar opiniones y evaluar a los profesores en los distintos cursos que han impartido contribuyendo al repositorio de la aplicación.
 
+### Alcance
+Contener un amplio repositorio de instituciones de nivel superior, profesores y opiniones inicialmente a nivel nacional y posteriormente en otros países sistemas educativos similares.
+
+### Limitaciones
+Debido a que los estudiantes generalmente son autónomos en la toma de decisiones de profesores hasta alcanzar el nivel superior de estudios, la aplicación se limitará únicamente a tener información de universidades y posiblemente posgrados.
+
+No todas las instituciones que ofrecen educación superior cuentan con una gran oferta de profesores para impartir sus cursos, generalmente son las instituciones públicas y algunas pocas privadas, por lo que la aplicación sería de más utilidad para dichas universidades y carecería de utilidad en instituciones con baja densidad de alumnos y profesores.
+
+
  
 ## Roadmap
 
