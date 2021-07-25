@@ -12,7 +12,7 @@
         <activity android:name=".subject"></activity>
         <activity android:name=".faculty" />
         <activity android:name=".university" />
-        <activity android:name=".recov_pass" />
+        <activity android:name=".view.PasswordForgottenActivity" />
         <activity android:name=".view.AboutUsActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".view.SignUpActivity" />
