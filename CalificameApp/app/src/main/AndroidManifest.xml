@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Califícame">
-        <activity android:name=".view.AboutUsActivity"></activity>
+        <activity android:name=".subject"></activity>
+        <activity android:name=".faculty" />
+        <activity android:name=".university" />
+        <activity android:name=".recov_pass" />
+        <activity android:name=".view.AboutUsActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".view.SignUpActivity" />
         <activity android:name=".view.SignInActivity">

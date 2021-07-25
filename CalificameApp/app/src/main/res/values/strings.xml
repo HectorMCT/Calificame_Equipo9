@@ -14,22 +14,26 @@
     <string name="sign_in_label">Sign In</string>
     <string name="sign_up_label">Sign Up</string>
     <string name="about_us_label">About Us</string>
+    <string name="forgot_password_label">Frogot Password</string>
 
     <!-- Texts -->
-    <string name ="about_us_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="about_us_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="recov_pass">Write you email and we\'ll send you link to get back your account.</string>
 
     <!-- Buttons -->
     <string name="forgot_password_text_button">Forgot Password</string>
     <string name="skip_sign_in_text_button">Skip Login</string>
     <string name="skip_sign_up_text_button">Skip Sign Up</string>
+    <string name="cancel_label">CANCEL</string>
+    <string name="send_label">SEND</string>
 
     <!-- Version -->
     <string name="version">Versión 1.0</string>
 
     <!-- Drawer -->
-        <!-- Header -->
-        <string name="drawer_header_title">Username</string>
-        <string name="drawer_header_subtitle">Email</string>
+    <!-- Header -->
+    <string name="drawer_header_title">Username</string>
+    <string name="drawer_header_subtitle">Email</string>
 
     <string name="drawer_home">Home</string>
     <string name="drawer_change_university">Change University</string>
@@ -38,4 +42,11 @@
     <string name="drawer_help">Help</string>
     <string name="drawer_about_us">About Us</string>
     <string name="drawer_sign_out">Sign out</string>
+
+    <!-- More -->
+    <string name="name_facultiy_label">Facultad de Ciencias</string>
+    <string name="prof_facultiy_label">Profesores: 69</string>
+    <string name="faculties">Faculties</string>
+    <string name="name_IPN_label">Instituto Politecnico Nacional</string>
+    <string name="name_programacion_label">Programación</string>
 </resources>
