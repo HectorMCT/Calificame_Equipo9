@@ -1,11 +1,12 @@
-package com.esielkar.calificame
+package com.esielkar.calificame.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.esielkar.calificame.R
 
-class subject : AppCompatActivity() {
+class UniversityActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_subject)
+        setContentView(R.layout.activity_university)
     }
 }
