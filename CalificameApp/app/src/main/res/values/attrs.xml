@@ -5,4 +5,28 @@
         <attr name="header_card_subtitle" format="string"/>
         <attr name="header_card_overline" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="PreviewCardView">
+        <attr name="preview_card_leading_drawable" format="reference"/>
+        <attr name="preview_card_title" format="string"/>
+        <attr name="preview_card_subtitle" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="UniversityCardView">
+        <attr name="university_name" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SubjectCardView">
+        <attr name="subject_name" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="FacultyCardView">
+        <attr name="faculty_name" format="string"/>
+        <attr name="faculty_professors_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProfessorCardView">
+        <attr name="professor_name" format="string"/>
+        <attr name="professor_reviews_count" format="integer"/>
+    </declare-styleable>
 </resources>
