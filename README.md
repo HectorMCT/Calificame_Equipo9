@@ -4,6 +4,13 @@
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
  
+## Requerimientos
+- Android Studio 4.2 o superior
+
+## Setup
+- Descargar el repositorio
+- Abrir proyecto existente en Android Studio, seleccinando la carpeta CalificameApp del repositorio
+
 
 ## Proyecto 🚀
  Califícame! es una aplicación nativa de Android en la que cualquier usuario podrá realizar y/o ver las reviews y las estadísticas de los profesores que laboran en su institución de nivel superior. De esta manera los usuarios estarán más informados para elegir con quienes tomar sus cursos mientras contribuyen con el contenido de la aplicación. 
@@ -39,11 +46,16 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 
 ### Vistas 🌁
 
-- [ ] Login. @Esiel15
-- [ ] Sign In. @Esiel15
-- [ ] Recuperar contraseña. @HectorMCT
-- [ ] Menu principal.
-- [ ] Reseña.
+- [x] Inicio de sesión. [Esiel15](https://github.com/Esiel15)
+- [x] Registro. [Esiel15](https://github.com/Esiel15)
+- [x] Recuperar contraseña. [HectorMCT](https://github.com/HectorMCT)
+- [ ] Menú principal (Drawer). @Esiel15
+- [ ] Universidades.
+- [ ] Facultades.
+- [ ] Profesores.
+- [ ] Estadisticas.
+- [ ] Reviews.
+- [ ] Materias.
 
 
 ## More...
