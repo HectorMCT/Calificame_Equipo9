@@ -1,13 +1,13 @@
 # Kotlin Intermedio : Equipo 19
  Aquí se encontraran todo lo relacionado al proyecto del modulo de Kotlin Intermedio Santander 2021
- ## Integrantes 🧑🏻‍💻
+ ### Integrantes 🧑🏻‍💻
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
  
-## Requerimientos
+### Requisitos
 - Android Studio 4.2 o superior
 
-## Setup
+### Instrucciones
 - Descargar el repositorio
 - Abrir proyecto existente en Android Studio, seleccinando la carpeta CalificameApp del repositorio
 
@@ -49,7 +49,7 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [x] Inicio de sesión. [Esiel15](https://github.com/Esiel15)
 - [x] Registro. [Esiel15](https://github.com/Esiel15)
 - [x] Recuperar contraseña. [HectorMCT](https://github.com/HectorMCT)
-- [ ] Menú principal (Drawer). @Esiel15
+- [ ] Menú principal (Drawer). [Esiel15](https://github.com/Esiel15)
 - [ ] Universidades.
 - [ ] Facultades.
 - [ ] Profesores.
