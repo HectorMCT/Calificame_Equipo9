@@ -8,4 +8,6 @@
     <color name="pink_700">#ffc61e3a</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_green">#FF3FA9C1</color>
+    <color name="transparent">#00000000</color>
 </resources>
