@@ -17,7 +17,7 @@ class HeaderCardView @JvmOverloads constructor(
     private val ll  = LinearLayout(this.context)
     private val title = TextView(this.context)
     private val subtitle : TextView?
-    private val caption : TextView?
+    private val overline : TextView?
 
     init {
         if (attrs != null) {
@@ -45,10 +45,10 @@ class HeaderCardView @JvmOverloads constructor(
                 }
             }else this.subtitle = null
 
-            val caption  = typedArray.getText(R.styleable.HeaderCardView_header_card_caption)
-            if (caption != null) {
-                this.caption = TextView(this.context).apply {
-                    this.text = caption.toString().uppercase()
+            val overline  = typedArray.getText(R.styleable.HeaderCardView_header_card_overline)
+            if (overline != null) {
+                this.overline = TextView(this.context).apply {
+                    this.text = overline.toString().uppercase()
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Overline)
                     }else{
@@ -56,11 +56,11 @@ class HeaderCardView @JvmOverloads constructor(
                     }
                     this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
                 }
-            }else this.caption = null
+            }else this.overline = null
             typedArray.recycle()
         }else{
             subtitle = null
-            caption = null
+            overline = null
         }
 
 
@@ -75,7 +75,7 @@ class HeaderCardView @JvmOverloads constructor(
             addView(title)
             subtitle?.let {
                 addView(it) }
-            caption?.let {
+            overline?.let {
                 addView(it) }
         }
 

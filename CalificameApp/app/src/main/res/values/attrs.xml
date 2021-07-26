@@ -3,6 +3,6 @@
     <declare-styleable name="HeaderCardView">
         <attr name="header_card_title" format="string"/>
         <attr name="header_card_subtitle" format="string"/>
-        <attr name="header_card_caption" format="string"/>
+        <attr name="header_card_overline" format="string"/>
     </declare-styleable>
 </resources>
