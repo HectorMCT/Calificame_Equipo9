@@ -5,15 +5,12 @@ import android.os.Build
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.content.res.getTextOrThrow
 import com.esielkar.calificame.R
-import com.esielkar.calificame.utils.Utils
+import com.google.android.material.card.MaterialCardView
 
 /**
  * A custom CardView with a <code>Gradient</code>, title, subtitle and overline.
- * The header_card_title attribute is required, otherwise an IllegalArgumentException is thrown.
  * The <code>background</code> of this Card is a <code>Gradient</code>
  *
  * @attr ref com.esielkar.R.stylable#HeaderCardView_header_card_title
@@ -22,7 +19,7 @@ import com.esielkar.calificame.utils.Utils
  */
 class HeaderCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : CardView(context, attrs, defStyleAttr) {
+) : MaterialCardView(context, attrs, defStyleAttr) {
 
     private val ll  = LinearLayout(this.context)
     private val title = TextView(this.context)
@@ -32,7 +29,7 @@ class HeaderCardView @JvmOverloads constructor(
     init {
         if (attrs != null) {
             val typedArray = context.obtainStyledAttributes(attrs, R.styleable.HeaderCardView, defStyleAttr, 0)
-            val title = typedArray.getTextOrThrow(R.styleable.HeaderCardView_header_card_title)
+            val title = typedArray.getText(R.styleable.HeaderCardView_header_card_title) ?: resources.getText(R.string.not_defined_label)
             this.title.apply {
                 this.text = title
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -68,7 +65,6 @@ class HeaderCardView @JvmOverloads constructor(
             }else this.overline = null
             typedArray.recycle()
         }else{
-            throw  IllegalArgumentException("header_card_title parameter is required")
             subtitle = null
             overline = null
         }
@@ -77,17 +73,15 @@ class HeaderCardView @JvmOverloads constructor(
         ll.apply {
             this.background = ResourcesCompat.getDrawable(resources, R.drawable.gradient_background, null)
             this.orientation = LinearLayout.VERTICAL
-
-            val padV = Utils.dpToPx(8, context)
-            val padH = Utils.dpToPx(16, context)
-
-            setPadding(padH,padV,padH,padV)
             addView(title)
             subtitle?.let {
                 addView(it) }
             overline?.let {
                 addView(it) }
         }
+
+        ll.setPadding(contentPaddingLeft, contentPaddingTop, contentPaddingRight, paddingBottom)
+        setContentPadding(0,0,0,0)
 
         addView(ll, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
