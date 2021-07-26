@@ -9,13 +9,13 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import com.esielkar.calificame.R
 import com.esielkar.calificame.utils.Utils
+import com.google.android.material.card.MaterialCardView
 
 class PreviewCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : CardView(context, attrs, defStyleAttr) {
+) : MaterialCardView(context, attrs, defStyleAttr) {
 
     private val rl  = RelativeLayout(this.context)
     private val ll  = LinearLayout(this.context).apply { this.orientation = LinearLayout.VERTICAL }
@@ -119,13 +119,8 @@ class PreviewCardView @JvmOverloads constructor(
                 this.addRule(RelativeLayout.CENTER_VERTICAL)
             }
         )
-
-        rl.apply {
-            val padV = Utils.dpToPx(8, context)
-            val padH = Utils.dpToPx(16, context)
-            setPadding(padH,padV,padH,padV)
-        }
-
+        rl.setPadding(contentPaddingLeft, contentPaddingTop, contentPaddingRight, paddingBottom)
+        setContentPadding(0,0,0,0)
 
         addView(rl, RelativeLayout.LayoutParams(
             RelativeLayout.LayoutParams.MATCH_PARENT,
