@@ -50,8 +50,8 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [x] Registro. [Esiel15](https://github.com/Esiel15)
 - [x] Recuperar contraseña. [HectorMCT](https://github.com/HectorMCT)
 - [ ] Menú principal (Drawer). [Esiel15](https://github.com/Esiel15)
-- [ ] Universidades. [HectorMCT](https://github.com/HectorMCT)
-- [ ] Facultades. [HectorMCT](https://github.com/HectorMCT)
+- [ ] Universidades.
+- [ ] Facultades.
 - [ ] Profesores.
 - [ ] Estadisticas.
 - [ ] Reviews.
