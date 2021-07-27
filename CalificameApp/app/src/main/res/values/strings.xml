@@ -60,8 +60,11 @@
 
 
     <!-- Prueba -->
+    <string name="university_label">University</string>
     <string name="universities_label">Universities</string>
+    <string name="faculty_label">Faculty</string>
     <string name="faculties_label">Faculties</string>
+    <string name="signature_label">Signature</string>
     <string name="signatures_label">Signatures</string>
 
     <string name="university_name">Benemérita Universidad Autónoma de Puebla</string>
