@@ -5,6 +5,7 @@
     <string name="username_hint">Username</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
+    <string name="search_hint">Search</string>
 
     <!-- Labels -->
     <string name="login_title_label">Welcome back!</string>
@@ -50,6 +51,7 @@
     <string name="not_defined_label">Not defined</string>
     <string name="select_signature">Select signature:</string>
     <string name="select_university">Select university:</string>
+    <string name="select_faculty">Select faculty:</string>
     <string name="name_facultiy_label">Facultad de Ciencias</string>
     <string name="prof_facultiy_label">Profesores: 69</string>
     <string name="faculties">Faculties</string>
@@ -72,6 +74,9 @@
     <string name="university_name8">Universidad Autónoma de Sinaloa</string>
     <string name="university_name9">Colegia de México</string>
     <string name="faculty_name">Facultad de Ciencias de la Computación</string>
+    <string name="faculty_name2">Facultad de Derecho y Ciencias Sociales</string>
+    <string name="faculty_name3">Facultad de Cultura Física</string>
+    <string name="faculty_name4">Facultad de Psicología</string>
     <string name="professor_name">Hilda Castillo Zacatelco</string>
     <string name="signature_name">Programación</string>
     <string name="signature_name2">Programación II</string>
