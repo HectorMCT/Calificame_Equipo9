@@ -53,7 +53,7 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [x] Universidades. [Esiel15](https://github.com/Esiel15)
 - [x] Facultades. [MayraJM](https://github.com/MayraJM)
 - [ ] Profesores. [deividshido](https://github.com/deividshido)
-- [ ] Estadisticas.
+- [x] Estadisticas Generales.
 - [ ] Reviews.
 - [ ] Materias. [HectorMCT](https://github.com/HectorMCT)
 - [x] Seleccionar materia. [Esiel15](https://github.com/Esiel15)
