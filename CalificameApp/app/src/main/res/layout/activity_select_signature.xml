@@ -65,7 +65,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name"/>
+                app:signature_name="@string/signature_name"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name2"/>
+                app:signature_name="@string/signature_name2"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name3"/>
+                app:signature_name="@string/signature_name3"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name4"/>
+                app:signature_name="@string/signature_name4"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name5"/>
+                app:signature_name="@string/signature_name5"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name6"/>
+                app:signature_name="@string/signature_name6"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -125,7 +125,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name7"/>
+                app:signature_name="@string/signature_name7"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name8"/>
+                app:signature_name="@string/signature_name8"/>
 
             <com.esielkar.calificame.view.SignatureCardView
                 android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:subject_name="@string/signature_name9"/>
+                app:signature_name="@string/signature_name9"/>
 
         </LinearLayout>
     </ScrollView>
