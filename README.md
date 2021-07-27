@@ -4,10 +4,10 @@
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
  
-### Requisitos
+### Requisitos ⚙️
 - Android Studio 4.2 o superior
 
-### Instrucciones
+### Instrucciones 🔧
 - Descargar el repositorio
 - Abrir proyecto existente en Android Studio, seleccinando la carpeta CalificameApp del repositorio
 
