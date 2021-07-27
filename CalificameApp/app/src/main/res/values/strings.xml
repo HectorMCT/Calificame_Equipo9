@@ -66,6 +66,8 @@
     <string name="faculties_label">Faculties</string>
     <string name="signature_label">Signature</string>
     <string name="signatures_label">Signatures</string>
+    <string name="general_stats_label">General Stats</string>
+    <string name="stats_label">Stats</string>
 
     <string name="university_name">Benemérita Universidad Autónoma de Puebla</string>
     <string name="university_name2">Universidad Autónoma de México</string>
