@@ -52,4 +52,24 @@
     <string name="faculties">Faculties</string>
     <string name="name_IPN_label">Instituto Politecnico Nacional</string>
     <string name="name_programacion_label">Programación</string>
+
+
+    <!-- Prueba -->
+    <string name="universities_label">Universities</string>
+    <string name="faculties_label">Faculties</string>
+    <string name="signatures_label">Signatures</string>
+
+    <string name="university_name">Benemérita Universidad Autónoma de Puebla</string>
+    <string name="faculty_name">Facultad de Ciencias de la Computación</string>
+    <string name="professor_name">Hilda Castillo Zacatelco</string>
+    <string name="signature_name">Programación</string>
+    <string name="signature_name2">Programación II</string>
+    <string name="signature_name3">Sistemas Operativos I</string>
+    <string name="signature_name4">Matemáticas</string>
+    <string name="signature_name5">Álgebra Superior</string>
+    <string name="signature_name6">Redes Inalámbrica</string>
+    <string name="signature_name7">Sistemas Operativos II</string>
+    <string name="signature_name8">Graficación</string>
+    <string name="signature_name9">Desarrollo de Aplicaciones Móviles</string>
+
 </resources>

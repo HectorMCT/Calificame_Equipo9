@@ -46,9 +46,9 @@ class PreviewCardView @JvmOverloads constructor(
                 this.text = title
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                     if (subtitle != null)
-                        this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Headline6)
-                    else
                         this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Headline5)
+                    else
+                        this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Headline6)
 
                 } else
                     this.textSize = 24f
