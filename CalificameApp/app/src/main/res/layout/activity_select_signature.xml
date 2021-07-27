@@ -18,7 +18,9 @@
         app:contentPaddingLeft="16dp"
         app:contentPaddingBottom="16dp"
         app:contentPaddingTop="16dp"
-        app:header_card_title="@string/welcome"/>
+        app:header_card_title="@string/professor_name"
+        app:header_card_subtitle="@string/faculty_name"
+        app:header_card_overline="@string/university_name"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/universities_label"
+            android:text="@string/signatures_label"
             android:textSize="24sp"
             android:textStyle="bold" />
         <SearchView
@@ -43,99 +45,108 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select_university"
-        android:textSize="20sp" />
-
+        android:text="@string/select_signature"
+        android:textSize="16sp" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginVertical="8dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.esielkar.calificame.view.UniversityCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name2"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name2"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name3"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name3"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name4"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name4"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name5"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name5"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name6"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name6"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
-                android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name7"/>
-            <com.esielkar.calificame.view.UniversityCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
                 app:cardElevation="16dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/blue_500"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-            app:university_name="@string/university_name8"/>
-            <com.esielkar.calificame.view.UniversityCardView
+                app:subject_name="@string/signature_name7"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="16dp"
                 app:strokeWidth="1dp"
                 app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
                 android:layout_marginVertical="4dp"
-                app:university_name="@string/university_name9"/>
+                app:subject_name="@string/signature_name8"/>
+
+            <com.esielkar.calificame.view.SubjectCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/blue_500"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginVertical="4dp"
+                app:subject_name="@string/signature_name9"/>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

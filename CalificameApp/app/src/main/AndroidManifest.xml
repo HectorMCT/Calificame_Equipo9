@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Califícame">
-        <activity android:name=".view.SubjectActivity"></activity>
+        <activity android:name=".SelectSignatureActivity"></activity>
         <activity android:name=".view.FacultyActivity" />
+        <activity android:name=".view.SubjectActivity" />
         <activity android:name=".view.UniversityActivity" />
         <activity android:name=".view.PasswordForgottenActivity" />
         <activity android:name=".view.AboutUsActivity" />
