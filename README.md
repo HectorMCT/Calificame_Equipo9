@@ -3,6 +3,8 @@
  ### Integrantes 🧑🏻‍💻
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
+ - [Mayra Jimenez](https://github.com/MayraJM)
+ - [David Ayala](https://github.com/deividshido)
  
 ### Requisitos ⚙️
 - Android Studio 4.2 o superior
@@ -52,10 +54,10 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [ ] Menú principal (Drawer). [Esiel15](https://github.com/Esiel15)
 - [x] Universidades. [Esiel15](https://github.com/Esiel15)
 - [x] Facultades. [MayraJM](https://github.com/MayraJM)
-- [ ] Profesores. [deividshido](https://github.com/deividshido)
+- [X] Profesores. [deividshido](https://github.com/deividshido)
 - [x] Estadisticas Generales.[Esiel15](https://github.com/Esiel15)
 - [ ] Reviews.
-- [ ] Materias. [HectorMCT](https://github.com/HectorMCT)
+- [X] Materias. [HectorMCT](https://github.com/HectorMCT)
 - [x] Seleccionar materia. [Esiel15](https://github.com/Esiel15)
 
 
