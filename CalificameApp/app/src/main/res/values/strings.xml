@@ -48,6 +48,7 @@
 
     <!-- More -->
     <string name="welcome">Welcome to Califícame!</string>
+    <string name="select_teacher">Teachers</string>
     <string name="not_defined_label">Not defined</string>
     <string name="select_signature">Select signature:</string>
     <string name="select_university">Select university:</string>
@@ -61,6 +62,7 @@
 
     <!-- Prueba -->
     <string name="university_label">University</string>
+    <string name="teachers_label">Find Teachers</string>
     <string name="universities_label">Universities</string>
     <string name="faculty_label">Faculty</string>
     <string name="faculties_label">Faculties</string>
@@ -78,6 +80,7 @@
     <string name="university_name7">Universidad Autónoma de Guadalajara</string>
     <string name="university_name8">Universidad Autónoma de Sinaloa</string>
     <string name="university_name9">Colegia de México</string>
+    <string name="teacher_name">Luis David Ayala López</string>
     <string name="faculty_name">Facultad de Ciencias de la Computación</string>
     <string name="faculty_name2">Facultad de Derecho y Ciencias Sociales</string>
     <string name="faculty_name3">Facultad de Cultura Física</string>
