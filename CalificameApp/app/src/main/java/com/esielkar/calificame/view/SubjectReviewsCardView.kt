@@ -14,6 +14,7 @@ class SubjectReviewsCardView @JvmOverloads constructor(
     private var subjectReviewsCountTextView : TextView
 
     init {
+        cardElevation = 16.0f
         LayoutInflater.from(context).inflate(R.layout.view_subject_reviews_card, this, true)
         subjectNameTextView = findViewById(R.id.subject_name)
         subjectReviewsCountTextView = findViewById(R.id.subject_reviews_count)

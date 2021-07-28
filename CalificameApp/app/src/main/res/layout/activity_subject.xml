@@ -1,74 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginVertical="24dp"
+    android:layout_marginHorizontal="16dp"
+    android:orientation="vertical"
     tools:context=".view.SubjectActivity">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <com.esielkar.calificame.view.HeaderCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="@string/faculties"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card_subject"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:cardElevation="16dp"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingTop="16dp"
+        app:header_card_title="@string/professor_name"
+        app:header_card_subtitle="@string/faculty_name"
+        app:header_card_overline="@string/university_name"
+        />
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_subject"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:layout_marginTop="100dp"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        card_view:cardCornerRadius="8dp">
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/signatures_label"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-        <RelativeLayout
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_signature"
+        android:textSize="16sp" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-
-            <TextView
-                android:layout_width="wrap_content"
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="16dp"
-                android:text="@string/name_programacion_label"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name3"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name2"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name4"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name6"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name8"
+                app:subject_reviews_count="10" />
+            <com.esielkar.calificame.view.SubjectReviewsCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/blue_500"
+                app:strokeWidth="1dp"
+                app:cardElevation="16dp"
+                app:cardCornerRadius="8dp"
+                app:subject_reviews_name="@string/signature_name7"
+                app:subject_reviews_count="10" />
 
-            <ImageButton
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/ic_outline_keyboard_arrow_right_24" />
-
-            x
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
