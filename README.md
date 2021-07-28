@@ -3,8 +3,8 @@
  ### Integrantes 🧑🏻‍💻
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
- - [Mayra Jimenez](https://github.com/MayraJM)
- - [David Ayala](https://github.com/deividshido)
+ - [Mayra Jimenez Maldonado](https://github.com/MayraJM)
+ - [Luis David Ayala López](https://github.com/deividshido)
  
 ### Requisitos ⚙️
 - Android Studio 4.2 o superior
