@@ -7,7 +7,7 @@
     android:layout_marginVertical="24dp"
     android:layout_marginHorizontal="16dp"
     android:orientation="vertical"
-    tools:context=".view.FacultyActivity">
+    tools:context=".FacultyActivity">
 
 
     <com.esielkar.calificame.view.HeaderCardView
