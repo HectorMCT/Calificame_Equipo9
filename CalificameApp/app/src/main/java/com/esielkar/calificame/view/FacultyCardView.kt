@@ -12,20 +12,30 @@ class FacultyCardView @JvmOverloads constructor(
 ) : MaterialCardView(context, attrs, defStyleAttr) {
     private var facultyNameTextView : TextView
     private var facultyProfessorsCountTextView : TextView
+    private var _professorsCount : Int = 0
 
     init {
-        cardElevation = 16.0f
-        LayoutInflater.from(context).inflate(R.layout.view_faculty_card, this, true)
+        LayoutInflater.from(context).inflate(R.layout.faculty_card_view, this, true)
         facultyNameTextView = findViewById(R.id.faculty_name)
         facultyProfessorsCountTextView = findViewById(R.id.faculty_professors_count)
 
         attrs?.let {
             val typedArray = context.obtainStyledAttributes(it, R.styleable.FacultyCardView, defStyleAttr, 0)
             val facultyName = typedArray.getText(R.styleable.FacultyCardView_faculty_name) ?: resources.getText(R.string.not_defined_label)
-            facultyNameTextView.text = facultyName
-            val facultyProfessorsCount = typedArray.getInt(R.styleable.FacultyCardView_faculty_professors_count, 0)
-            facultyProfessorsCountTextView.text = resources.getString(R.string.registered_professors, facultyProfessorsCount)
+            this.facultyName = facultyName
+            professorsCount = typedArray.getInt(R.styleable.FacultyCardView_faculty_professors_count, 0)
             typedArray.recycle()
         }
     }
+
+    var facultyName
+        set(value) { facultyNameTextView.text = value }
+        get() = facultyNameTextView.text
+
+    var professorsCount : Int
+        set(value) {
+            _professorsCount = value
+            facultyProfessorsCountTextView.text = resources.getString(R.string.registered_professors, _professorsCount)
+        }
+        get() = _professorsCount
 }

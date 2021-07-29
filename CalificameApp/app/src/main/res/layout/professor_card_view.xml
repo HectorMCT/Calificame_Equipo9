@@ -6,26 +6,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="8dp"
-        android:paddingHorizontal="16dp"
-        android:orientation="horizontal">
+        android:paddingHorizontal="16dp">
         <ImageView
             android:id="@+id/image"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_outline_apartment_24"
-            android:contentDescription="University" />
-        <TextView
-            android:id="@+id/university_name"
+            android:src="@drawable/ic_outline_person_outline_24"
+            android:contentDescription="Professor" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/image"
             android:layout_toStartOf="@id/trailingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingHorizontal="16dp" />
+            android:paddingHorizontal="16dp">
+            <TextView
+                android:id="@+id/professor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/professor_stats_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/professor_reviews_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
         <Button
             android:id="@+id/trailingButton"
             android:layout_centerVertical="true"
