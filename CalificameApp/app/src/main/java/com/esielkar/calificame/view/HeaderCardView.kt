@@ -23,8 +23,8 @@ class HeaderCardView @JvmOverloads constructor(
 
     private val ll  = LinearLayout(this.context)
     private val titleTextView = TextView(this.context)
-    private val subtitleTextView : TextView?
-    private val overlineTextView : TextView?
+    private var subtitleTextView : TextView? = null
+    private var overlineTextView : TextView? = null
 
     init {
         if (attrs != null) {
@@ -40,29 +40,12 @@ class HeaderCardView @JvmOverloads constructor(
             }
 
             val subtitle  = typedArray.getText(R.styleable.HeaderCardView_header_card_subtitle)
-            if (subtitle != null) {
-                this.subtitleTextView = TextView(this.context).apply {
-                    this.text = subtitle
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Subtitle1)
-                    }else
-                        this.textSize = 20f
-                    this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
-                }
-            }else this.subtitleTextView = null
+            if (subtitle != null) createSubtitleTextView(subtitle)
+            else this.subtitleTextView = null
 
             val overline  = typedArray.getText(R.styleable.HeaderCardView_header_card_overline)
-            if (overline != null) {
-                this.overlineTextView = TextView(this.context).apply {
-                    this.text = overline.toString().uppercase()
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Overline)
-                    }else{
-                        this.textSize = 12f
-                    }
-                    this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
-                }
-            }else this.overlineTextView = null
+            if (overline != null) createOverlineTextView(overline)
+            else this.overlineTextView = null
             typedArray.recycle()
         }else{
             subtitleTextView = null
@@ -94,12 +77,56 @@ class HeaderCardView @JvmOverloads constructor(
         get() = titleTextView.text
 
     var subtitle
-        set(value) {subtitleTextView?.text = value}
+        set(value) {
+            if (subtitleTextView != null)
+                subtitleTextView!!.text = value
+            else value?.let {
+                createSubtitleTextView(value)
+                if (overlineTextView != null) {
+                    overlineTextView.let {
+                        this.removeView(it)
+                        this.addView(subtitleTextView)
+                        this.addView(it)
+                    }
+                } else ll.addView(subtitleTextView)
+            }
+        }
         get() = subtitleTextView?.text
 
     var overline
-        set(value) {overlineTextView?.text = value}
+        set(value) {
+            if (overlineTextView != null)
+                overlineTextView!!.text = value
+            else value?.let {
+                createOverlineTextView(value)
+                ll.addView(overlineTextView)
+            }
+        }
         get() = overlineTextView?.text
+
+
+    private fun createSubtitleTextView(value: CharSequence) {
+        this.subtitleTextView = TextView(this.context).apply {
+            this.text = value
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Subtitle1)
+            }else
+                this.textSize = 20f
+            this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
+        }
+    }
+
+    private fun createOverlineTextView(value : CharSequence) {
+        this.overlineTextView = TextView(this.context).apply {
+            this.text = value.toString().uppercase()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Overline)
+            }else{
+                this.textSize = 12f
+            }
+            this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
+        }
+    }
 
 
 }
