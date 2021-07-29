@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.adapter.ProfessorsAdapter
 import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.model.Professor
+import com.esielkar.calificame.model.ProfessorStats
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.utils.ProfessorWithInfo
 import com.esielkar.calificame.view.HeaderCardView
@@ -21,10 +22,12 @@ class ProfessorsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_professors)
 
         //TODO: Universidad con facultad de prueba
-        val u = University(
-            resources.getString(R.string.university_name),
-            setOf(Faculty(resources.getString(R.string.faculty_name)))
-        )
+        val u = University(resources.getString(R.string.university_name), setOf(
+            Faculty(resources.getString(R.string.faculty_name),
+                mapOf(
+                    Professor(resources.getString(R.string.professor_name)) to ProfessorStats()
+                ))
+        ))
 
         val p = setOf(
             ProfessorWithInfo(Professor("Mayra Jiménez Maldonado"), 50, 80),
@@ -35,8 +38,9 @@ class ProfessorsActivity : AppCompatActivity() {
 
 
         headerCV = findViewById(R.id.headerCV)
-        headerCV.title = u.name
-        headerCV.subtitle = u.faculties.first().name
+        headerCV.title = u.faculties.first().name
+        headerCV.subtitle = u.name
+        headerCV.overline = u.faculties.first().name
 
 
         rec = findViewById(R.id.rec)
