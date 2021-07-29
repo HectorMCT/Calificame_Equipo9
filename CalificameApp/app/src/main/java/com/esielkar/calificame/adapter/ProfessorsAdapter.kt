@@ -3,6 +3,7 @@ package com.esielkar.calificame.adapter
 import android.view.ViewGroup
 import com.esielkar.calificame.utils.ProfessorWithInfo
 import com.esielkar.calificame.view.ProfessorCardView
+import kotlin.random.Random
 
 class ProfessorsAdapter(professorsWithInfo : Set<ProfessorWithInfo>) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo) {
     class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<ProfessorWithInfo>(professorCardView) {
@@ -11,6 +12,8 @@ class ProfessorsAdapter(professorsWithInfo : Set<ProfessorWithInfo>) : CardViewA
             v.professorName = item.first.name
             v.statsCount = item.second
             v.reviewsCount = item.third
+            //TODO: Corregir
+            v.percentage = Random.nextInt(101)
         }
     }
 
