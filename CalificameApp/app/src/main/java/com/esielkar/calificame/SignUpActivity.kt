@@ -28,7 +28,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun skipLogin() {
-        var toUniversityActivityIntent = Intent(this, UniversityActivity::class.java)
+        var toUniversityActivityIntent = Intent(this, UniversitiesActivity::class.java)
         startActivity(toUniversityActivityIntent)
         finish()
     }

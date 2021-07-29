@@ -12,7 +12,7 @@ import com.esielkar.calificame.model.ProfessorStats
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.view.HeaderCardView
 
-class FacultyActivity : AppCompatActivity() {
+class FacultysActivity : AppCompatActivity() {
     private lateinit var rec : RecyclerView
     private lateinit var headerCV : HeaderCardView
 

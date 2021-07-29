@@ -11,12 +11,12 @@
         android:theme="@style/Theme.Califícame">
         <activity android:name=".GeneralStatsActivity"/>
         <activity android:name=".SelectSubjectActivity" />
-        <activity android:name=".FacultyActivity" />
-        <activity android:name=".SubjectActivity" />
-        <activity android:name=".UniversityActivity" />
+        <activity android:name=".FacultysActivity" />
+        <activity android:name=".SubjectsActivity" />
+        <activity android:name=".UniversitiesActivity" />
         <activity android:name=".PasswordForgottenActivity" />
         <activity android:name=".AboutUsActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfessorsActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity">
             <intent-filter>

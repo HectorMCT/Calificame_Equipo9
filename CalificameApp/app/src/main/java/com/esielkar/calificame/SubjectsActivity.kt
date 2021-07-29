@@ -10,7 +10,7 @@ import com.esielkar.calificame.model.*
 import com.esielkar.calificame.utils.SubjectWithInfo
 import com.esielkar.calificame.view.HeaderCardView
 
-class SubjectActivity : AppCompatActivity() {
+class SubjectsActivity : AppCompatActivity() {
     private lateinit var rec : RecyclerView
     private lateinit var headerCV : HeaderCardView
 

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.adapter.UniversitiesAdapter
 import com.esielkar.calificame.model.University
 
-class UniversityActivity : AppCompatActivity() {
+class UniversitiesActivity : AppCompatActivity() {
     private lateinit var rec : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
