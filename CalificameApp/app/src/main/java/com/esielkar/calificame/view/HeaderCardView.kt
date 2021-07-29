@@ -22,15 +22,15 @@ class HeaderCardView @JvmOverloads constructor(
 ) : MaterialCardView(context, attrs, defStyleAttr) {
 
     private val ll  = LinearLayout(this.context)
-    private val title = TextView(this.context)
-    private val subtitle : TextView?
-    private val overline : TextView?
+    private val titleTextView = TextView(this.context)
+    private val subtitleTextView : TextView?
+    private val overlineTextView : TextView?
 
     init {
         if (attrs != null) {
             val typedArray = context.obtainStyledAttributes(attrs, R.styleable.HeaderCardView, defStyleAttr, 0)
             val title = typedArray.getText(R.styleable.HeaderCardView_header_card_title) ?: resources.getText(R.string.not_defined_label)
-            this.title.apply {
+            this.titleTextView.apply {
                 this.text = title
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Headline5)
@@ -41,7 +41,7 @@ class HeaderCardView @JvmOverloads constructor(
 
             val subtitle  = typedArray.getText(R.styleable.HeaderCardView_header_card_subtitle)
             if (subtitle != null) {
-                this.subtitle = TextView(this.context).apply {
+                this.subtitleTextView = TextView(this.context).apply {
                     this.text = subtitle
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Subtitle1)
@@ -49,11 +49,11 @@ class HeaderCardView @JvmOverloads constructor(
                         this.textSize = 20f
                     this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
                 }
-            }else this.subtitle = null
+            }else this.subtitleTextView = null
 
             val overline  = typedArray.getText(R.styleable.HeaderCardView_header_card_overline)
             if (overline != null) {
-                this.overline = TextView(this.context).apply {
+                this.overlineTextView = TextView(this.context).apply {
                     this.text = overline.toString().uppercase()
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         this.setTextAppearance(R.style.TextAppearance_MaterialComponents_Overline)
@@ -62,21 +62,21 @@ class HeaderCardView @JvmOverloads constructor(
                     }
                     this.setTextColor(ResourcesCompat.getColor(resources, R.color.white, null))
                 }
-            }else this.overline = null
+            }else this.overlineTextView = null
             typedArray.recycle()
         }else{
-            subtitle = null
-            overline = null
+            subtitleTextView = null
+            overlineTextView = null
         }
 
 
         ll.apply {
             this.background = ResourcesCompat.getDrawable(resources, R.drawable.gradient_background, null)
             this.orientation = LinearLayout.VERTICAL
-            addView(title)
-            subtitle?.let {
+            addView(titleTextView)
+            subtitleTextView?.let {
                 addView(it) }
-            overline?.let {
+            overlineTextView?.let {
                 addView(it) }
         }
 
@@ -88,4 +88,18 @@ class HeaderCardView @JvmOverloads constructor(
             LinearLayout.LayoutParams.WRAP_CONTENT
         ))
     }
+
+    var title: CharSequence
+        set(value) {titleTextView.text = value}
+        get() = titleTextView.text
+
+    var subtitle
+        set(value) {subtitleTextView?.text = value}
+        get() = subtitleTextView?.text
+
+    var overline
+        set(value) {overlineTextView?.text = value}
+        get() = overlineTextView?.text
+
+
 }

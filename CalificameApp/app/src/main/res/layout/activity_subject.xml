@@ -10,6 +10,7 @@
     tools:context=".SubjectActivity">
 
     <com.esielkar.calificame.view.HeaderCardView
+        android:id="@+id/headerCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="16dp"
@@ -17,11 +18,7 @@
         app:contentPaddingRight="16dp"
         app:contentPaddingLeft="16dp"
         app:contentPaddingBottom="16dp"
-        app:contentPaddingTop="16dp"
-        app:header_card_title="@string/professor_name"
-        app:header_card_subtitle="@string/faculty_name"
-        app:header_card_overline="@string/university_name"
-        />
+        app:contentPaddingTop="16dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,8 +46,13 @@
         android:text="@string/select_signature"
         android:textSize="16sp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-
+    <!--
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -134,4 +136,5 @@
 
         </LinearLayout>
     </ScrollView>
+    -->
 </LinearLayout>

@@ -1,5 +1,8 @@
 package com.esielkar.calificame.model
 
+import com.esielkar.calificame.utils.StatsAndReviews
+import com.esielkar.calificame.utils.SubjectWithInfo
+
 /**
  * Representa las estisticas generales de un profesor de la aplicación Califícame!
  * @constructor Crea las estadisticas de un profesor dadas su facilidad, claridad y recomendación.
@@ -34,8 +37,17 @@ class ProfessorStats(
     fun getStats(of: Subject) = _subjectStats[of]?.toList()
     fun add(review: Review, to : Subject) = _reviews[to]?.add(review) ?: _reviews.put(to, mutableListOf(review))
     fun add(stats: SubjectStats, to : Subject) = _subjectStats[to]?.add(stats) ?: _subjectStats.put(to, mutableListOf(stats))
-    fun getSubjectWithStatsAndReviewsCounts() = signatures.map {
-        Triple<Subject, Int, Int>(it, getStats(of = it)?.size ?: 0, getReviews(of = it)?.size ?: 0)
+
+    fun getSubjectsWithStatsAndReviewsCounts() = signatures.map {
+        SubjectWithInfo(
+            it,
+            getStats(of = it)?.size ?: 0,
+            getReviews(of = it)?.size ?: 0)
+    }
+
+    fun getStatsAndReviewsCounts() : StatsAndReviews {
+        val l = getSubjectsWithStatsAndReviewsCounts()
+        return StatsAndReviews(l.sumOf { it.second }, l.sumOf { it.third })
     }
 
     private fun update() {

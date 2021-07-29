@@ -40,4 +40,9 @@ data class Faculty (val name : String) {
      * @return true si la profesor se eliminó, false si no exististe el la facultad.
      */
     fun remove(professor : Professor) = _professors.remove(professor)
+
+    fun getProfessorsWithStatsAndReviewsCounts() = professors.map {
+        val counters = getStats(it)?.getStatsAndReviewsCounts()
+        Triple<Professor, Int, Int>(it, counters?.first ?: 0, counters?.second ?: 0)
+    }
 }
