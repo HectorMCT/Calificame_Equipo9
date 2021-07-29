@@ -16,7 +16,7 @@ class SubjectsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_subject)
+        setContentView(R.layout.activity_subjects)
 
         //TODO: Materias de prueba
         val su1 = Subject(resources.getString(R.string.signature_name))

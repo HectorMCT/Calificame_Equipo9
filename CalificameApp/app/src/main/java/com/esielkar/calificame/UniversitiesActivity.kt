@@ -12,7 +12,7 @@ class UniversitiesActivity : AppCompatActivity() {
     private lateinit var rec : RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_university)
+        setContentView(R.layout.activity_universities)
         supportActionBar?.hide()
 
         rec = findViewById(R.id.rec)

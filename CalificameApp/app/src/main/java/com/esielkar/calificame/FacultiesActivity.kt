@@ -18,7 +18,7 @@ class FacultiesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_faculty)
+        setContentView(R.layout.activity_faculties)
 
         //TODO: Universidad con facultades de prueba
         val u = University(resources.getString(R.string.university_name),
