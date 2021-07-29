@@ -66,7 +66,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name"
+                app:subject_stats_name="@string/signature_name"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name"
+                app:subject_stats_name="@string/signature_name"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name3"
+                app:subject_stats_name="@string/signature_name3"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name2"
+                app:subject_stats_name="@string/signature_name2"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -102,7 +102,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name4"
+                app:subject_stats_name="@string/signature_name4"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name6"
+                app:subject_stats_name="@string/signature_name6"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -120,7 +120,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name8"
+                app:subject_stats_name="@string/signature_name8"
                 app:subject_reviews_count="10" />
             <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                 app:strokeWidth="1dp"
                 app:cardElevation="16dp"
                 app:cardCornerRadius="8dp"
-                app:subject_reviews_name="@string/signature_name7"
+                app:subject_stats_name="@string/signature_name7"
                 app:subject_reviews_count="10" />
 
         </LinearLayout>

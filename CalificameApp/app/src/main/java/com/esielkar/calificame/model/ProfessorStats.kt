@@ -11,7 +11,7 @@ class ProfessorStats(
     recommendation: Double = 0.0,
 ) : Stats(facility, clarity, recommendation) {
 
-    private val _signaturesStats: MutableMap<Subject, MutableList<SubjectStats>> = mutableMapOf()
+    private val _subjectStats: MutableMap<Subject, MutableList<SubjectStats>> = mutableMapOf()
     private val _reviews: MutableMap<Subject, MutableList<Review>> = mutableMapOf()
 
     /**
@@ -21,19 +21,22 @@ class ProfessorStats(
      * @throws StatsOutOfRangeException si facility, clarity o recommendation no están en el rango de valores de 1 - 100.
      */
     constructor(facility: Double = 0.0, clarity: Double = 0.0, recommendation: Double = 0.0,
-                signaturesStats: Map<Subject, MutableList<SubjectStats>>? = null,
+                subjectStats: Map<Subject, MutableList<SubjectStats>>? = null,
                 reviews: Map<Subject, MutableList<Review>>? = null
     ) : this(facility, clarity, recommendation) {
-        signaturesStats?.let { _signaturesStats.putAll(it) }
+        subjectStats?.let { _subjectStats.putAll(it) }
         reviews?.let { _reviews.putAll(it) }
     }
 
     val signatures
-    get() = (_signaturesStats.map { it.key } + _reviews.map { it.key }).toSet()
+    get() = (_subjectStats.map { it.key } + _reviews.map { it.key }).toSet()
     fun getReviews(of: Subject) = _reviews[of]?.toList()
-    fun getStats(of: Subject) = _signaturesStats[of]?.toList()
+    fun getStats(of: Subject) = _subjectStats[of]?.toList()
     fun add(review: Review, to : Subject) = _reviews[to]?.add(review) ?: _reviews.put(to, mutableListOf(review))
-    fun add(stats: SubjectStats, to : Subject) = _signaturesStats[to]?.add(stats) ?: _signaturesStats.put(to, mutableListOf(stats))
+    fun add(stats: SubjectStats, to : Subject) = _subjectStats[to]?.add(stats) ?: _subjectStats.put(to, mutableListOf(stats))
+    fun getSubjectWithStatsAndReviewsCounts() = signatures.map {
+        Triple<Subject, Int, Int>(it, getStats(of = it)?.size ?: 0, getReviews(of = it)?.size ?: 0)
+    }
 
     private fun update() {
         var size: Int
@@ -41,24 +44,24 @@ class ProfessorStats(
         var clarity= 0.0
         var recommendation = 0.0
 
-        for(key in _signaturesStats.keys){
+        for(key in _subjectStats.keys){
 
             var auxFacility = 0.0
             var auxClarity= 0.0
             var auxRecommendation = 0.0
 
-            for (value in _signaturesStats[key]!!){
+            for (value in _subjectStats[key]!!){
                 auxFacility += value.facility
                 auxClarity += value.clarity
                 auxRecommendation += value.recommendation
             }
-            size = _signaturesStats[key]!!.size
+            size = _subjectStats[key]!!.size
             facility += auxFacility / size
             clarity += auxClarity / size
             recommendation += auxRecommendation / size
         }
 
-        size = _signaturesStats.size
+        size = _subjectStats.size
         if (size != 0){
             this.facility = facility / size
             this.clarity = clarity / size
