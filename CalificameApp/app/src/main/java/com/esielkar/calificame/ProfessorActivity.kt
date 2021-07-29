@@ -6,6 +6,6 @@ import android.os.Bundle
 class ProfessorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_Professors)
+        setContentView(R.layout.activity_professors)
     }
 }
