@@ -2,6 +2,7 @@
 <resources>
     <declare-styleable name="ProfessorCardView">
         <attr name="professor_name" format="string"/>
+        <attr name="professor_percentage" format="integer"/>
         <attr name="professor_stats_count" format="integer"/>
         <attr name="professor_reviews_count" format="integer"/>
     </declare-styleable>

@@ -10,6 +10,7 @@ import com.google.android.material.card.MaterialCardView
 class ProfessorCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : MaterialCardView(context, attrs, defStyleAttr) {
+    private var percentageCircularProgressBar : CircularProgressBar
     private var professorNameTextView : TextView
     private var statsCountTextView : TextView
     private var _statsCount : Int = 0
@@ -18,6 +19,7 @@ class ProfessorCardView @JvmOverloads constructor(
 
     init {
         LayoutInflater.from(context).inflate(R.layout.professor_card_view, this, true)
+        percentageCircularProgressBar = findViewById(R.id.circular_progress_bar)
         professorNameTextView = findViewById(R.id.professor_name)
         statsCountTextView = findViewById(R.id.professor_stats_count)
         reviewsCountTextView = findViewById(R.id.professor_reviews_count)
@@ -26,6 +28,7 @@ class ProfessorCardView @JvmOverloads constructor(
             val typedArray = context.obtainStyledAttributes(it, R.styleable.ProfessorCardView, defStyleAttr, 0)
             val professorName = typedArray.getText(R.styleable.ProfessorCardView_professor_name) ?: resources.getText(R.string.not_defined_label)
             this.professorName = professorName
+            percentage = typedArray.getInt(R.styleable.ProfessorCardView_professor_percentage, 0)
             statsCount = typedArray.getInt(R.styleable.ProfessorCardView_professor_stats_count, 0)
             reviewsCount = typedArray.getInt(R.styleable.ProfessorCardView_professor_reviews_count, 0)
             typedArray.recycle()
@@ -49,4 +52,8 @@ class ProfessorCardView @JvmOverloads constructor(
             reviewsCountTextView.text = resources.getString(R.string.registered_reviews, _reviewsCount)
         }
         get() = _reviewsCount
+
+    var percentage
+        set(value) { percentageCircularProgressBar.progress = value }
+        get() = percentageCircularProgressBar.progress
 }

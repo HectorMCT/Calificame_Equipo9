@@ -7,20 +7,20 @@
         android:layout_height="wrap_content"
         android:paddingVertical="8dp"
         android:paddingHorizontal="16dp">
-        <ImageView
-            android:id="@+id/image"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"
+        <com.esielkar.calificame.view.CircularProgressBar
+            android:id="@+id/circular_progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_outline_person_outline_24"
-            android:contentDescription="Professor" />
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Professor"
+            />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/image"
+            android:layout_toEndOf="@id/circular_progress_bar"
             android:layout_toStartOf="@id/trailingButton"
             android:paddingHorizontal="16dp">
             <TextView
