@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -68,7 +68,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -77,7 +77,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -86,7 +86,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name3"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -95,7 +95,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name2"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -104,7 +104,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name4"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -113,7 +113,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name6"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"
@@ -122,7 +122,7 @@
                 app:cardCornerRadius="8dp"
                 app:subject_reviews_name="@string/signature_name8"
                 app:subject_reviews_count="10" />
-            <com.esielkar.calificame.view.SubjectReviewsCardView
+            <com.esielkar.calificame.view.SubjectStatsCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/blue_500"

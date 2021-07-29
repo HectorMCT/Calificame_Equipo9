@@ -11,8 +11,8 @@ class ProfessorStats(
     recommendation: Double = 0.0,
 ) : Stats(facility, clarity, recommendation) {
 
-    private val _signaturesStats: MutableMap<Signature, MutableList<SignatureStats>> = mutableMapOf()
-    private val _reviews: MutableMap<Signature, MutableList<Review>> = mutableMapOf()
+    private val _signaturesStats: MutableMap<Subject, MutableList<SubjectStats>> = mutableMapOf()
+    private val _reviews: MutableMap<Subject, MutableList<Review>> = mutableMapOf()
 
     /**
      * @constructor Crea las estadisticas de un profesor dadas su facilidad, claridad y recomendación.
@@ -21,8 +21,8 @@ class ProfessorStats(
      * @throws StatsOutOfRangeException si facility, clarity o recommendation no están en el rango de valores de 1 - 100.
      */
     constructor(facility: Double = 0.0, clarity: Double = 0.0, recommendation: Double = 0.0,
-            signaturesStats: Map<Signature, MutableList<SignatureStats>>? = null,
-            reviews: Map<Signature, MutableList<Review>>? = null
+                signaturesStats: Map<Subject, MutableList<SubjectStats>>? = null,
+                reviews: Map<Subject, MutableList<Review>>? = null
     ) : this(facility, clarity, recommendation) {
         signaturesStats?.let { _signaturesStats.putAll(it) }
         reviews?.let { _reviews.putAll(it) }
@@ -30,10 +30,10 @@ class ProfessorStats(
 
     val signatures
     get() = (_signaturesStats.map { it.key } + _reviews.map { it.key }).toSet()
-    fun getReviews(of: Signature) = _reviews[of]?.toList()
-    fun getStats(of: Signature) = _signaturesStats[of]?.toList()
-    fun add(review: Review, to : Signature) = _reviews[to]?.add(review) ?: _reviews.put(to, mutableListOf(review))
-    fun add(stats: SignatureStats, to : Signature) = _signaturesStats[to]?.add(stats) ?: _signaturesStats.put(to, mutableListOf(stats))
+    fun getReviews(of: Subject) = _reviews[of]?.toList()
+    fun getStats(of: Subject) = _signaturesStats[of]?.toList()
+    fun add(review: Review, to : Subject) = _reviews[to]?.add(review) ?: _reviews.put(to, mutableListOf(review))
+    fun add(stats: SubjectStats, to : Subject) = _signaturesStats[to]?.add(stats) ?: _signaturesStats.put(to, mutableListOf(stats))
 
     private fun update() {
         var size: Int

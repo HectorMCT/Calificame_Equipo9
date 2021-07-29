@@ -5,4 +5,4 @@ package com.esielkar.calificame.model
  * @constructor Crea una nueva Materia dado su nombre
  * @property name Nombre de la materia
  */
-data class Signature(val name : String)
+data class Subject(val name : String)

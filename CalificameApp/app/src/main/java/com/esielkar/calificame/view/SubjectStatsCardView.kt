@@ -21,7 +21,7 @@ class SubjectStatsCardView @JvmOverloads constructor(
 
         attrs?.let {
             val typedArray = context.obtainStyledAttributes(it, R.styleable.SubjectStatsCardView, defStyleAttr, 0)
-            val subjectName = typedArray.getText(R.styleable.SubjectStatsCardView_subject_name) ?: resources.getText(R.string.not_defined_label)
+            val subjectName = typedArray.getText(R.styleable.SubjectStatsCardView_subject_stats_name) ?: resources.getText(R.string.not_defined_label)
             subjectNameTextView.text = subjectName
             val subjectReviewsCount = typedArray.getInt(R.styleable.SubjectStatsCardView_subject_reviews_count, 0)
             subjectReviewsCountTextView.text = resources.getString(R.string.registered_reviews, subjectReviewsCount)

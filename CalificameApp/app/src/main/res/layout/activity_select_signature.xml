@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -67,7 +67,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -77,7 +77,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name2"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -87,7 +87,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name3"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -97,7 +97,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name4"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -107,7 +107,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name5"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -117,7 +117,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name6"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -127,7 +127,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name7"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"
@@ -137,7 +137,7 @@
                 android:layout_marginVertical="4dp"
                 app:signature_name="@string/signature_name8"/>
 
-            <com.esielkar.calificame.view.SignatureCardView
+            <com.esielkar.calificame.view.SubjectCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeWidth="1dp"

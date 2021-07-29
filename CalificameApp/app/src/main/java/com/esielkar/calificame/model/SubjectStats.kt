@@ -7,7 +7,7 @@ package com.esielkar.calificame.model
  * @throws StatsOutOfRangeException si facility, clarity, recommendation, domain, complexity
  * fairEvaluation, applyExams, no están en el rango de valores de 1 - 100.
  */
-class SignatureStats//Range
+class SubjectStats//Range
     (facility: Double = 0.0,
      clarity: Double = 0.0,
      recommendation: Double = 0.0,//Stats
