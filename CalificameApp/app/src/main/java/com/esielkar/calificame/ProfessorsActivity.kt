@@ -40,7 +40,6 @@ class ProfessorsActivity : AppCompatActivity() {
         headerCV = findViewById(R.id.headerCV)
         headerCV.title = u.faculties.first().name
         headerCV.subtitle = u.name
-        headerCV.overline = u.faculties.first().name
 
 
         rec = findViewById(R.id.rec)
