@@ -8,7 +8,11 @@
     <color name="pink_700">#ffc61e3a</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="light_green">#FF3FA9C1</color>
+    <color name="light_blue">#FF3FA9C1</color>
     <color name="transparent">#00000000</color>
+    <color name="light_gray">#FFD3D3D3</color>
+    <color name="light_green">#FF90EE90</color>
+    <color name="light_yellow">#FFFFFCBB</color>
+    <color name="light_orange">#FFF6CD8B</color>
     <color name="red">#FFA91B0D</color>
 </resources>

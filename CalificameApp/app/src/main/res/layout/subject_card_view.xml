@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_outline_menu_book_24"
-            android:contentDescription="@string/signature_label" />
+            android:contentDescription="@string/subject_label" />
         <TextView
             android:id="@+id/subject_name"
             android:layout_centerVertical="true"

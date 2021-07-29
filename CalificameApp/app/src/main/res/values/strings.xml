@@ -18,6 +18,7 @@
     <string name="forgot_password_label">Frogot Password</string>
     <string name="registered_reviews">Reviews registered: %d</string>
     <string name="registered_stats">Stats registered: %d</string>
+    <string name="progress_percentage">%d %s</string>
     <string name="registered_professors">Professors registered: %d</string>
 
     <!-- Texts -->
@@ -67,8 +68,8 @@
     <string name="universities_label">Universities</string>
     <string name="faculty_label">Faculty</string>
     <string name="faculties_label">Faculties</string>
-    <string name="signature_label">Signature</string>
-    <string name="signatures_label">Signatures</string>
+    <string name="subject_label">Subject</string>
+    <string name="subjects_label">Subjects</string>
     <string name="general_stats_label">General Stats</string>
     <string name="stats_label">Stats</string>
 

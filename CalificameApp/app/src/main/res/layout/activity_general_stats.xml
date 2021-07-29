@@ -51,7 +51,7 @@
                 app:cardElevation="16dp"
                 app:title="Recomendación"
                 app:subtitle="100%"
-                app:subtitleTextColor="@color/light_green"/>
+                app:subtitleTextColor="@color/light_blue"/>
             <com.esielkar.calificame.view.StatsCardView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -62,7 +62,7 @@
                 app:cardElevation="16dp"
                 app:title="Dominio"
                 app:subtitle="Excelente"
-                app:subtitleTextColor="@color/light_green"/>
+                app:subtitleTextColor="@color/light_blue"/>
 
         </LinearLayout>
 
