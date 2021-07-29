@@ -17,6 +17,7 @@
     <string name="about_us_label">About Us</string>
     <string name="forgot_password_label">Frogot Password</string>
     <string name="registered_reviews">Reviews registered: %d</string>
+    <string name="registered_stats">Stats registered: %d</string>
     <string name="registered_professors">Professors registered: %d</string>
 
     <!-- Texts -->
