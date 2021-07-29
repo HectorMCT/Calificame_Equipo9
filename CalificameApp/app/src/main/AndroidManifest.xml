@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Califícame">
         <activity android:name=".GeneralStatsActivity"/>
-        <activity android:name=".SelectSignatureActivity" />
+        <activity android:name=".SelectSubjectActivity" />
         <activity android:name=".FacultyActivity" />
         <activity android:name=".SubjectActivity" />
         <activity android:name=".UniversityActivity" />
