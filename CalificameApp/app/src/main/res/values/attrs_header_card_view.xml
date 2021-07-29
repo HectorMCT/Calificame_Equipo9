@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeaderCardView">
+        <attr name="header_card_title" format="string"/>
+        <attr name="header_card_subtitle" format="string"/>
+        <attr name="header_card_overline" format="string"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FacultyCardView">
+        <attr name="faculty_name" format="string"/>
+        <attr name="faculty_professors_count" format="integer"/>
+    </declare-styleable>
+</resources>
