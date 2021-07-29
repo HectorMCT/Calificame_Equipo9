@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SubjectStatsCardView">
-        <attr name="subject_name" format="string"/>
+        <attr name="subject_stats_name" format="string"/>
         <attr name="subject_reviews_count" format="integer"/>
     </declare-styleable>
 </resources>
