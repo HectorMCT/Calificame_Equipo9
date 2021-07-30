@@ -1,19 +1,16 @@
 package com.esielkar.calificame.model.adapter
 
-import android.os.Parcelable
 import android.view.View
-import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
-import com.esielkar.calificame.model.Bindable
 
 //TODO: E : Parcelable
-abstract class BindableAdapter<E>(
+sealed class BindableAdapter<E>(
     val items : Collection<E>,
     val onItemClickListener : ((E) -> Unit)? = null,
     val onItemLongClickListener : ((E) -> Boolean)? = null
 ) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
     //TODO: E : Parcelable
-    abstract class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
+    sealed class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
 
     /**
      * Called by RecyclerView to display the data at the specified position. This method should
