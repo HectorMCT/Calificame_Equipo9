@@ -1,5 +1,8 @@
 package com.esielkar.calificame.model
 
+import android.os.Parcel
+import android.os.Parcelable
+
 /**
  * Representa las estisticas de una materia de la aplicación Califícame!
  * @constructor Crea las estadisticas de una materia dadas la facilidad, claridad, recomendación
@@ -18,6 +21,17 @@ class SubjectStats//Range
      var examsCount: Int = 0
 ) : Stats(facility, clarity, recommendation) {
 
+    constructor(parcel: Parcel) : this(
+        parcel.readDouble(),
+        parcel.readDouble(),
+        parcel.readDouble(),
+        parcel.readDouble(),
+        parcel.readDouble(),
+        parcel.readDouble(),
+        parcel.readDouble(),
+        parcel.readInt()
+    )
+
     init {
         val range = 0.0..100.0 //Range
         when {
@@ -25,6 +39,25 @@ class SubjectStats//Range
             complexity !in range -> throw StatsOutOfRangeException("Complexity out of range. Range: from 0 up to 100")
             fairEvaluation !in range -> throw StatsOutOfRangeException("FairEvaluatiob out of range. Range: from 0 up to 100")
             applyExams !in range -> throw StatsOutOfRangeException("ApplyExams out of range. Range: from 0 up to 100")
+        }
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        super.writeToParcel(parcel, flags)
+        parcel.writeDouble(domain)
+        parcel.writeDouble(complexity)
+        parcel.writeDouble(fairEvaluation)
+        parcel.writeDouble(applyExams)
+        parcel.writeInt(examsCount)
+    }
+
+    companion object CREATOR : Parcelable.Creator<SubjectStats> {
+        override fun createFromParcel(parcel: Parcel): SubjectStats {
+            return SubjectStats(parcel)
+        }
+
+        override fun newArray(size: Int): Array<SubjectStats?> {
+            return arrayOfNulls(size)
         }
     }
 }
