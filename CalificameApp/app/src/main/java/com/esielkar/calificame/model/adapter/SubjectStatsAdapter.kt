@@ -7,7 +7,8 @@ import com.esielkar.calificame.view.SubjectStatsCardView
 class SubjectStatsAdapter(
     subjectsWithInfo : List<SubjectWithInfo>,
     //TODO: Revisar parametro referente al evento
-) : CardViewAdapter<SubjectWithInfo, SubjectStatsCardView>(subjectsWithInfo, null) {
+    onItemClickListener: ((SubjectWithInfo) -> Unit)? = null,
+) : CardViewAdapter<SubjectWithInfo, SubjectStatsCardView>(subjectsWithInfo, onItemClickListener) {
 
     class SubjectViewHolder(subjectStatsCardView: SubjectStatsCardView
     ) : BindableViewHolder<SubjectWithInfo>(subjectStatsCardView) {

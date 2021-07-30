@@ -7,7 +7,7 @@
     android:layout_marginVertical="24dp"
     android:layout_marginHorizontal="16dp"
     android:orientation="vertical"
-    tools:context=".FacultiesActivity">
+    tools:context=".SelectSubjectActivity">
 
     <com.esielkar.calificame.view.HeaderCardView
         android:id="@+id/headerCV"
@@ -43,7 +43,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select_signature"
+        android:text="Selecciona para añadir review"
         android:textSize="16sp" />
 
     <androidx.recyclerview.widget.RecyclerView

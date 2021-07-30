@@ -1,5 +1,6 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
@@ -60,7 +61,11 @@ class SubjectsActivity : AppCompatActivity() {
                 SubjectWithInfo(su7, 169, 100),
                 SubjectWithInfo(su8, 345, 267),
                 SubjectWithInfo(su9, 68, 18)
-            )
+            ), onItemClickListener = {
+                val intent = Intent(this, AddReviewActivity::class.java)
+                //putExtra(it) TODO: Parcelable
+                startActivity(intent)
+            }
         )
     }
 }
