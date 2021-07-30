@@ -54,6 +54,7 @@
     <string name="not_defined_label">Not defined</string>
     <string name="select_signature">Select signature:</string>
     <string name="select_university">Select university:</string>
+    <string name="select_professor">Select professor:</string>
     <string name="select_faculty">Select faculty:</string>
     <string name="name_facultiy_label">Facultad de Ciencias</string>
     <string name="prof_facultiy_label">Profesores: 69</string>
@@ -64,7 +65,7 @@
 
     <!-- Prueba -->
     <string name="university_label">University</string>
-    <string name="teachers_label">Find Teachers</string>
+    <string name="teachers_label">Professors</string>
     <string name="universities_label">Universities</string>
     <string name="faculty_label">Faculty</string>
     <string name="faculties_label">Faculties</string>

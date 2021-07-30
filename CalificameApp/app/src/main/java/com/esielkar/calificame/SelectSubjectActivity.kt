@@ -1,5 +1,6 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
@@ -58,7 +59,11 @@ class SelectSubjectActivity : AppCompatActivity() {
                 Subject(resources.getString(R.string.signature_name7)),
                 Subject(resources.getString(R.string.signature_name8)),
                 Subject(resources.getString(R.string.signature_name9))
-            )
+            ), onItemClickListener = {
+                val intent = Intent(this, AboutUsActivity::class.java)
+                //putExtra(it) TODO: Parcelable
+                startActivity(intent)
+            }
         )
     }
 }
