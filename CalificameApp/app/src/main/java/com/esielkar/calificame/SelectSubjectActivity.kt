@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.esielkar.calificame.adapter.SubjectsAdapter
+import com.esielkar.calificame.model.adapter.SubjectsAdapter
 import com.esielkar.calificame.model.*
 import com.esielkar.calificame.view.HeaderCardView
 
