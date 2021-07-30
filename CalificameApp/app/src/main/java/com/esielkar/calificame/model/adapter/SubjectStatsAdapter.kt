@@ -1,4 +1,4 @@
-package com.esielkar.calificame.adapter
+package com.esielkar.calificame.model.adapter
 
 import android.view.ViewGroup
 import com.esielkar.calificame.utils.SubjectWithInfo

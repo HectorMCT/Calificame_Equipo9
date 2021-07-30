@@ -1,19 +1,18 @@
-package com.esielkar.calificame.adapter
+package com.esielkar.calificame.model.adapter
 
+import android.content.res.Resources
+import android.os.Build
 import android.view.ViewGroup
-import com.esielkar.calificame.utils.ProfessorWithInfo
-import com.esielkar.calificame.view.ProfessorCardView
-import kotlin.random.Random
+import androidx.core.view.marginTop
+import com.esielkar.calificame.R
+import com.esielkar.calificame.model.University
+import com.esielkar.calificame.utils.Utils
+import com.esielkar.calificame.view.UniversityCardView
 
-class ProfessorsAdapter(professorsWithInfo : Set<ProfessorWithInfo>) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo) {
-    class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<ProfessorWithInfo>(professorCardView) {
-        override fun bind(item: ProfessorWithInfo) {
-            val v = itemView as ProfessorCardView
-            v.professorName = item.first.name
-            v.statsCount = item.second
-            v.reviewsCount = item.third
-            //TODO: Corregir
-            v.percentage = Random.nextInt(101)
+class UniversitiesAdapter(universities : Set<University>) : CardViewAdapter<University, UniversityCardView>(universities) {
+    class UniversityViewHolder(universityCardView: UniversityCardView) : BindableViewHolder<University>(universityCardView) {
+        override fun bind(item: University) {
+            (itemView as UniversityCardView).universityName = item.name
         }
     }
 
@@ -42,5 +41,5 @@ class ProfessorsAdapter(professorsWithInfo : Set<ProfessorWithInfo>) : CardViewA
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ) = ProfessorViewHolder(this.applyStyle(ProfessorCardView(parent.context)))
+    ) = UniversityViewHolder(this.applyStyle(UniversityCardView(parent.context)))
 }

@@ -1,18 +1,19 @@
-package com.esielkar.calificame.adapter
+package com.esielkar.calificame.model.adapter
 
-import android.content.res.Resources
 import android.os.Build
 import android.view.ViewGroup
-import androidx.core.view.marginTop
 import com.esielkar.calificame.R
-import com.esielkar.calificame.model.University
+import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.utils.Utils
-import com.esielkar.calificame.view.UniversityCardView
+import com.esielkar.calificame.view.FacultyCardView
 
-class UniversitiesAdapter(universities : Set<University>) : CardViewAdapter<University, UniversityCardView>(universities) {
-    class UniversityViewHolder(universityCardView: UniversityCardView) : BindableViewHolder<University>(universityCardView) {
-        override fun bind(item: University) {
-            (itemView as UniversityCardView).universityName = item.name
+class FacultiesAdapter(faculties : Set<Faculty>) : CardViewAdapter<Faculty, FacultyCardView>(faculties) {
+    class FacultyViewHolder(facultyCardView: FacultyCardView) : BindableViewHolder<Faculty>(facultyCardView) {
+        override fun bind(item: Faculty) {
+            val v = itemView as FacultyCardView
+
+            v.facultyName = item.name
+            v.professorsCount = item.professors.size
         }
     }
 
@@ -41,5 +42,5 @@ class UniversitiesAdapter(universities : Set<University>) : CardViewAdapter<Univ
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ) = UniversityViewHolder(this.applyStyle(UniversityCardView(parent.context)))
+    ) = FacultyViewHolder(this.applyStyle(FacultyCardView(parent.context)))
 }
