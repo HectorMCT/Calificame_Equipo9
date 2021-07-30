@@ -1,11 +1,15 @@
 package com.esielkar.calificame.model.adapter
 
 import android.view.ViewGroup
+import com.esielkar.calificame.model.University
 import com.esielkar.calificame.utils.ProfessorWithInfo
 import com.esielkar.calificame.view.ProfessorCardView
 import kotlin.random.Random
 
-class ProfessorsAdapter(professorsWithInfo : Set<ProfessorWithInfo>) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo) {
+class ProfessorsAdapter(
+    professorsWithInfo : Set<ProfessorWithInfo>,
+    //TODO: Revisar parametro referente al evento
+) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo, null) {
     class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<ProfessorWithInfo>(professorCardView) {
         override fun bind(item: ProfessorWithInfo) {
             val v = itemView as ProfessorCardView

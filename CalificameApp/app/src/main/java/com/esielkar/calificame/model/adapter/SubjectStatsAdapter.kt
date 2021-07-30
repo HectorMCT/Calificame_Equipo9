@@ -4,9 +4,10 @@ import android.view.ViewGroup
 import com.esielkar.calificame.utils.SubjectWithInfo
 import com.esielkar.calificame.view.SubjectStatsCardView
 
-
-class SubjectStatsAdapter(subjectsWithInfo : List<SubjectWithInfo>
-) : CardViewAdapter<SubjectWithInfo, SubjectStatsCardView>(subjectsWithInfo) {
+class SubjectStatsAdapter(
+    subjectsWithInfo : List<SubjectWithInfo>,
+    //TODO: Revisar parametro referente al evento
+) : CardViewAdapter<SubjectWithInfo, SubjectStatsCardView>(subjectsWithInfo, null) {
 
     class SubjectViewHolder(subjectStatsCardView: SubjectStatsCardView
     ) : BindableViewHolder<SubjectWithInfo>(subjectStatsCardView) {

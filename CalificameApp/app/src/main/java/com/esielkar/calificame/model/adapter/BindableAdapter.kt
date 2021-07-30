@@ -1,10 +1,16 @@
 package com.esielkar.calificame.model.adapter
 
+import android.os.Parcelable
 import android.view.View
+import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.model.Bindable
 
-abstract class BindableAdapter<E>(val items : Collection<E>) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
+//TODO: E : Parceable
+abstract class BindableAdapter<E>(
+    val items : Collection<E>,
+    val onItemClickListener : ((E) -> Unit)? = null
+) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
     abstract class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
 
     /**
@@ -30,6 +36,9 @@ abstract class BindableAdapter<E>(val items : Collection<E>) : RecyclerView.Adap
      */
     override fun onBindViewHolder(holder: BindableViewHolder<E>, position: Int) {
         holder.bind(items.elementAt(position))
+        onItemClickListener?.let {
+            holder.itemView.setOnClickListener { it(items.elementAt(position)) }
+        }
     }
 
     /**

@@ -1,10 +1,14 @@
 package com.esielkar.calificame.model.adapter
 
+import android.view.View
 import android.view.ViewGroup
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.view.UniversityCardView
 
-class UniversitiesAdapter(universities : Set<University>) : CardViewAdapter<University, UniversityCardView>(universities) {
+class UniversitiesAdapter(
+    universities : Set<University>,
+    onItemClickListener: ((University) -> Unit)? = null,
+) : CardViewAdapter<University, UniversityCardView>(universities, onItemClickListener) {
     class UniversityViewHolder(universityCardView: UniversityCardView) : BindableViewHolder<University>(universityCardView) {
         override fun bind(item: University) {
             (itemView as UniversityCardView).universityName = item.name

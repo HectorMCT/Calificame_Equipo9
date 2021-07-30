@@ -4,7 +4,10 @@ import android.view.ViewGroup
 import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.view.FacultyCardView
 
-class FacultiesAdapter(faculties : Set<Faculty>) : CardViewAdapter<Faculty, FacultyCardView>(faculties) {
+class FacultiesAdapter(
+    faculties : Set<Faculty>,
+    onItemClickListener: ((Faculty) -> Unit)? = null,
+) : CardViewAdapter<Faculty, FacultyCardView>(faculties, onItemClickListener) {
     class FacultyViewHolder(facultyCardView: FacultyCardView) : BindableViewHolder<Faculty>(facultyCardView) {
         override fun bind(item: Faculty) {
             val v = itemView as FacultyCardView
