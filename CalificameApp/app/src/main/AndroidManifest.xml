@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Califícame">
-        <activity android:name=".AddReviewActivity"></activity>
+        <activity android:name=".AddReviewActivity"/>
         <activity android:name=".GeneralStatsActivity" />
         <activity android:name=".SelectSubjectActivity" />
         <activity android:name=".FacultiesActivity" />
