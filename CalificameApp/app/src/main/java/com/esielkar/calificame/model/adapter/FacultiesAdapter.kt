@@ -1,10 +1,7 @@
 package com.esielkar.calificame.model.adapter
 
-import android.os.Build
 import android.view.ViewGroup
-import com.esielkar.calificame.R
 import com.esielkar.calificame.model.Faculty
-import com.esielkar.calificame.utils.Utils
 import com.esielkar.calificame.view.FacultyCardView
 
 class FacultiesAdapter(faculties : Set<Faculty>) : CardViewAdapter<Faculty, FacultyCardView>(faculties) {

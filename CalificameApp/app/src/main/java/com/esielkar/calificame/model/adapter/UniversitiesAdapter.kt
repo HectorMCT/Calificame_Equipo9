@@ -1,12 +1,7 @@
 package com.esielkar.calificame.model.adapter
 
-import android.content.res.Resources
-import android.os.Build
 import android.view.ViewGroup
-import androidx.core.view.marginTop
-import com.esielkar.calificame.R
 import com.esielkar.calificame.model.University
-import com.esielkar.calificame.utils.Utils
 import com.esielkar.calificame.view.UniversityCardView
 
 class UniversitiesAdapter(universities : Set<University>) : CardViewAdapter<University, UniversityCardView>(universities) {
