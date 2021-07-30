@@ -1,5 +1,6 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
@@ -48,6 +49,10 @@ class ProfessorsActivity : AppCompatActivity() {
                 setDrawable(it)
             })
         }
-        rec.adapter = ProfessorsAdapter(p)
+        rec.adapter = ProfessorsAdapter(p, onItemClickListener = {
+            val intent = Intent(this, GeneralStatsActivity::class.java)
+            //putExtra(it) TODO: Parcelable
+            startActivity(intent)
+        })
     }
 }

@@ -1,6 +1,7 @@
 package com.esielkar.calificame.model.adapter
 
 import android.view.ViewGroup
+import com.esielkar.calificame.model.Professor
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.utils.ProfessorWithInfo
 import com.esielkar.calificame.view.ProfessorCardView
@@ -9,14 +10,15 @@ import kotlin.random.Random
 class ProfessorsAdapter(
     professorsWithInfo : Set<ProfessorWithInfo>,
     //TODO: Revisar parametro referente al evento
-) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo, null) {
+    onItemClickListener: ((ProfessorWithInfo) -> Unit)? = null,
+) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo, onItemClickListener) {
     class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<ProfessorWithInfo>(professorCardView) {
         override fun bind(item: ProfessorWithInfo) {
             val v = itemView as ProfessorCardView
             v.professorName = item.first.name
             v.statsCount = item.second
             v.reviewsCount = item.third
-            //TODO: Corregir
+            //TODO: Corregir no debe ser Ramdom
             v.percentage = Random.nextInt(101)
         }
     }
