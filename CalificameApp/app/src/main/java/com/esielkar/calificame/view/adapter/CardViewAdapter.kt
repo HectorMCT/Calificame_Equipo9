@@ -1,4 +1,4 @@
-package com.esielkar.calificame.model.adapter
+package com.esielkar.calificame.view.adapter
 
 import android.os.Build
 import com.esielkar.calificame.R

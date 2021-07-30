@@ -1,25 +1,16 @@
-package com.esielkar.calificame.model.adapter
+package com.esielkar.calificame.view.adapter
 
 import android.view.ViewGroup
-import com.esielkar.calificame.model.Professor
-import com.esielkar.calificame.model.University
-import com.esielkar.calificame.utils.ProfessorWithInfo
-import com.esielkar.calificame.view.ProfessorCardView
-import kotlin.random.Random
+import com.esielkar.calificame.model.Subject
+import com.esielkar.calificame.view.SubjectCardView
 
-class ProfessorsAdapter(
-    professorsWithInfo : Set<ProfessorWithInfo>,
-    //TODO: Revisar parametro referente al evento
-    onItemClickListener: ((ProfessorWithInfo) -> Unit)? = null,
-) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo, onItemClickListener) {
-    class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<ProfessorWithInfo>(professorCardView) {
-        override fun bind(item: ProfessorWithInfo) {
-            val v = itemView as ProfessorCardView
-            v.professorName = item.first.name
-            v.statsCount = item.second
-            v.reviewsCount = item.third
-            //TODO: Corregir no debe ser Ramdom
-            v.percentage = Random.nextInt(101)
+class SubjectsAdapter(
+    subjects : Set<Subject>,
+    onItemClickListener: ((Subject) -> Unit)? = null,
+) : CardViewAdapter<Subject, SubjectCardView>(subjects, onItemClickListener) {
+    class SubjectViewHolder(subjectCardView: SubjectCardView) : BindableViewHolder<Subject>(subjectCardView) {
+        override fun bind(item: Subject) {
+            (itemView as SubjectCardView).subjectName = item.name
         }
     }
 
@@ -48,5 +39,5 @@ class ProfessorsAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ) = ProfessorViewHolder(this.applyStyle(ProfessorCardView(parent.context)))
+    ) = SubjectViewHolder(this.applyStyle(SubjectCardView(parent.context)))
 }

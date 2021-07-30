@@ -1,17 +1,19 @@
-package com.esielkar.calificame.model.adapter
+package com.esielkar.calificame.view.adapter
 
 import android.view.ViewGroup
-import com.esielkar.calificame.model.Subject
-import com.esielkar.calificame.model.University
-import com.esielkar.calificame.view.SubjectCardView
+import com.esielkar.calificame.model.Faculty
+import com.esielkar.calificame.view.FacultyCardView
 
-class SubjectsAdapter(
-    subjects : Set<Subject>,
-    onItemClickListener: ((Subject) -> Unit)? = null,
-) : CardViewAdapter<Subject, SubjectCardView>(subjects, onItemClickListener) {
-    class SubjectViewHolder(subjectCardView: SubjectCardView) : BindableViewHolder<Subject>(subjectCardView) {
-        override fun bind(item: Subject) {
-            (itemView as SubjectCardView).subjectName = item.name
+class FacultiesAdapter(
+    faculties : Set<Faculty>,
+    onItemClickListener: ((Faculty) -> Unit)? = null,
+) : CardViewAdapter<Faculty, FacultyCardView>(faculties, onItemClickListener) {
+    class FacultyViewHolder(facultyCardView: FacultyCardView) : BindableViewHolder<Faculty>(facultyCardView) {
+        override fun bind(item: Faculty) {
+            val v = itemView as FacultyCardView
+
+            v.facultyName = item.name
+            v.professorsCount = item.professors.size
         }
     }
 
@@ -40,5 +42,5 @@ class SubjectsAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ) = SubjectViewHolder(this.applyStyle(SubjectCardView(parent.context)))
+    ) = FacultyViewHolder(this.applyStyle(FacultyCardView(parent.context)))
 }

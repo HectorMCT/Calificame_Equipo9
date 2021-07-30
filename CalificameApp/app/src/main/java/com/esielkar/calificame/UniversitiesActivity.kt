@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.esielkar.calificame.model.adapter.UniversitiesAdapter
+import com.esielkar.calificame.view.adapter.UniversitiesAdapter
 import com.esielkar.calificame.model.University
 
 class UniversitiesActivity : AppCompatActivity() {

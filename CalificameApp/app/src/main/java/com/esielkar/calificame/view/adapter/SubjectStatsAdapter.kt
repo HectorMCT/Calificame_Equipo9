@@ -1,17 +1,22 @@
-package com.esielkar.calificame.model.adapter
+package com.esielkar.calificame.view.adapter
 
-import android.view.View
 import android.view.ViewGroup
-import com.esielkar.calificame.model.University
-import com.esielkar.calificame.view.UniversityCardView
+import com.esielkar.calificame.utils.SubjectWithInfo
+import com.esielkar.calificame.view.SubjectStatsCardView
 
-class UniversitiesAdapter(
-    universities : Set<University>,
-    onItemClickListener: ((University) -> Unit)? = null,
-) : CardViewAdapter<University, UniversityCardView>(universities, onItemClickListener) {
-    class UniversityViewHolder(universityCardView: UniversityCardView) : BindableViewHolder<University>(universityCardView) {
-        override fun bind(item: University) {
-            (itemView as UniversityCardView).universityName = item.name
+class SubjectStatsAdapter(
+    subjectsWithInfo : List<SubjectWithInfo>,
+    //TODO: Revisar parametro referente al evento
+    onItemClickListener: ((SubjectWithInfo) -> Unit)? = null,
+) : CardViewAdapter<SubjectWithInfo, SubjectStatsCardView>(subjectsWithInfo, onItemClickListener) {
+
+    class SubjectViewHolder(subjectStatsCardView: SubjectStatsCardView
+    ) : BindableViewHolder<SubjectWithInfo>(subjectStatsCardView) {
+        override fun bind(item: SubjectWithInfo) {
+            val v = itemView  as SubjectStatsCardView
+            v.subjectName = item.first.name
+            v.statsCount = item.second
+            v.reviewsCount = item.third
         }
     }
 
@@ -40,5 +45,5 @@ class UniversitiesAdapter(
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ) = UniversityViewHolder(this.applyStyle(UniversityCardView(parent.context)))
+    ) = SubjectViewHolder(this.applyStyle(SubjectStatsCardView(parent.context)))
 }
