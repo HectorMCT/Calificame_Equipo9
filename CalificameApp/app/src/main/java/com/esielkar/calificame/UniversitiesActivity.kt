@@ -1,5 +1,6 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
@@ -31,8 +32,13 @@ class UniversitiesActivity : AppCompatActivity() {
             University(resources.getString(R.string.university_name6)),
             University(resources.getString(R.string.university_name7)),
             University(resources.getString(R.string.university_name8)),
-            University(resources.getString(R.string.university_name9)),
-        ))
+            University(resources.getString(R.string.university_name9))
+        ), onItemClickListener = {
+            val intent = Intent(this, FacultiesActivity::class.java)
+            //putExtra(it) TODO: Parcelable
+            startActivity(intent)
+        })
+
 
     }
 }
