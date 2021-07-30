@@ -6,13 +6,13 @@ import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.model.Bindable
 
-//TODO: E : Parceable
+//TODO: E : Parcelable
 abstract class BindableAdapter<E>(
     val items : Collection<E>,
     val onItemClickListener : ((E) -> Unit)? = null,
     val onItemLongClickListener : ((E) -> Boolean)? = null
 ) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
-    //TODO: E : Parceable
+    //TODO: E : Parcelable
     abstract class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
 
     /**
