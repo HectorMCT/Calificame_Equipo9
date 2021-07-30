@@ -12,6 +12,7 @@ abstract class BindableAdapter<E>(
     val onItemClickListener : ((E) -> Unit)? = null,
     val onItemLongClickListener : ((E) -> Boolean)? = null
 ) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
+    //TODO: E : Parceable
     abstract class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
 
     /**

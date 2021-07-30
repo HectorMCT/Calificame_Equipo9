@@ -5,6 +5,7 @@ import com.esielkar.calificame.R
 import com.esielkar.calificame.utils.Utils
 import com.google.android.material.card.MaterialCardView
 
+//TODO: E : Parceable
 abstract class CardViewAdapter<E, V : MaterialCardView> (
     items : Collection<E>,
     onItemClickListener : ((E) -> Unit)? = null
