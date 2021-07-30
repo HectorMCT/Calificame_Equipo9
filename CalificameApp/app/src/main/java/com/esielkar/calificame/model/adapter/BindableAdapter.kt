@@ -9,7 +9,8 @@ import com.esielkar.calificame.model.Bindable
 //TODO: E : Parceable
 abstract class BindableAdapter<E>(
     val items : Collection<E>,
-    val onItemClickListener : ((E) -> Unit)? = null
+    val onItemClickListener : ((E) -> Unit)? = null,
+    val onItemLongClickListener : ((E) -> Boolean)? = null
 ) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
     abstract class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
 
@@ -39,6 +40,11 @@ abstract class BindableAdapter<E>(
         onItemClickListener?.let {
             holder.itemView.setOnClickListener { it(items.elementAt(position)) }
         }
+
+        onItemLongClickListener?.let {
+            holder.itemView.setOnLongClickListener { it(items.elementAt(position)) }
+        }
+
     }
 
     /**
