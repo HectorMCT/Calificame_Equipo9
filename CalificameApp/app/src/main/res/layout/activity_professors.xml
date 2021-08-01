@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/teachers_label"
+            android:text="@string/professors_label"
             android:textSize="24sp"
             android:textStyle="bold" />
         <SearchView

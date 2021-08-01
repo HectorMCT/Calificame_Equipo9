@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout
-        android:id="@+id/relative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="8dp"
@@ -22,16 +20,16 @@
             android:orientation="vertical"
             android:layout_toEndOf="@id/image"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/trailingButton"
+            android:layout_toStartOf="@id/trailing_image"
             android:paddingHorizontal="16dp">
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/faculty_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 />
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/faculty_professors_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,7 +37,7 @@
                 />
         </LinearLayout>
         <ImageView
-            android:id="@+id/trailingButton"
+            android:id="@+id/trailing_image"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"

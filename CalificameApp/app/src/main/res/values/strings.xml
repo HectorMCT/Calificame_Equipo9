@@ -65,7 +65,8 @@
 
     <!-- Prueba -->
     <string name="university_label">University</string>
-    <string name="teachers_label">Professors</string>
+    <string name="professor_label">Professors</string>
+    <string name="professors_label">Professors</string>
     <string name="universities_label">Universities</string>
     <string name="faculty_label">Faculty</string>
     <string name="faculties_label">Faculties</string>

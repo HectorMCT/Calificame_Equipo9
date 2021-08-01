@@ -22,7 +22,7 @@
         app:header_card_subtitle="@string/faculty_name"
         app:header_card_overline="@string/university_name"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

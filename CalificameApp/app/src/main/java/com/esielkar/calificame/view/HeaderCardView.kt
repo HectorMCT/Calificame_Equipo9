@@ -19,7 +19,7 @@ import com.google.android.material.card.MaterialCardView
  */
 class HeaderCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : MaterialCardView(context, attrs, defStyleAttr) {
+) : CalificameCardView(context, attrs, defStyleAttr) {
 
     private val ll  = LinearLayout(this.context)
     private val titleTextView = TextView(this.context)
