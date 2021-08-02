@@ -1,12 +1,13 @@
 package com.esielkar.calificame.view.adapter
 
+import android.view.View
 import android.view.ViewGroup
 import com.esielkar.calificame.model.Subject
 import com.esielkar.calificame.view.SubjectCardView
 
 class SubjectsAdapter(
     subjects : Set<Subject>,
-    onItemClickListener: ((Subject) -> Unit)? = null,
+    onItemClickListener : View.OnClickListener? = null,
 ) : CardViewAdapter<Subject, SubjectCardView>(subjects, onItemClickListener) {
     class SubjectViewHolder(subjectCardView: SubjectCardView) : BindableViewHolder<Subject>(subjectCardView) {
         override fun bind(item: Subject) {

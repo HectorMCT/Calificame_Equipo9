@@ -7,7 +7,7 @@ import com.esielkar.calificame.view.UniversityCardView
 
 class UniversitiesAdapter(
     universities : Set<University>,
-    onItemClickListener: ((University) -> Unit)? = null,
+    onItemClickListener: View.OnClickListener? = null,
 ) : CardViewAdapter<University, UniversityCardView>(universities, onItemClickListener) {
     class UniversityViewHolder(universityCardView: UniversityCardView) : BindableViewHolder<University>(universityCardView) {
         override fun bind(item: University) {

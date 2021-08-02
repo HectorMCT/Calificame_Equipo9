@@ -3,4 +3,6 @@
     <dimen name="min_card_height">48dp</dimen>
     <dimen name="stats_circular_track_thickness">12dp</dimen>
     <dimen name="stats_circular_indicator_size">96dp</dimen>
+    <dimen name="container_horizontal_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>

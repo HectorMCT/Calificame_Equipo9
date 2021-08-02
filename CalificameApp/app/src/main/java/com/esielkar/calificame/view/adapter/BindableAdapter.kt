@@ -3,13 +3,11 @@ package com.esielkar.calificame.view.adapter
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-//TODO: E : Parcelable
 sealed class BindableAdapter<E>(
     val items : Collection<E>,
-    val onItemClickListener : ((E) -> Unit)? = null,
-    val onItemLongClickListener : ((E) -> Boolean)? = null
+    val onItemClickListener : View.OnClickListener? = null,
+    val onItemLongClickListener : View.OnLongClickListener? = null
 ) : RecyclerView.Adapter<BindableAdapter.BindableViewHolder<E>>() {
-    //TODO: E : Parcelable
     sealed class BindableViewHolder<E>(view: View) : RecyclerView.ViewHolder(view), Bindable<E>
 
     /**
@@ -34,15 +32,18 @@ sealed class BindableAdapter<E>(
      * @param position The position of the item within the adapter's data set.
      */
     override fun onBindViewHolder(holder: BindableViewHolder<E>, position: Int) {
-        holder.bind(items.elementAt(position))
-        onItemClickListener?.let {
-            holder.itemView.setOnClickListener { it(items.elementAt(position)) }
-        }
+        val item = items.elementAt(position)
+        holder.bind(item)
+        with(holder.itemView) {
+            tag = item
+            onItemClickListener?.let {
+                this.setOnClickListener(onItemClickListener)
+            }
 
-        onItemLongClickListener?.let {
-            holder.itemView.setOnLongClickListener { it(items.elementAt(position)) }
+            onItemLongClickListener?.let {
+                this.setOnLongClickListener(onItemLongClickListener)
+            }
         }
-
     }
 
     /**

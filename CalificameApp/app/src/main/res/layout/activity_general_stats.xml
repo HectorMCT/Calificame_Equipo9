@@ -57,6 +57,7 @@
                 app:cardElevation="16dp"
                 app:title="Recomendación"
                 app:subtitle="100%"
+                app:stats="100"
                 app:subtitleTextColor="@color/light_blue"/>
             <com.esielkar.calificame.view.StatsCardView
                 android:layout_width="0dp"
@@ -67,6 +68,7 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="16dp"
                 app:title="Dominio"
+                app:withSubtitle="true"
                 app:subtitle="Excelente"
                 app:subtitleTextColor="@color/light_blue"/>
 
@@ -87,6 +89,7 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="16dp"
                 app:title="Complejidad"
+                app:stats="90"
                 app:subtitle="Muy dificil"
                 app:subtitleTextColor="@color/red"/>
             <com.esielkar.calificame.view.StatsCardView
@@ -98,6 +101,7 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="16dp"
                 app:title="Clarity"
+                app:withSubtitle="true"
                 app:subtitle="Buena"
                 app:subtitleTextColor="@color/blue_500"/>
 
@@ -118,6 +122,7 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="16dp"
                 app:title="Asesorias"
+                app:withSubtitle="true"
                 app:subtitleTextColor="@color/blue_500"
                 app:subtitle="Casi siempre"/>
             <com.esielkar.calificame.view.StatsCardView
@@ -129,6 +134,7 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="16dp"
                 app:title="Evaluación justa"
+                app:withSubtitle="true"
                 app:subtitle="Siempre"
                 app:subtitleTextColor="@color/light_green"/>
         </LinearLayout>

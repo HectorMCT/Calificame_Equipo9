@@ -121,11 +121,11 @@ class ProfessorStats(
         val map = mutableMapOf<K, V>()
         for (i in 1..parcel.readInt()){
             val key = parcel.readParcelable<K>(K::class.java.classLoader)
-            val list = mutableListOf<E>() as V
+            val list = mutableListOf<E>()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 parcel.readParcelableList(list, E::class.java.classLoader)
             }else parcel.readList(list, E::class.java.classLoader)
-            map.put(key!!, list)
+            map.put(key!!, list as V)
         }
         return map
     }
