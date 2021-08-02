@@ -27,7 +27,7 @@
 
     <!-- Buttons -->
     <string name="forgot_password_text_button">Forgot Password</string>
-    <string name="skip_sign_in_text_button">Skip Login</string>
+    <string name="skip_sign_in_text_button">Skip Sign In</string>
     <string name="skip_sign_up_text_button">Skip Sign Up</string>
     <string name="cancel_label">Cancel</string>
     <string name="send_label">Send</string>

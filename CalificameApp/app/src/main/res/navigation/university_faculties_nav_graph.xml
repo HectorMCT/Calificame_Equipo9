@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/university_faculties_nav_graph"
     app:startDestination="@id/universities_list_fragment">
-
     <fragment
         android:id="@+id/universities_list_fragment"
         android:name="com.esielkar.calificame.UniversitiesListFragment"
@@ -20,7 +19,6 @@
         android:id="@+id/faculties_list_fragment"
         android:name="com.esielkar.calificame.FacultiesListFragment"
         android:label="Faculties">
-
         <argument
             android:name="university"
             app:argType="com.esielkar.calificame.model.University" />

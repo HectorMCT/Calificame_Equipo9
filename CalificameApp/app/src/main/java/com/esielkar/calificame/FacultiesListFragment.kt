@@ -1,6 +1,5 @@
 package com.esielkar.calificame
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,7 +12,6 @@ import com.esielkar.calificame.databinding.FragmentFacultiesListBinding
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.placeholder.UniversityPlaceholderContent
 import com.esielkar.calificame.view.adapter.FacultiesAdapter
-import com.esielkar.calificame.viewmodel.FacultiesListViewModel
 
 class FacultiesListFragment : Fragment() {
     private var university: University? = null
@@ -35,13 +33,12 @@ class FacultiesListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentFacultiesListBinding.inflate(inflater, container, false)
-
-        binding.headerCV.title = university?.name.toString()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.headerCV.title = university?.name.toString()
         val recyclerView = binding.facultiesList
         setupRecyclerView(recyclerView)
     }
@@ -65,7 +62,11 @@ class FacultiesListFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance() = FacultiesListFragment()
+        fun newInstance(university: University) = FacultiesListFragment().apply {
+            arguments = Bundle().apply {
+                putParcelable(ARG_UNI, university)
+            }
+        }
         const val ARG_UNI = "UNIVERSITY"
     }
 }

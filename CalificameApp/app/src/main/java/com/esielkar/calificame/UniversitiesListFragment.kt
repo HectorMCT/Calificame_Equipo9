@@ -30,7 +30,7 @@ class UniversitiesListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val facultiesFragmentContainer: View? = view.findViewById(R.id.faculties_list_container)
+        //val facultiesFragmentContainer: View? = view.findViewById(R.id.faculties_list_container)
         setupRecyclerView(binding.universitiesList, onClickListener = {
             val bundle = Bundle()
             bundle.putParcelable(FacultiesListFragment.ARG_UNI, it.tag as University)

@@ -4,12 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13360507246376813" />
+        <entry key="app/src/main/res/layout/activity_password_forgotten.xml" value="5.189655386648678" />
         <entry key="app/src/main/res/layout/activity_sing_in.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/activity_universities.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/circular_progress_bar.xml" value="0.14361702127659576" />
         <entry key="app/src/main/res/layout/faculties_list_fragment.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/fragment_faculties_list.xml" value="0.1234375" />
+        <entry key="app/src/main/res/layout/fragment_password_forgotten.xml" value="0.13360507246376813" />
+        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.2354689567653204" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/fragment_universities.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/fragment_universities_list.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_university.xml" value="0.13360507246376813" />
