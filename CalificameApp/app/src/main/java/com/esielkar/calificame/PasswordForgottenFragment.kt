@@ -21,11 +21,12 @@ class PasswordForgottenFragment : Fragment() {
             username = it.getString(ARG_USERNAME)
             email = it.getString(ARG_EMAIL)
         }
+        (requireActivity() as AppCompatActivity).supportActionBar?.show()
     }
 
-    override fun onStart() {
-        super.onStart()
-        (requireActivity() as AppCompatActivity).supportActionBar?.show()
+    override fun onStop() {
+        super.onStop()
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
 
     override fun onCreateView(

@@ -23,10 +23,6 @@ class SignUpFragment : Fragment() {
             username = it.getString(ARG_USERNAME)
             email = it.getString(ARG_EMAIL)
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
 

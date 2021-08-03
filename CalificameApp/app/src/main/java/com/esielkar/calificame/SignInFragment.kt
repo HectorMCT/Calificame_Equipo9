@@ -22,17 +22,13 @@ class SignInFragment : Fragment() {
             username = it.getString(ARG_USERNAME)
             email = it.getString(ARG_EMAIL)
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSignInBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -66,7 +62,7 @@ class SignInFragment : Fragment() {
     }
 
     private fun toMainActivity() {
-        var intent = Intent(context, MainActivity::class.java)
+        val intent = Intent(context, MainActivity::class.java)
         startActivity(intent)
         activity?.finish()
     }
