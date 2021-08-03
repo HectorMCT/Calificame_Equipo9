@@ -19,33 +19,33 @@ object UniversityPlaceholderContent {
         University("Benemérita Universidad Autónoma de Puebla", setOf(
             Faculty("Facultad de Ciencias de la Computación",
                 mapOf(
-                    Professor("1") to ProfessorStats(),
-                    Professor("2") to ProfessorStats(),
-                    Professor("3") to ProfessorStats(),
-                    Professor("4") to ProfessorStats(),
-                    Professor("5") to ProfessorStats(),
-                    Professor("6") to ProfessorStats()
+                    Professor("Hilda Castillo Zacatelco") to ProfessorStats(),
+                    Professor("Ana Patricia Cervantes Marquez") to ProfessorStats(),
+                    Professor("Meliza Contreras Gonzales") to ProfessorStats(),
+                    Professor("Ivan Olmos Pineda") to ProfessorStats(),
+                    Professor("Pedro Bello Lopez") to ProfessorStats(),
+                    Professor("Beatriz Beltran Martinez") to ProfessorStats()
                 )
             ),
             Faculty("Facultad de Derecho y Ciencias Sociales",
                 mapOf(
-                    Professor("1") to ProfessorStats(),
-                    Professor("2") to ProfessorStats(),
-                    Professor("3") to ProfessorStats()
+                    Professor("Jose Miguel Rodrigez Vargas") to ProfessorStats(),
+                    Professor("Guadalupe Martinez Ramirez") to ProfessorStats(),
+                    Professor("Ricardo Carmarada Cool") to ProfessorStats()
                 )
             ),
             Faculty("Facultad de Cultura Física",
                 mapOf(
-                    Professor("1") to ProfessorStats(),
-                    Professor("2") to ProfessorStats()
+                    Professor("Karla Lopez Vargas") to ProfessorStats(),
+                    Professor("Santiago Gonzalez Ramirez") to ProfessorStats()
                 )
             ),
             Faculty("Facultad de Psicología",
                 mapOf(
-                    Professor("1") to ProfessorStats(),
-                    Professor("2") to ProfessorStats(),
-                    Professor("3") to ProfessorStats(),
-                    Professor("4") to ProfessorStats(),
+                    Professor("Zoyla Luna Noches") to ProfessorStats(),
+                    Professor("Facundo Ramirez Marihuana") to ProfessorStats(),
+                    Professor("Omar Hernandez Hernandez") to ProfessorStats(),
+                    Professor("Ramiro Cortez Cruz") to ProfessorStats(),
                 )
             ),
         )),

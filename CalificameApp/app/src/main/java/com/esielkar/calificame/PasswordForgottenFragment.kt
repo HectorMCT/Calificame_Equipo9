@@ -39,15 +39,22 @@ class PasswordForgottenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.emailEditText.setText(email)
-        val bundle = Bundle()
-        bundle.putString(SignUpFragment.ARG_USERNAME, username)
-        bundle.putString(SignUpFragment.ARG_USERNAME, email)
 
         binding.signUpButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(SignUpFragment.ARG_USERNAME, username)
+            bundle.putString(SignUpFragment.ARG_USERNAME, email)
             it.findNavController().navigate(R.id.action_password_forgotten_fragment_to_sign_up_fragment, bundle)
         }
         binding.cancelButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(SignInFragment.ARG_USERNAME, username)
+            bundle.putString(SignInFragment.ARG_USERNAME, email)
             it.findNavController().navigate(R.id.action_password_forgotten_fragment_to_sign_in_fragment, bundle)
+        }
+
+        binding.sendButton.setOnClickListener {
+            //Metodo de recuperamiento de contraseña
         }
     }
 

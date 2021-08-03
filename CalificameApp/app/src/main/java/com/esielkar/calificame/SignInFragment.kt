@@ -1,5 +1,6 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,17 +41,34 @@ class SignInFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.emailEditText.setText(email)
 
-        val bundle = Bundle()
-        bundle.putString(SignUpFragment.ARG_USERNAME, username)
-        bundle.putString(SignUpFragment.ARG_USERNAME, email)
-
         binding.signUpTextButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(SignUpFragment.ARG_USERNAME, username)
+            bundle.putString(SignUpFragment.ARG_USERNAME, email)
             it.findNavController().navigate(R.id.action_sign_in_fragment_to_sign_up_fragment, bundle)
         }
 
         binding.forgotPasswordTextButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(PasswordForgottenFragment.ARG_USERNAME, username)
+            bundle.putString(PasswordForgottenFragment.ARG_USERNAME, email)
             it.findNavController().navigate(R.id.action_sign_in_fragment_to_password_forgotten_fragment, bundle)
         }
+
+        binding.signInButton.setOnClickListener {
+            //VALIDAR SIGN IN
+            toMainActivity()
+        }
+
+        binding.skipSignInTextButton.setOnClickListener {
+            toMainActivity()
+        }
+    }
+
+    private fun toMainActivity() {
+        var intent = Intent(context, MainActivity::class.java)
+        startActivity(intent)
+        activity?.finish()
     }
 
     override fun onDestroyView() {

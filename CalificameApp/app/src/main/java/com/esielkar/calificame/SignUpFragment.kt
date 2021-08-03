@@ -1,5 +1,6 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -41,13 +42,29 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.usernameEditText.setText(username)
         binding.emailEditText.setText(email)
-        val bundle = Bundle()
-        bundle.putString(SignUpFragment.ARG_USERNAME, username)
-        bundle.putString(SignUpFragment.ARG_USERNAME, email)
+
 
         binding.signInTextButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString(SignInFragment.ARG_USERNAME, username)
+            bundle.putString(SignInFragment.ARG_USERNAME, email)
             it.findNavController().navigate(R.id.action_sign_up_fragment_to_sign_in_fragment, bundle)
         }
+
+        binding.signUpButton.setOnClickListener {
+            //VALIDAR SIGN UP
+            toMainActivity()
+        }
+
+        binding.skipSignUpTextButton.setOnClickListener {
+            toMainActivity()
+        }
+    }
+
+    private fun toMainActivity() {
+        var intent = Intent(context, MainActivity::class.java)
+        startActivity(intent)
+        activity?.finish()
     }
 
     override fun onDestroyView() {
