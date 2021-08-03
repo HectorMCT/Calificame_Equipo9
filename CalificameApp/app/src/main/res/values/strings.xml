@@ -31,6 +31,8 @@
     <string name="skip_sign_up_text_button">Skip Sign Up</string>
     <string name="cancel_label">Cancel</string>
     <string name="send_label">Send</string>
+    <string name="add_review">Add review</string>
+
 
     <!-- Version -->
     <string name="version">Versión 1.0</string>
@@ -99,5 +101,7 @@
     <string name="signature_name7">Sistemas Operativos II</string>
     <string name="signature_name8">Graficación</string>
     <string name="signature_name9">Desarrollo de Aplicaciones Móviles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

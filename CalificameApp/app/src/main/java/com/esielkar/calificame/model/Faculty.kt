@@ -3,6 +3,7 @@ package com.esielkar.calificame.model
 import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
+import com.esielkar.calificame.utils.ProfessorWithInfo
 
 /**
  * Representa una facultad de la aplicación Califícame!
@@ -50,7 +51,7 @@ data class Faculty (val name : String) : Parcelable{
 
     fun getProfessorsWithStatsAndReviewsCounts() = professors.map {
         val counters = getStats(it)?.getStatsAndReviewsCounts()
-        Triple<Professor, Int, Int>(it, counters?.first ?: 0, counters?.second ?: 0)
+        ProfessorWithInfo(it, counters?.first ?: 0, counters?.second ?: 0)
     }
 
     private fun <K : Parcelable, V : Parcelable> writeParcelableMap(

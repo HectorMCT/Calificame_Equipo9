@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutUsctivity">
+    tools:context=".AboutUsFragment">
 
     <LinearLayout
         android:id="@+id/backgroundImage"
@@ -19,7 +19,6 @@
             android:layout_weight="0.3"
             android:src="@drawable/about_us"
             android:scaleType="fitXY"/>
-        <!-- app:shapeAppearanceOverlay="@style/RoundedBottomImageView" -->
     </LinearLayout>
 
     <androidx.cardview.widget.CardView

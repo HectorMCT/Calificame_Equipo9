@@ -9,14 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Califícame">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".AddReviewActivity" />
-        <activity android:name=".GeneralStatsActivity" />
-        <activity android:name=".SelectSubjectActivity" />
-        <activity android:name=".SubjectsActivity" />
-        <activity android:name=".AboutUsActivity" />
-        <activity android:name=".ProfessorsActivity" />
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".UniversityFacultiesActivity"
+            android:exported="true" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

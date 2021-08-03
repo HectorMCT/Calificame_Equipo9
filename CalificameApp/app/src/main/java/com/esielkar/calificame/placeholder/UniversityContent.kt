@@ -10,7 +10,7 @@ import com.esielkar.calificame.model.University
  *
  * TODO: Replace all uses of this class before publishing your app.
  */
-object UniversityPlaceholderContent {
+object UniversityContent {
 
     /**
      * An set of sample (placeholder) universities.

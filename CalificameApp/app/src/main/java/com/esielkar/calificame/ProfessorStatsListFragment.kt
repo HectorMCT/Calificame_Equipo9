@@ -8,22 +8,22 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.esielkar.calificame.databinding.FragmentFacultiesListBinding
+import com.esielkar.calificame.databinding.FragmentProfessorStatsListBinding
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.placeholder.UniversityContent
-import com.esielkar.calificame.view.adapter.FacultiesAdapter
+import com.esielkar.calificame.view.adapter.ProfessorsAdapter
 
-class FacultiesListFragment : Fragment() {
-    private var university: University? = null //TODO: Variable de prueba
-    private var _binding: FragmentFacultiesListBinding? = null
+class ProfessorStatsListFragment : Fragment() {
+
+    private var _binding: FragmentProfessorStatsListBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-            if (it.containsKey(ARG_UNI)) {
-                university = it.getParcelable(ARG_UNI)
+            if (it.containsKey(FacultiesListFragment.ARG_UNI)) {
+                //university = it.getParcelable(FacultiesListFragment.ARG_UNI) //TODO: Aqui se recibe el parametro
             }
         }
     }
@@ -32,14 +32,15 @@ class FacultiesListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentFacultiesListBinding.inflate(inflater, container, false)
+        _binding = FragmentProfessorStatsListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.headerCV.title = university?.name.toString()
-        val recyclerView = binding.facultiesList
+        binding.headerCV.title = UniversityContent.universities.first().name
+        binding.headerCV.subtitle = UniversityContent.universities.first().faculties.first().name
+        val recyclerView = binding.rec
         setupRecyclerView(recyclerView)
     }
 
@@ -53,7 +54,12 @@ class FacultiesListFragment : Fragment() {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter = FacultiesAdapter(UniversityContent.universities.first().faculties)
+        recyclerView.adapter =
+            UniversityContent.universities.first().faculties.first().getProfessorsWithStatsAndReviewsCounts().let {
+                ProfessorsAdapter(
+                    it.toSet()
+                )
+            } //TODO: Prueba
     }
 
     override fun onDestroyView() {
@@ -62,7 +68,7 @@ class FacultiesListFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(university: University) = FacultiesListFragment().apply {
+        fun newInstance(university: University) = ProfessorStatsListFragment().apply {
             arguments = Bundle().apply {
                 putParcelable(ARG_UNI, university)
             }

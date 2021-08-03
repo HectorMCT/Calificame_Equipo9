@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.esielkar.calificame.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
@@ -22,7 +23,7 @@ class SignInFragment : Fragment() {
             username = it.getString(ARG_USERNAME)
             email = it.getString(ARG_EMAIL)
         }
-        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
+        //(requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
 
     override fun onCreateView(
@@ -62,9 +63,12 @@ class SignInFragment : Fragment() {
     }
 
     private fun toMainActivity() {
-        val intent = Intent(context, MainActivity::class.java)
+        /*val intent = Intent(context, MainActivity::class.java)
         startActivity(intent)
-        activity?.finish()
+        activity?.finish()*/
+        //NavHostFragment.findNavController(this).popBackStack()
+        //NavHostFragment.findNavController(this).navigate(R.id.action_global_university_faculties_nav_graph)
+
     }
 
     override fun onDestroyView() {

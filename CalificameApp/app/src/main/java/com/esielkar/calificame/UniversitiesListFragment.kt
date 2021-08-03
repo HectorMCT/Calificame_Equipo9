@@ -6,12 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.esielkar.calificame.databinding.FragmentUniversitiesListBinding
 import com.esielkar.calificame.model.University
-import com.esielkar.calificame.placeholder.UniversityPlaceholderContent
+import com.esielkar.calificame.placeholder.UniversityContent
 import com.esielkar.calificame.view.adapter.UniversitiesAdapter
 
 class UniversitiesListFragment : Fragment() {
@@ -24,6 +25,7 @@ class UniversitiesListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentUniversitiesListBinding.inflate(layoutInflater, container, false)
+        (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         return binding.root
     }
 
@@ -52,7 +54,7 @@ class UniversitiesListFragment : Fragment() {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter = UniversitiesAdapter(UniversityPlaceholderContent.universities, onClickListener)
+        recyclerView.adapter = UniversitiesAdapter(UniversityContent.universities, onClickListener)
     }
 
     companion object {

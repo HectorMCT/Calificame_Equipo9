@@ -1,12 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/professors_reviews_nav_graph"
+    app:startDestination="@id/professorStatsListFragment">
 
-    <include app:graph="@navigation/login_nav_graph"/>
-    <include app:graph="@navigation/university_faculties_nav_graph"/>
-    <action
-        android:id="@+id/action_global_university_faculties_nav_graph"
-        app:destination="@id/university_faculties_nav_graph" />
-
+    <fragment
+        android:id="@+id/professorStatsListFragment"
+        android:name="com.esielkar.calificame.ProfessorStatsListFragment"
+        tools:layout="@layout/fragment_professor_stats_list" >
+        <action
+            android:id="@+id/action_professorStatsListFragment_to_generalStatsFragment"
+            app:destination="@id/generalStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalStatsFragment"
+        android:name="com.esielkar.calificame.GeneralStatsFragment"
+        tools:layout="@layout/fragment_general_stats" >
+        <action
+            android:id="@+id/action_generalStatsFragment_to_addReviewFragment"
+            app:destination="@id/addReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.esielkar.calificame.AddReviewFragment"
+        tools:layout="@layout/fragment_add_review" >
+        <action
+            android:id="@+id/action_addReviewFragment_to_subjectsListFragment"
+            app:destination="@id/subjectsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectsListFragment"
+        android:name="com.esielkar.calificame.SubjectsListFragment"
+        tools:layout="@layout/fragment_subjects_list" />
 </navigation>
