@@ -5,13 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.esielkar.calificame.model.User
+import com.google.android.material.textfield.TextInputLayout
+
+val usuarios = listOf<User>(User("hector", "hector@calificame.com", "12345678"),
+                            User("Eziel", "eziel@calificame.com", "12345678"),
+                            User("Mayra", "mayra@calificame.com", "12345678"))
 
 class SignInActivity : AppCompatActivity() {
 
-    private lateinit var  signInButton : Button
-    private lateinit var  signUpTextButton : Button
-    private lateinit var  skipLoginTextButton : Button
-    private lateinit var  forgotPasswordTextButton : Button
+    private lateinit var signInButton : Button
+    private lateinit var signUpTextButton : Button
+    private lateinit var skipLoginTextButton : Button
+    private lateinit var forgotPasswordTextButton : Button
+
+    //Texto
+    private lateinit var email : TextInputLayout
+    private lateinit var password : TextInputLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +35,22 @@ class SignInActivity : AppCompatActivity() {
         skipLoginTextButton = findViewById(R.id.skipSignUpTextButton)
         forgotPasswordTextButton = findViewById(R.id.forgotPasswordTextButton)
 
+        email = findViewById(R.id.emailField)
+        password = findViewById(R.id.passwordField)
         //Adding events
-        signInButton.setOnClickListener { skipLogin() }
+        signInButton.setOnClickListener(object : View.OnClickListener {
+            /**
+             * Called when a view has been clicked.
+             *
+             * @param v The view that was clicked.
+             */
+            override fun onClick(v: View?) {
+                if(validarData(email, password)){
+                    skipLogin()
+                }
+            }
+        })
+
         skipLoginTextButton.setOnClickListener { skipLogin() }
         signUpTextButton.setOnClickListener { signUp() }
         forgotPasswordTextButton.setOnClickListener(object : View.OnClickListener {
@@ -41,6 +65,34 @@ class SignInActivity : AppCompatActivity() {
 
         })
 
+    }
+
+    private fun validarData(email: TextInputLayout, password: TextInputLayout): Boolean{
+        when {
+            password.editText?.text.toString().isNotBlank() && email.editText?.text.toString().isNotBlank() -> {
+                return if(validEmail(email.editText?.text.toString()) && validPassword(email.editText?.text.toString(), password.editText?.text.toString())){
+                    true
+                }else{
+                    password.error = getString(R.string.error_Password)
+                    email.error = getString(R.string.error_Email)
+                    false
+                }
+            }
+            else -> {
+                email.error = getString(R.string.error_noEmail)
+                password.error = getString(R.string.error_noPassword)
+                return false
+            }
+        }
+    }
+
+    private fun validPassword(email: String, password: String): Boolean {
+        val usr = usuarios.find { it.email == email }
+        return usr?.password == password
+    }
+
+    private fun validEmail(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     private fun skipLogin() {
