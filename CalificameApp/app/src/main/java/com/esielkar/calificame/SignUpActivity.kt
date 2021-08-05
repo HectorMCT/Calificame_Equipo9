@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.esielkar.calificame.model.User
 import com.google.android.material.textfield.TextInputLayout
 
 class SignUpActivity : AppCompatActivity() {
@@ -51,10 +52,13 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun validarData(username: TextInputLayout, email: TextInputLayout, password: TextInputLayout): Boolean{
+        val usr = username.editText?.text.toString()
+        val correo = email.editText?.text.toString()
+        val pass = password.editText?.text.toString()
         when {
-            username.editText?.text.toString().isNotBlank() && password.editText?.text.toString().isNotBlank() &&
-                    email.editText?.text.toString().isNotBlank() -> {
-                return if(validUsername(username.editText?.text.toString()) && validEmail(email.editText?.text.toString())){
+            usr.isNotBlank() && pass.isNotBlank() && correo.isNotBlank() -> {
+                return if(validUsername(usr) && validEmail(email.editText?.text.toString())){
+                    usuarios.add(User(usr,  correo, pass))
                     true
                 }else{
                     username.error = getString(R.string.error_Username)

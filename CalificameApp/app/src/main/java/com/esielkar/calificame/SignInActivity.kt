@@ -8,7 +8,7 @@ import android.widget.Button
 import com.esielkar.calificame.model.User
 import com.google.android.material.textfield.TextInputLayout
 
-val usuarios = listOf<User>(User("hector", "hector@calificame.com", "12345678"),
+val usuarios = mutableListOf<User>(User("hector", "hector@calificame.com", "12345678"),
                             User("Eziel", "eziel@calificame.com", "12345678"),
                             User("Mayra", "mayra@calificame.com", "12345678"))
 
@@ -68,9 +68,13 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun validarData(email: TextInputLayout, password: TextInputLayout): Boolean{
+
+        val correo = email.editText?.text.toString()
+        val pass = password.editText?.text.toString()
+
         when {
-            password.editText?.text.toString().isNotBlank() && email.editText?.text.toString().isNotBlank() -> {
-                return if(validEmail(email.editText?.text.toString()) && validPassword(email.editText?.text.toString(), password.editText?.text.toString())){
+            pass.isNotBlank() && correo.isNotBlank() -> {
+                return if(validEmail(correo) && validPassword(correo, pass)){
                     true
                 }else{
                     password.error = getString(R.string.error_Password)
