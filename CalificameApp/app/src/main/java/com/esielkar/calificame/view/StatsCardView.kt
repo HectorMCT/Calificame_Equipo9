@@ -99,12 +99,12 @@ open class StatsCardView @JvmOverloads constructor(
         defStyleAttr: Int = 0,
     ) {
         _title.text = title
-        _title.textSize = 20f
+        _title.textSize = 16f
         _title.typeface = Typeface.DEFAULT_BOLD
         if (withSubtitle) {
             _statsText = MaterialTextView(context, null, defStyleAttr)
             _statsText!!.text = subtitle ?: resources.getText(R.string.not_defined_label)
-            _statsText!!.textSize = 20f
+            _statsText!!.textSize = 16f
         }else{
             statsCircularProgressBar = CircularProgressBar(context, null, defStyleAttr)
             statsCircularProgressBar!!.textSize = 20f

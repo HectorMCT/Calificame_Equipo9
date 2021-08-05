@@ -25,14 +25,12 @@ class UniversitiesListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentUniversitiesListBinding.inflate(layoutInflater, container, false)
-        (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        //(requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        //val facultiesFragmentContainer: View? = view.findViewById(R.id.faculties_list_container)
         setupRecyclerView(binding.universitiesList, onClickListener = {
             val bundle = Bundle()
             bundle.putParcelable(FacultiesListFragment.ARG_UNI, it.tag as University)

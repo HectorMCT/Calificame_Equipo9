@@ -1,14 +1,17 @@
 package com.esielkar.calificame
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.databinding.FragmentFacultiesListBinding
+import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.placeholder.UniversityContent
 import com.esielkar.calificame.view.adapter.FacultiesAdapter
@@ -40,20 +43,27 @@ class FacultiesListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.headerCV.title = university?.name.toString()
         val recyclerView = binding.facultiesList
-        setupRecyclerView(recyclerView)
+        setupRecyclerView(recyclerView, onClickListener = {
+            val bundle = Bundle()
+            bundle.putString(ProfessorStatsListFragment.ARG_UNI_NAME, university?.name)
+            bundle.putParcelable(ProfessorStatsListFragment.ARG_FAC, it.tag as Faculty)
+            //Intent
+            var intent = Intent(requireActivity(), MainActivity::class.java)
+            startActivity(intent, bundle)
+            requireActivity().finish()
+        })
     }
 
     private fun setupRecyclerView(
         recyclerView: RecyclerView,
         onClickListener: View.OnClickListener? = null,
-        onLongClickListener: View.OnLongClickListener? = null
     ) {
         ResourcesCompat.getDrawable(resources, R.drawable.divider, null)?.let {
             recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL).apply {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter = FacultiesAdapter(UniversityContent.universities.first().faculties)
+        recyclerView.adapter = FacultiesAdapter(university?.faculties ?: setOf(), onClickListener)
     }
 
     override fun onDestroyView() {

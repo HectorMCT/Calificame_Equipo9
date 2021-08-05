@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.databinding.FragmentProfessorStatsListBinding
-import com.esielkar.calificame.model.University
+import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.placeholder.UniversityContent
 import com.esielkar.calificame.view.adapter.ProfessorsAdapter
 
@@ -41,13 +42,14 @@ class ProfessorStatsListFragment : Fragment() {
         binding.headerCV.title = UniversityContent.universities.first().name
         binding.headerCV.subtitle = UniversityContent.universities.first().faculties.first().name
         val recyclerView = binding.rec
-        setupRecyclerView(recyclerView)
+        setupRecyclerView(recyclerView, onClickListener = {
+            it.findNavController().navigate(R.id.action_professorStatsListFragment_to_generalStatsFragment)
+        })
     }
 
     private fun setupRecyclerView(
         recyclerView: RecyclerView,
         onClickListener: View.OnClickListener? = null,
-        onLongClickListener: View.OnLongClickListener? = null
     ) {
         ResourcesCompat.getDrawable(resources, R.drawable.divider, null)?.let {
             recyclerView.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL).apply {
@@ -57,7 +59,7 @@ class ProfessorStatsListFragment : Fragment() {
         recyclerView.adapter =
             UniversityContent.universities.first().faculties.first().getProfessorsWithStatsAndReviewsCounts().let {
                 ProfessorsAdapter(
-                    it.toSet()
+                    it.toSet(), onClickListener
                 )
             } //TODO: Prueba
     }
@@ -68,11 +70,13 @@ class ProfessorStatsListFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(university: University) = ProfessorStatsListFragment().apply {
+        fun newInstance(universityName: String, faculty: Faculty) = ProfessorStatsListFragment().apply {
             arguments = Bundle().apply {
-                putParcelable(ARG_UNI, university)
+                putString(ARG_UNI_NAME, universityName)
+                putParcelable(ARG_FAC, faculty)
             }
         }
-        const val ARG_UNI = "UNIVERSITY"
+        const val ARG_UNI_NAME = "UNI_NAME"
+        const val ARG_FAC = "FACULTY"
     }
 }

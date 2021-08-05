@@ -38,75 +38,127 @@
         android:layout_height="wrap_content"
         android:text="@string/add_review"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+
+                android:layout_marginVertical="8dp"
+                android:orientation="horizontal">
+                <com.esielkar.calificame.view.StatsCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="16dp"
+                    app:title="Recommendation"
+                    app:subtitle="100%"
+                    app:stats="100"
+                    app:subtitleTextColor="@color/light_blue"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.esielkar.calificame.view.StatsCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="16dp"
+                        app:title="Dominio"
+                        app:withSubtitle="true"
+                        app:subtitle="Excelente"
+                        app:subtitleTextColor="@color/light_blue"/>
+                    <com.esielkar.calificame.view.StatsCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="4dp"
+                        android:layout_weight="0.5"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="16dp"
+                        app:title="Clarity"
+                        app:withSubtitle="true"
+                        app:subtitle="Excelente"
+                        app:subtitleTextColor="@color/light_blue"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginVertical="8dp"
+                android:orientation="horizontal">
+                <com.esielkar.calificame.view.StatsCardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="16dp"
+                    app:title="Domain"
+                    app:subtitle="100%"
+                    app:stats="100"
+                    app:subtitleTextColor="@color/light_blue"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <com.esielkar.calificame.view.StatsCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginVertical="4dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="16dp"
+                        app:title="Consultancies"
+                        app:withSubtitle="true"
+                        app:subtitle="Excelente"
+                        app:subtitleTextColor="@color/light_blue"/>
+                    <com.esielkar.calificame.view.StatsCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginVertical="4dp"
+                        android:layout_weight="0.5"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="16dp"
+                        app:title="Fair evaluation"
+                        app:withSubtitle="true"
+                        app:subtitle="Excelente"
+                        app:subtitleTextColor="@color/light_blue"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginVertical="8dp"
-            android:orientation="horizontal">
-            <com.esielkar.calificame.view.StatsCardView
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="8dp"
-                android:layout_gravity="center"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="16dp"
-                app:title="Recomendación"
-                app:subtitle="100%"
-                app:stats="100"
-                app:subtitleTextColor="@color/light_blue"/>
-            <com.esielkar.calificame.view.StatsCardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="8dp"
-                android:layout_gravity="center"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="16dp"
-                app:title="Dominio"
-                app:withSubtitle="true"
-                app:subtitle="Excelente"
-                app:subtitleTextColor="@color/light_blue"/>
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginVertical="8dp"
-            android:orientation="horizontal">
-            <com.esielkar.calificame.view.StatsCardView
-                android:layout_width="0dp"
-                android:layout_weight="1.5"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="8dp"
-                android:layout_gravity="center"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="16dp"
-                app:title="Complejidad"
-                app:stats="90"
-                app:subtitle="Muy dificil"
-                app:subtitleTextColor="@color/red"/>
-            <com.esielkar.calificame.view.StatsCardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="8dp"
-                android:layout_gravity="center"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="16dp"
-                app:title="Clarity"
-                app:withSubtitle="true"
-                app:subtitle="Buena"
-                app:subtitleTextColor="@color/blue_500"/>
 
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,6 +191,5 @@
                 app:subtitle="Siempre"
                 app:subtitleTextColor="@color/light_green"/>
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>
