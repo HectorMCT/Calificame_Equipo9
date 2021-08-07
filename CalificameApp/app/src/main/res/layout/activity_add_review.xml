@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
@@ -62,49 +62,47 @@
                 android:id="@+id/toggleButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:selectionRequired="true">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/val_exelente"
                     android:id="@+id/quest1btn0"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/val_bueno"
                     android:id="@+id/quest1btn1"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/val_regular"
                     android:id="@+id/quest1btn2"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/val_malo"
                     android:id="@+id/quest1btn3"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
-                    style="?android:attr/buttonBarButtonStyle"/>
+                    app:shapeAppearance="@style/Rounded"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -122,48 +120,46 @@
                 android:id="@+id/toggleButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:selectionRequired="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_exelente"
                     android:id="@+id/quest2btn0"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@android:color/black"
-                    style="?android:attr/buttonBarButtonStyle" />
-
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_bueno"
                     android:id="@+id/quest2btn1"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_regular"
                     android:id="@+id/quest2btn2"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_malo"
                     android:id="@+id/quest2btn3"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
                     style="?android:attr/buttonBarButtonStyle" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -180,48 +176,46 @@
                 android:id="@+id/toggleButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:selectionRequired="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_exelente"
                     android:id="@+id/quest3btn0"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@android:color/black"
-                    style="?android:attr/buttonBarButtonStyle" />
-
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_bueno"
                     android:id="@+id/quest3btn1"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_regular"
                     android:id="@+id/quest3btn2"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_malo"
                     android:id="@+id/quest3btn3"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
                     style="?android:attr/buttonBarButtonStyle" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -238,38 +232,37 @@
                 android:id="@+id/toggleButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:selectionRequired="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_siempre"
                     android:id="@+id/quest4btn0"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@android:color/black"
-                    style="?android:attr/buttonBarButtonStyle" />
-
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_aveces"
                     android:id="@+id/quest4btn1"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_nunca"
                     android:id="@+id/quest4btn2"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
                     style="?android:attr/buttonBarButtonStyle" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -286,38 +279,39 @@
                 android:id="@+id/toggleButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:selectionRequired="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_siempre"
                     android:id="@+id/quest5btn0"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@android:color/black"
-                    style="?android:attr/buttonBarButtonStyle" />
-
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_aveces"
                     android:id="@+id/quest5btn1"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
                     style="?android:attr/buttonBarButtonStyle" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <!-- style="?android:attr/buttonBarButtonStyle" -->
+
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_nunca"
                     android:id="@+id/quest5btn2"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
                     style="?android:attr/buttonBarButtonStyle" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -334,28 +328,28 @@
                 android:id="@+id/toggleButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:selectionRequired="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.button.MaterialButton
                     android:text="@string/val_yes"
                     android:id="@+id/quest6btn0"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
-                    app:strokeWidth="1dp"
-                    app:strokeColor="@android:color/black"
-                    style="?android:attr/buttonBarButtonStyle" />
-
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/val_no"
-                    android:id="@+id/quest6btn1"
-                    app:shapeAppearance="@style/Rounded"
-                    android:layout_gravity="center_vertical"
                     app:strokeWidth="1dp"
                     app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:text="@string/val_no"
+                    android:id="@+id/quest6btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    app:shapeAppearance="@style/Rounded"
                     style="?android:attr/buttonBarButtonStyle" />
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -388,8 +382,7 @@
                 app:shapeAppearance="@style/Rounded"
                 app:strokeWidth="1dp"
                 app:strokeColor="@android:color/black"
-                android:gravity="bottom"/>
+                android:gravity="center"/>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
