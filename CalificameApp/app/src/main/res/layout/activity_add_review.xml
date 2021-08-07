@@ -1,29 +1,395 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginVertical="24dp"
+    android:layout_marginHorizontal="16dp"
+    android:orientation="vertical"
     tools:context=".AddReviewActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        style="@style/TextAppearance.MaterialComponents.Headline4"
-        android:layout_width="wrap_content"
+    <com.esielkar.calificame.view.HeaderCardView
+        android:id="@+id/headerAddRev"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="View en progreso...\nSu función es añadir reviews juntos con la siguiente vista"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:cardElevation="16dp"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingRight="16dp"
+        app:contentPaddingLeft="16dp"
+        app:contentPaddingBottom="16dp"
+        app:contentPaddingTop="16dp"
+        app:header_card_title="@string/professor_name"
+        app:header_card_subtitle="@string/faculty_name"
+        app:header_card_overline="@string/university_name"/>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ir a la siguiente vista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginVertical="16dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_review"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <SearchView
+            android:id="@+id/searchReviewSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/question_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_exelente"
+                    android:id="@+id/quest1btn0"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_bueno"
+                    android:id="@+id/quest1btn1"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_regular"
+                    android:id="@+id/quest1btn2"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_malo"
+                    android:id="@+id/quest1btn3"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+            <TextView
+                android:id="@+id/question_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_2"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_exelente"
+                    android:id="@+id/quest2btn0"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_bueno"
+                    android:id="@+id/quest2btn1"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_regular"
+                    android:id="@+id/quest2btn2"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_malo"
+                    android:id="@+id/quest2btn3"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/question_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_3"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_exelente"
+                    android:id="@+id/quest3btn0"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_bueno"
+                    android:id="@+id/quest3btn1"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_regular"
+                    android:id="@+id/quest3btn2"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_malo"
+                    android:id="@+id/quest3btn3"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/question_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_siempre"
+                    android:id="@+id/quest4btn0"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_aveces"
+                    android:id="@+id/quest4btn1"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_nunca"
+                    android:id="@+id/quest4btn2"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/question_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_siempre"
+                    android:id="@+id/quest5btn0"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_aveces"
+                    android:id="@+id/quest5btn1"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_nunca"
+                    android:id="@+id/quest5btn2"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/question_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_yes"
+                    android:id="@+id/quest6btn0"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/val_no"
+                    android:id="@+id/quest6btn1"
+                    app:shapeAppearance="@style/Rounded"
+                    android:layout_gravity="center_vertical"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@android:color/black"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                android:id="@+id/question_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/question_7"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="4"
+                android:gravity="top|start"
+                android:maxLines="10"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_review_btn"
+                android:layout_gravity="end"
+                app:shapeAppearance="@style/Rounded"
+                app:strokeWidth="1dp"
+                app:strokeColor="@android:color/black"
+                android:gravity="bottom"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -99,13 +99,35 @@
     <string name="signature_name8">Graficación</string>
     <string name="signature_name9">Desarrollo de Aplicaciones Móviles</string>
 
-    <!-- Prueba -->
+    <!-- Ingreso/Registro Mensajes -->
     <string name="error_Password">Contraseña Incorrecta</string>
     <string name="error_noPassword">Ingrese su contraseña</string>
     <string name="error_Email">Correo invalido</string>
     <string name="error_noEmail">Ingrese su correo</string>
     <string name="error_Username">Usuario invalido</string>
     <string name="error_noUsername">Ingrese un usuario</string>
+    <!-- Review profesor-->
+    <!-- Preguntas de Review -->
+    <string name="add_review">Add a review</string>
+    <string name="question_1">¿Cómo consideras su dominio en la materia?</string>
+    <string name="question_2">¿Cómo consideras que es explicando los temas?</string>
+    <string name="question_3">¿Qué tan complicada crees que fue pasar la materia?</string>
+    <string name="question_4">¿Ofrece acesorías?</string>
+    <string name="question_5">¿Cumple con las rubricas de evaluación?</string>
+    <string name="question_6">¿Aplica examenes?</string>
+    <string name="question_7">¿Cómo fue tu experiencia con el profesor?</string>
 
+    <!-- Review profesor -->
+    <!-- Valores de Review boton-->
+    <string name="val_exelente">Exelente</string>
+    <string name="val_bueno">bueno</string>
+    <string name="val_regular">regular</string>
+    <string name="val_malo">malo</string>
+    <string name="val_siempre">Siempre</string>
+    <string name="val_aveces">A veces</string>
+    <string name="val_nunca">Nunca</string>
+    <string name="val_yes">Si</string>
+    <string name="val_no">No</string>
+    <string name="add_review_btn">Add Review</string>
 
 </resources>
