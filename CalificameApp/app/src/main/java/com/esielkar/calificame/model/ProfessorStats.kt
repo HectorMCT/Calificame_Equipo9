@@ -4,6 +4,7 @@ import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
 import com.esielkar.calificame.utils.StatsAndReviews
+import com.esielkar.calificame.utils.StatsWrapper
 import com.esielkar.calificame.utils.SubjectWithInfo
 
 /**
@@ -49,7 +50,33 @@ class ProfessorStats(
     val signatures
     get() = (_subjectStats.map { it.key } + _reviews.map { it.key }).toSet()
 
+    val average : Double
+    get() {
+        update()
+        return (facility + clarity + recommendation) / 3
+    }
 
+    val generalStats : StatsWrapper
+    get() {
+        var a1 : Double? = null
+        var a2 : Double? = null
+        var a3 : Double? = null
+        var a4 : Double? = null
+        var a5 : Double? = null
+        var a6 : Double? = null
+        signatures.forEach {
+            a1 = getStats(it)?.map { it.recommendation }?.average()
+            a2 = getStats(it)?.map { it.complexity }?.average()
+            a3 = getStats(it)?.map { it.clarity }?.average()
+            a4 = getStats(it)?.map { it.domain }?.average()
+            a5 = getStats(it)?.map { it.consultancies }?.average()
+            a6 = getStats(it)?.map { it.fairEvaluation }?.average()
+        }
+        return StatsWrapper(
+            Triple(a1 ?: 0.0, a2 ?: 0.0, a3 ?: 0.0),
+            Triple(a4 ?: 0.0, a5 ?: 0.0, a6 ?: 0.0)
+        )
+    }
 
     fun getReviews(of: Subject) = _reviews[of]?.toList()
     fun getStats(of: Subject) = _subjectStats[of]?.toList()

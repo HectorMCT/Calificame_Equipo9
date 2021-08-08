@@ -31,9 +31,13 @@ class UniversitiesListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         setupRecyclerView(binding.universitiesList, onClickListener = {
             val bundle = Bundle()
-            bundle.putParcelable(FacultiesListFragment.ARG_UNI, it.tag as University)
+
+            bundle.putParcelable(FacultiesListFragment.ARG_UNI, it.tag as University) //TODO: Parcelable
+            UniversityContent.currentUniversity = it.tag as University //TODO: Content
+
             it.findNavController().navigate(R.id.action_universities_list_fragment_to_faculties_list_fragment, bundle)
         })
     }

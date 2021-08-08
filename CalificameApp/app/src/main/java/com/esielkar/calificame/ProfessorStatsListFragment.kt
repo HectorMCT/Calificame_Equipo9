@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.databinding.FragmentProfessorStatsListBinding
 import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.placeholder.UniversityContent
+import com.esielkar.calificame.utils.ProfessorAndStats
 import com.esielkar.calificame.view.adapter.ProfessorsAdapter
 
 class ProfessorStatsListFragment : Fragment() {
@@ -24,7 +25,7 @@ class ProfessorStatsListFragment : Fragment() {
 
         arguments?.let {
             if (it.containsKey(FacultiesListFragment.ARG_UNI)) {
-                //university = it.getParcelable(FacultiesListFragment.ARG_UNI) //TODO: Aqui se recibe el parametro
+                //university = it.getParcelable(FacultiesListFragment.ARG_UNI) //TODO: PARCELABLE
             }
         }
     }
@@ -39,10 +40,14 @@ class ProfessorStatsListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.headerCV.title = UniversityContent.universities.first().name
-        binding.headerCV.subtitle = UniversityContent.universities.first().faculties.first().name
+        binding.headerCV.title = UniversityContent.currentUniversity?.name.toString()
+        binding.headerCV.subtitle = UniversityContent.currentFaculty?.name
+        
         val recyclerView = binding.rec
         setupRecyclerView(recyclerView, onClickListener = {
+
+            //TODO: CONTENT
+            UniversityContent.currentProfessorStats = (it.tag as ProfessorAndStats)
             it.findNavController().navigate(R.id.action_professorStatsListFragment_to_generalStatsFragment)
         })
     }
@@ -56,18 +61,17 @@ class ProfessorStatsListFragment : Fragment() {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter =
-            UniversityContent.universities.first().faculties.first().getProfessorsWithStatsAndReviewsCounts().let {
-                ProfessorsAdapter(
-                    it.toSet(), onClickListener
-                )
-            } //TODO: Prueba
+
+        recyclerView.adapter = UniversityContent.currentFaculty?.professorStats?.let {
+            ProfessorsAdapter(it, onClickListener)
+        } //TODO: CONTENT
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
     companion object {
         fun newInstance(universityName: String, faculty: Faculty) = ProfessorStatsListFragment().apply {

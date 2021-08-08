@@ -13,6 +13,7 @@ import com.esielkar.calificame.databinding.FragmentSignUpBinding
 class SignUpFragment : Fragment() {
     private var username : String? = null
     private var email : String? = null
+    private var password : String? = null
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
 
@@ -20,8 +21,9 @@ class SignUpFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-            username = it.getString(ARG_USERNAME)
-            email = it.getString(ARG_EMAIL)
+            username = it.getString(SignInFragment.ARG_USERNAME)
+            email = it.getString(SignInFragment.ARG_EMAIL)
+            password = it.getString(SignInFragment.ARG_PASSWORD)
         }
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
@@ -38,29 +40,31 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.usernameEditText.setText(username)
         binding.emailEditText.setText(email)
+        binding.passwordEditText.setText(password)
 
 
         binding.signInTextButton.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString(SignInFragment.ARG_USERNAME, username)
-            bundle.putString(SignInFragment.ARG_USERNAME, email)
+            bundle.putString(SignInFragment.ARG_USERNAME, binding.usernameEditText.text?.toString())
+            bundle.putString(SignInFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
+            bundle.putString(SignInFragment.ARG_PASSWORD, binding.passwordEditText.text?.toString())
             it.findNavController().navigate(R.id.action_sign_up_fragment_to_sign_in_fragment, bundle)
         }
 
         binding.signUpButton.setOnClickListener {
-            //VALIDAR SIGN UP
-            toMainActivity()
+            //TODO: VALIDAR SIGN UP (REGISTRAR AL USUARIO)
+            toUniversityFacultiesActivity()
         }
 
         binding.skipSignUpTextButton.setOnClickListener {
-            toMainActivity()
+            toUniversityFacultiesActivity()
         }
     }
 
-    private fun toMainActivity() {
-        var intent = Intent(context, MainActivity::class.java)
+    private fun toUniversityFacultiesActivity() {
+        var intent = Intent(context, UniversityFacultiesActivity::class.java)
         startActivity(intent)
-        activity?.finish()
+        requireActivity().finish()
     }
 
     override fun onDestroyView() {
@@ -71,12 +75,14 @@ class SignUpFragment : Fragment() {
     companion object {
         const val ARG_USERNAME = "USERNAME"
         const val ARG_EMAIL = "EMAIL"
+        const val ARG_PASSWORD = "PASSWORD"
         @JvmStatic
-        fun newInstance(username: String, email: String) =
+        fun newInstance(username: String?, email: String?, password : String?) =
             SignUpFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_USERNAME, username)
                     putString(ARG_EMAIL, email)
+                    putString(ARG_PASSWORD, password)
                 }
             }
     }

@@ -17,7 +17,7 @@ import com.esielkar.calificame.placeholder.UniversityContent
 import com.esielkar.calificame.view.adapter.FacultiesAdapter
 
 class FacultiesListFragment : Fragment() {
-    private var university: University? = null //TODO: Variable de prueba
+    private var university: University? = null //TODO: Parcelable
     private var _binding: FragmentFacultiesListBinding? = null
     private val binding get() = _binding!!
 
@@ -26,7 +26,7 @@ class FacultiesListFragment : Fragment() {
 
         arguments?.let {
             if (it.containsKey(ARG_UNI)) {
-                university = it.getParcelable(ARG_UNI)
+                university = it.getParcelable(ARG_UNI) //TODO: PARCELABLE
             }
         }
     }
@@ -45,8 +45,12 @@ class FacultiesListFragment : Fragment() {
         val recyclerView = binding.facultiesList
         setupRecyclerView(recyclerView, onClickListener = {
             val bundle = Bundle()
+            //TODO: PARCELABLE
             bundle.putString(ProfessorStatsListFragment.ARG_UNI_NAME, university?.name)
             bundle.putParcelable(ProfessorStatsListFragment.ARG_FAC, it.tag as Faculty)
+
+            //TODO: CONTENT
+            UniversityContent.currentFaculty = it.tag as Faculty
             //Intent
             var intent = Intent(requireActivity(), MainActivity::class.java)
             startActivity(intent, bundle)
@@ -63,7 +67,8 @@ class FacultiesListFragment : Fragment() {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter = FacultiesAdapter(university?.faculties ?: setOf(), onClickListener)
+        //recyclerView.adapter = FacultiesAdapter(university?.faculties ?: setOf(), onClickListener) //TODO: PARCELABLE
+        recyclerView.adapter = FacultiesAdapter(UniversityContent.currentUniversity?.faculties ?: setOf(), onClickListener) //TODO: CONTENT
     }
 
     override fun onDestroyView() {

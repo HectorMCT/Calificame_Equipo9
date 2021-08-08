@@ -44,7 +44,7 @@
 
     <string name="drawer_home">Home</string>
     <string name="drawer_change_university">Change University</string>
-    <string name="drawer_change_faculty">Change University</string>
+    <string name="drawer_change_faculty">Change Faculty</string>
 
     <string name="drawer_help">Help</string>
     <string name="drawer_about_us">About Us</string>
@@ -103,5 +103,40 @@
     <string name="signature_name9">Desarrollo de Aplicaciones Móviles</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--ENUMS-->
+    <string-array name="difficulty">
+        <item>Very easy</item>
+        <item>Easy</item>
+        <item>Regular</item>
+        <item>Hard</item>
+        <item>Very Hard</item>
+    </string-array>
+
+    <string-array name="frecuency">
+        <item>Always</item>
+        <item>Sometimes</item>
+        <item>Never</item>
+    </string-array>
+
+    <string-array name="score">
+        <item>Excellent</item>
+        <item>Good</item>
+        <item>Regular</item>
+        <item>Bad</item>
+        <item>Terrible</item>
+    </string-array>
+
+    <string-array name="satisfaction">
+        <item>Satisfied</item>
+        <item>Half satisfied</item>
+        <item>Dissatified</item>
+    </string-array>
+
+    <string-array name="YesNo">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 
 </resources>

@@ -3,6 +3,7 @@ package com.esielkar.calificame.model
 import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
+import com.esielkar.calificame.utils.ProfessorAndStats
 import com.esielkar.calificame.utils.ProfessorWithInfo
 
 /**
@@ -29,6 +30,9 @@ data class Faculty (val name : String) : Parcelable{
     val professors : Set<Professor>
         get() = _professors.map { it.key }.toSet()
 
+    val professorStats
+        get() =_professors.map { ProfessorAndStats(it.key, it.value) }
+
     fun getStats(of : Professor) = _professors[of]
 
     /**
@@ -48,11 +52,6 @@ data class Faculty (val name : String) : Parcelable{
      * @return true si la profesor se eliminó, false si no exististe el la facultad.
      */
     fun remove(professor : Professor) = _professors.remove(professor)
-
-    fun getProfessorsWithStatsAndReviewsCounts() = professors.map {
-        val counters = getStats(it)?.getStatsAndReviewsCounts()
-        ProfessorWithInfo(it, counters?.first ?: 0, counters?.second ?: 0)
-    }
 
     private fun <K : Parcelable, V : Parcelable> writeParcelableMap(
         parcel : Parcel, flags : Int, map : Map<K, V>) {

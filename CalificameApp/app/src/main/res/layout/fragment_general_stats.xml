@@ -10,6 +10,7 @@
     tools:context=".GeneralStatsFragment">
 
     <com.esielkar.calificame.view.HeaderCardView
+        android:id="@+id/headerCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="16dp"
@@ -17,10 +18,7 @@
         app:contentPaddingRight="16dp"
         app:contentPaddingLeft="16dp"
         app:contentPaddingBottom="16dp"
-        app:contentPaddingTop="16dp"
-        app:header_card_title="@string/professor_name"
-        app:header_card_subtitle="@string/faculty_name"
-        app:header_card_overline="@string/university_name"/>
+        app:contentPaddingTop="16dp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
@@ -51,24 +49,22 @@
 
                 android:layout_marginVertical="8dp"
                 android:orientation="horizontal">
-                <com.esielkar.calificame.view.StatsCardView
+                <com.esielkar.calificame.view.RecommendationStatsCardView
+                    android:id="@+id/recommendationCV"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="8dp"
                     android:layout_gravity="center"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="16dp"
-                    app:title="Recommendation"
-                    app:subtitle="100%"
-                    app:stats="100"
-                    app:subtitleTextColor="@color/light_blue"/>
+                    app:cardElevation="16dp" />
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <com.esielkar.calificame.view.StatsCardView
+                    <com.esielkar.calificame.view.ComplexityStatsCardView
+                        android:id="@+id/complexityCV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
@@ -77,11 +73,9 @@
                         android:layout_gravity="center"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
-                        app:title="Dominio"
-                        app:withSubtitle="true"
-                        app:subtitle="Excelente"
-                        app:subtitleTextColor="@color/light_blue"/>
-                    <com.esielkar.calificame.view.StatsCardView
+                        app:withSubtitle="true" />
+                    <com.esielkar.calificame.view.ClarityStatsCardView
+                        android:id="@+id/clarityCV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_marginVertical="4dp"
@@ -90,9 +84,7 @@
                         android:layout_gravity="center"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
-                        app:title="Clarity"
                         app:withSubtitle="true"
-                        app:subtitle="Excelente"
                         app:subtitleTextColor="@color/light_blue"/>
                 </LinearLayout>
             </LinearLayout>
@@ -102,7 +94,8 @@
                 android:layout_height="175dp"
                 android:layout_marginVertical="8dp"
                 android:orientation="horizontal">
-                <com.esielkar.calificame.view.StatsCardView
+                <com.esielkar.calificame.view.DomainStatsCardView
+                    android:id="@+id/domainCV"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="match_parent"
@@ -110,7 +103,6 @@
                     android:layout_gravity="center"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="16dp"
-                    app:title="Domain"
                     app:subtitle="100%"
                     app:stats="100"
                     app:subtitleTextColor="@color/light_blue"/>
@@ -119,7 +111,8 @@
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <com.esielkar.calificame.view.StatsCardView
+                    <com.esielkar.calificame.view.ConsultanciesStatsCardView
+                        android:id="@+id/consultanciesCV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
@@ -132,7 +125,8 @@
                         app:withSubtitle="true"
                         app:subtitle="Excelente"
                         app:subtitleTextColor="@color/light_blue"/>
-                    <com.esielkar.calificame.view.StatsCardView
+                    <com.esielkar.calificame.view.FairEvaluationStatsCardView
+                        android:id="@+id/fairEvaluationCV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_marginVertical="4dp"
@@ -147,49 +141,6 @@
                         app:subtitleTextColor="@color/light_blue"/>
                 </LinearLayout>
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_marginVertical="8dp"
-            android:orientation="horizontal">
-            <com.esielkar.calificame.view.StatsCardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="8dp"
-                android:layout_gravity="center"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="16dp"
-                app:title="Asesorias"
-                app:withSubtitle="true"
-                app:subtitleTextColor="@color/blue_500"
-                app:subtitle="Casi siempre"/>
-            <com.esielkar.calificame.view.StatsCardView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="8dp"
-                android:layout_gravity="center"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="16dp"
-                app:title="Evaluación justa"
-                app:withSubtitle="true"
-                app:subtitle="Siempre"
-                app:subtitleTextColor="@color/light_green"/>
-        </LinearLayout>
-    </LinearLayout>
 </LinearLayout>

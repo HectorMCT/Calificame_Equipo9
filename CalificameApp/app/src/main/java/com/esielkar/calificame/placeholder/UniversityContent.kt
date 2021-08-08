@@ -1,8 +1,6 @@
 package com.esielkar.calificame.placeholder
-import com.esielkar.calificame.model.Faculty
-import com.esielkar.calificame.model.Professor
-import com.esielkar.calificame.model.ProfessorStats
-import com.esielkar.calificame.model.University
+import com.esielkar.calificame.model.*
+import com.esielkar.calificame.utils.ProfessorAndStats
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -12,14 +10,21 @@ import com.esielkar.calificame.model.University
  */
 object UniversityContent {
 
-    /**
-     * An set of sample (placeholder) universities.
-     */
-    val universities = mutableSetOf(
+    var currentUniversity: University? = null
+    var currentFaculty: Faculty? = null
+    var currentProfessorStats : ProfessorAndStats? = null
+
+    private val _universities = mutableSetOf(
         University("Benemérita Universidad Autónoma de Puebla", setOf(
             Faculty("Facultad de Ciencias de la Computación",
                 mapOf(
-                    Professor("Hilda Castillo Zacatelco") to ProfessorStats(),
+                    Professor("Hilda Castillo Zacatelco") to ProfessorStats(
+                        subjectStats = mapOf(
+                            Subject("Programación I") to listOf(
+                                SubjectStats(100.0, 90.0, 80.0, 70.0, 60.0, 50.0, 40.0, 30.0, 1)
+                            )
+                        )
+                    ),
                     Professor("Ana Patricia Cervantes Marquez") to ProfessorStats(),
                     Professor("Meliza Contreras Gonzales") to ProfessorStats(),
                     Professor("Ivan Olmos Pineda") to ProfessorStats(),
@@ -49,7 +54,18 @@ object UniversityContent {
                 )
             ),
         )),
-        University("Universidad Autónoma de México"),
+        University("Universidad Autónoma de México", setOf(
+            Faculty("Facultad de Ingeniería",
+                mapOf(
+                    Professor("Hilda Castillo Zacatelco") to ProfessorStats(),
+                    Professor("Ana Patricia Cervantes Marquez") to ProfessorStats(),
+                    Professor("Meliza Contreras Gonzales") to ProfessorStats(),
+                    Professor("Ivan Olmos Pineda") to ProfessorStats(),
+                    Professor("Pedro Bello Lopez") to ProfessorStats(),
+                    Professor("Beatriz Beltran Martinez") to ProfessorStats()
+                )
+            )
+        )),
         University("Universidad Autónoma de Guerrero"),
         University("Universidad Autónoma de Guadalajara"),
         University("Instituto Politécnico Nacional"),
@@ -58,7 +74,9 @@ object UniversityContent {
         University("Universidad Autónoma de Sinaloa"),
         University("Colegio de México"))
 
+    val universities = _universities.toSet()
+
     private fun add(university: University) {
-        universities.add(university)
+        _universities.add(university)
     }
 }

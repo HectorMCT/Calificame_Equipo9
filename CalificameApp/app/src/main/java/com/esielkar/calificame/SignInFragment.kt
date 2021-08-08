@@ -8,12 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import com.esielkar.calificame.databinding.FragmentSignInBinding
 
 class SignInFragment : Fragment() {
     private var username : String? = null
     private var email : String? = null
+    private var password : String? = null
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
@@ -22,8 +22,9 @@ class SignInFragment : Fragment() {
         arguments?.let {
             username = it.getString(ARG_USERNAME)
             email = it.getString(ARG_EMAIL)
+            password = it.getString(ARG_PASSWORD)
         }
-        //(requireActivity() as AppCompatActivity).supportActionBar?.hide()
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
 
     override fun onCreateView(
@@ -37,38 +38,39 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.emailEditText.setText(email)
+        binding.passwordEditText.setText(password)
 
         binding.signUpTextButton.setOnClickListener {
             val bundle = Bundle()
             bundle.putString(SignUpFragment.ARG_USERNAME, username)
-            bundle.putString(SignUpFragment.ARG_USERNAME, email)
+            bundle.putString(SignUpFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
+            bundle.putString(SignUpFragment.ARG_PASSWORD, binding.passwordEditText.text?.toString())
             it.findNavController().navigate(R.id.action_sign_in_fragment_to_sign_up_fragment, bundle)
         }
 
         binding.forgotPasswordTextButton.setOnClickListener {
             val bundle = Bundle()
             bundle.putString(PasswordForgottenFragment.ARG_USERNAME, username)
-            bundle.putString(PasswordForgottenFragment.ARG_USERNAME, email)
+            bundle.putString(PasswordForgottenFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
+            bundle.putString(PasswordForgottenFragment.ARG_PASSWORD, binding.passwordEditText.text?.toString())
             it.findNavController().navigate(R.id.action_sign_in_fragment_to_password_forgotten_fragment, bundle)
         }
 
         binding.signInButton.setOnClickListener {
-            //VALIDAR SIGN IN
-            toMainActivity()
+            //TODO: VALIDAR SIGN IN (EL USUARIO EXISTE)
+            toUniversityFacultiesActivity()
         }
 
         binding.skipSignInTextButton.setOnClickListener {
-            toMainActivity()
+            //TODO: ENTRO COMO INVITADO
+            toUniversityFacultiesActivity()
         }
     }
 
-    private fun toMainActivity() {
-        /*val intent = Intent(context, MainActivity::class.java)
+    private fun toUniversityFacultiesActivity() {
+        val intent = Intent(context, UniversityFacultiesActivity::class.java)
         startActivity(intent)
-        activity?.finish()*/
-        //NavHostFragment.findNavController(this).popBackStack()
-        //NavHostFragment.findNavController(this).navigate(R.id.action_global_university_faculties_nav_graph)
-
+        requireActivity().finish()
     }
 
     override fun onDestroyView() {
@@ -79,12 +81,14 @@ class SignInFragment : Fragment() {
     companion object {
         const val ARG_USERNAME = "USERNAME"
         const val ARG_EMAIL = "EMAIL"
+        const val ARG_PASSWORD = "PASSWORD"
         @JvmStatic
-        fun newInstance(username: String, email: String) =
+        fun newInstance(username: String?, email: String?, password: String?) =
             SignInFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_USERNAME, username)
                     putString(ARG_EMAIL, email)
+                    putString(ARG_PASSWORD, password)
                 }
             }
     }

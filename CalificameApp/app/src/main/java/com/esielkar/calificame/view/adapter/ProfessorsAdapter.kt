@@ -2,23 +2,29 @@ package com.esielkar.calificame.view.adapter
 
 import android.view.View
 import android.view.ViewGroup
+import com.esielkar.calificame.model.Professor
+import com.esielkar.calificame.model.ProfessorStats
 import com.esielkar.calificame.utils.ProfessorWithInfo
 import com.esielkar.calificame.view.ProfessorCardView
 import kotlin.random.Random
 
 class ProfessorsAdapter(
-    professorsWithInfo : Set<ProfessorWithInfo>,
+    professorStats : List<Pair<Professor, ProfessorStats>>,
     //TODO: Revisar parametro referente al evento
     onItemClickListener : View.OnClickListener? = null,
-) : CardViewAdapter<ProfessorWithInfo, ProfessorCardView>(professorsWithInfo, onItemClickListener) {
-    class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<ProfessorWithInfo>(professorCardView) {
-        override fun bind(item: ProfessorWithInfo) {
+
+) : CardViewAdapter<Pair<Professor, ProfessorStats>, ProfessorCardView>(professorStats, onItemClickListener) {
+    class ProfessorViewHolder(professorCardView: ProfessorCardView) : BindableViewHolder<Pair<Professor, ProfessorStats>>(professorCardView) {
+
+        override fun bind(item: Pair<Professor, ProfessorStats>) {
             val v = itemView as ProfessorCardView
             v.professorName = item.first.name
-            v.statsCount = item.second
-            v.reviewsCount = item.third
-            //TODO: Corregir no debe ser Ramdom
-            v.percentage = Random.nextInt(101)
+
+            val counters = item.second.getStatsAndReviewsCounts()
+            v.statsCount = counters.first
+            v.reviewsCount = counters.second
+
+            v.percentage = item.second.average.toInt()
         }
     }
 

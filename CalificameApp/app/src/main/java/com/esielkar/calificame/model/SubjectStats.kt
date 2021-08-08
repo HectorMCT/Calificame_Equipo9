@@ -17,11 +17,13 @@ class SubjectStats//Range
      var domain: Double = 0.0,
      var complexity: Double = 0.0,
      var fairEvaluation: Double = 0.0,
+     var consultancies: Double = 0.0,
      var applyExams: Double = 0.0,
      var examsCount: Int = 0
 ) : Stats(facility, clarity, recommendation) {
 
     constructor(parcel: Parcel) : this(
+        parcel.readDouble(),
         parcel.readDouble(),
         parcel.readDouble(),
         parcel.readDouble(),
@@ -37,8 +39,9 @@ class SubjectStats//Range
         when {
             domain !in range -> throw StatsOutOfRangeException("Domain out of range. Range: from 0 up to 100")
             complexity !in range -> throw StatsOutOfRangeException("Complexity out of range. Range: from 0 up to 100")
-            fairEvaluation !in range -> throw StatsOutOfRangeException("FairEvaluatiob out of range. Range: from 0 up to 100")
-            applyExams !in range -> throw StatsOutOfRangeException("ApplyExams out of range. Range: from 0 up to 100")
+            fairEvaluation !in range -> throw StatsOutOfRangeException("Fair Evaluation out of range. Range: from 0 up to 100")
+            consultancies !in range -> throw StatsOutOfRangeException("Consultancies out of range. Range: from 0 up to 100")
+            applyExams !in range -> throw StatsOutOfRangeException("Apply Exams out of range. Range: from 0 up to 100")
         }
     }
 
@@ -47,6 +50,7 @@ class SubjectStats//Range
         parcel.writeDouble(domain)
         parcel.writeDouble(complexity)
         parcel.writeDouble(fairEvaluation)
+        parcel.writeDouble(consultancies)
         parcel.writeDouble(applyExams)
         parcel.writeInt(examsCount)
     }
