@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.esielkar.calificame.databinding.FragmentGeneralStatsBinding
-import com.esielkar.calificame.model.Score
-import com.esielkar.calificame.placeholder.UniversityContent
+import com.esielkar.calificame.placeholder.AppContent
 
 class GeneralStatsFragment : Fragment() {
 
@@ -26,11 +25,11 @@ class GeneralStatsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.headerCV.title = UniversityContent.currentProfessorStats?.first?.name ?: ""
-        binding.headerCV.subtitle = UniversityContent.currentFaculty?.name
-        binding.headerCV.overline = UniversityContent.currentUniversity?.name
+        binding.headerCV.title = AppContent.currentProfessorStats?.first?.name ?: ""
+        binding.headerCV.subtitle = AppContent.currentFaculty?.name
+        binding.headerCV.overline = AppContent.currentUniversity?.name
 
-        val stats = UniversityContent.currentProfessorStats?.second?.generalStats
+        val stats = AppContent.currentProfessorStats?.second?.generalStats
 
         binding.recommendationCV.stats = stats?.first?.first?.toInt() ?: 0
         binding.complexityCV.stats = stats?.first?.second?.toInt() ?: 0

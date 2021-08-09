@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.databinding.FragmentProfessorStatsListBinding
 import com.esielkar.calificame.model.Faculty
-import com.esielkar.calificame.placeholder.UniversityContent
+import com.esielkar.calificame.placeholder.AppContent
 import com.esielkar.calificame.utils.ProfessorAndStats
 import com.esielkar.calificame.view.adapter.ProfessorsAdapter
 
@@ -40,14 +40,14 @@ class ProfessorStatsListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.headerCV.title = UniversityContent.currentUniversity?.name.toString()
-        binding.headerCV.subtitle = UniversityContent.currentFaculty?.name
+        binding.headerCV.title = AppContent.currentUniversity?.name.toString()
+        binding.headerCV.subtitle = AppContent.currentFaculty?.name
         
         val recyclerView = binding.rec
         setupRecyclerView(recyclerView, onClickListener = {
 
             //TODO: CONTENT
-            UniversityContent.currentProfessorStats = (it.tag as ProfessorAndStats)
+            AppContent.currentProfessorStats = (it.tag as ProfessorAndStats)
             it.findNavController().navigate(R.id.action_professorStatsListFragment_to_generalStatsFragment)
         })
     }
@@ -62,7 +62,7 @@ class ProfessorStatsListFragment : Fragment() {
             })
         }
 
-        recyclerView.adapter = UniversityContent.currentFaculty?.professorStats?.let {
+        recyclerView.adapter = AppContent.currentFaculty?.professorStats?.let {
             ProfessorsAdapter(it, onClickListener)
         } //TODO: CONTENT
     }

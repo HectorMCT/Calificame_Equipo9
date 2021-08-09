@@ -8,7 +8,7 @@ import com.esielkar.calificame.utils.ProfessorAndStats
  *
  * TODO: Replace all uses of this class before publishing your app.
  */
-object UniversityContent {
+object AppContent {
 
     var currentUniversity: University? = null
     var currentFaculty: Faculty? = null

@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.databinding.FragmentFacultiesListBinding
 import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.model.University
-import com.esielkar.calificame.placeholder.UniversityContent
+import com.esielkar.calificame.placeholder.AppContent
 import com.esielkar.calificame.view.adapter.FacultiesAdapter
 
 class FacultiesListFragment : Fragment() {
@@ -50,7 +49,7 @@ class FacultiesListFragment : Fragment() {
             bundle.putParcelable(ProfessorStatsListFragment.ARG_FAC, it.tag as Faculty)
 
             //TODO: CONTENT
-            UniversityContent.currentFaculty = it.tag as Faculty
+            AppContent.currentFaculty = it.tag as Faculty
             //Intent
             var intent = Intent(requireActivity(), MainActivity::class.java)
             startActivity(intent, bundle)
@@ -68,7 +67,7 @@ class FacultiesListFragment : Fragment() {
             })
         }
         //recyclerView.adapter = FacultiesAdapter(university?.faculties ?: setOf(), onClickListener) //TODO: PARCELABLE
-        recyclerView.adapter = FacultiesAdapter(UniversityContent.currentUniversity?.faculties ?: setOf(), onClickListener) //TODO: CONTENT
+        recyclerView.adapter = FacultiesAdapter(AppContent.currentUniversity?.faculties ?: setOf(), onClickListener) //TODO: CONTENT
     }
 
     override fun onDestroyView() {

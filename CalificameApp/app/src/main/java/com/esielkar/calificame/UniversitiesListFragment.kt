@@ -6,13 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.esielkar.calificame.databinding.FragmentUniversitiesListBinding
 import com.esielkar.calificame.model.University
-import com.esielkar.calificame.placeholder.UniversityContent
+import com.esielkar.calificame.placeholder.AppContent
 import com.esielkar.calificame.view.adapter.UniversitiesAdapter
 
 class UniversitiesListFragment : Fragment() {
@@ -36,7 +35,7 @@ class UniversitiesListFragment : Fragment() {
             val bundle = Bundle()
 
             bundle.putParcelable(FacultiesListFragment.ARG_UNI, it.tag as University) //TODO: Parcelable
-            UniversityContent.currentUniversity = it.tag as University //TODO: Content
+            AppContent.currentUniversity = it.tag as University //TODO: Content
 
             it.findNavController().navigate(R.id.action_universities_list_fragment_to_faculties_list_fragment, bundle)
         })
@@ -56,7 +55,7 @@ class UniversitiesListFragment : Fragment() {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter = UniversitiesAdapter(UniversityContent.universities, onClickListener)
+        recyclerView.adapter = UniversitiesAdapter(AppContent.universities, onClickListener)
     }
 
     companion object {

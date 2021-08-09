@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.esielkar.calificame.databinding.FragmentAddReviewBinding
 import com.esielkar.calificame.model.*
-import com.esielkar.calificame.placeholder.UniversityContent
+import com.esielkar.calificame.placeholder.AppContent
 
 class AddReviewFragment : Fragment() {
 
@@ -31,13 +31,13 @@ class AddReviewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.headerCV.title = UniversityContent.currentProfessorStats?.first?.name.toString() //professor
-        binding.headerCV.subtitle = UniversityContent.currentFaculty?.name  //faculty
-        binding.headerCV.overline = UniversityContent.currentUniversity?.name  //university
+        binding.headerCV.title = AppContent.currentProfessorStats?.first?.name.toString() //professor
+        binding.headerCV.subtitle = AppContent.currentFaculty?.name  //faculty
+        binding.headerCV.overline = AppContent.currentUniversity?.name  //university
 
         binding.addReviewButton.setOnClickListener {
             updateStats()
-            UniversityContent.currentProfessorStats?.second?.add(
+            AppContent.currentProfessorStats?.second?.add(
                 SubjectStats(
                     recommendation = satisfaction.getValue(),
                     clarity = clarity.getValue(),
