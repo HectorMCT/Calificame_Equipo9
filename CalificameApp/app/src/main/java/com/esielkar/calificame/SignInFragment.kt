@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.esielkar.calificame.databinding.FragmentSignInBinding
+import com.esielkar.calificame.placeholder.UsersContent
 
 class SignInFragment : Fragment() {
     private var username : String? = null
@@ -58,7 +59,8 @@ class SignInFragment : Fragment() {
 
         binding.signInButton.setOnClickListener {
             //TODO: VALIDAR SIGN IN (EL USUARIO EXISTE)
-            toUniversityFacultiesActivity()
+            if (validateData(binding.emailEditText.text.toString(), binding.passwordEditText.text.toString()))
+                toUniversityFacultiesActivity()
         }
 
         binding.skipSignInTextButton.setOnClickListener {
@@ -91,5 +93,27 @@ class SignInFragment : Fragment() {
                     putString(ARG_PASSWORD, password)
                 }
             }
+    }
+
+
+    private fun validateData(email: String, password: String): Boolean{
+        return when {
+            password.isNotBlank() && email.isNotBlank() -> {
+                var vEmail = UsersContent.validEmail(email)
+                var vUser = UsersContent.validUser(email, password)
+                if(vEmail && vUser != null) {
+                    UsersContent.currentUser = vUser
+                    true
+                }else{
+                    if(vUser == null) binding.passwordEditText.error = getString(R.string.error_password)
+                    if (!vEmail) binding.emailEditText.error = getString(R.string.error_email)
+                    false
+                }
+            }else -> {
+                binding.emailEditText.error = getString(R.string.error_noEmail)
+                binding.passwordEditText.error = getString(R.string.error_noPassword)
+                false
+            }
+        }
     }
 }

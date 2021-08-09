@@ -3,12 +3,14 @@ package com.esielkar.calificame
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.customview.widget.Openable
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
+import com.esielkar.calificame.placeholder.UsersContent
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navController = navHostFragment.navController
 
+
+
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         //findViewById<NavigationView>(R.id.nav_view).setupWithNavController(navController)
@@ -31,6 +35,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupNavigationView(navController : NavController) {
         val navView = findViewById<NavigationView>(R.id.nav_view)
+        val header = navView.getHeaderView(0)
+        header.findViewById<TextView>(R.id.header_username).text = UsersContent.currentUser?.username
+        header.findViewById<TextView>(R.id.header_email).text = UsersContent.currentUser?.email
         //NavigationUI.setupWithNavController(navView, navController)
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {

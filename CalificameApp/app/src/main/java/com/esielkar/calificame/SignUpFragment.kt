@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.esielkar.calificame.databinding.FragmentSignUpBinding
+import com.esielkar.calificame.model.User
+import com.esielkar.calificame.placeholder.UsersContent
 
 class SignUpFragment : Fragment() {
     private var username : String? = null
@@ -53,6 +55,7 @@ class SignUpFragment : Fragment() {
 
         binding.signUpButton.setOnClickListener {
             //TODO: VALIDAR SIGN UP (REGISTRAR AL USUARIO)
+            if (validateData(binding.usernameEditText.text.toString(), binding.emailEditText.text.toString(), binding.passwordEditText.text.toString()))
             toUniversityFacultiesActivity()
         }
 
@@ -85,5 +88,30 @@ class SignUpFragment : Fragment() {
                     putString(ARG_PASSWORD, password)
                 }
             }
+    }
+
+    private fun validateData(username: String, email: String, password: String): Boolean{
+        return when {
+            username.isNotBlank() && password.isNotBlank() && email.isNotBlank() -> {
+                var vUsername = UsersContent.validUsername(username)
+                var vEmail = UsersContent.validEmail(email)
+
+                if(vUsername && vEmail){
+                    UsersContent.add(User(username, email, password))
+                    UsersContent.currentUser = UsersContent.validUser(email, password)
+                    return true
+                }else{
+                    if (!vUsername) binding.usernameEditText.error = getString(R.string.error_username)
+                    if (!vEmail) binding.emailEditText.error = getString(R.string.error_email)
+                    false
+                }
+            }
+            else -> {
+                binding.usernameEditText.error = getString(R.string.error_noUsername)
+                binding.emailEditText.error = getString(R.string.error_noEmail)
+                binding.passwordEditText.error = getString(R.string.error_noPassword)
+                false
+            }
+        }
     }
 }

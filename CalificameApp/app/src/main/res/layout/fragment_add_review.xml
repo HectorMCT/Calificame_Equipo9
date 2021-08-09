@@ -10,6 +10,7 @@
     tools:context=".AddReviewFragment">
 
     <com.esielkar.calificame.view.HeaderCardView
+        android:id="@+id/headerCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="16dp"
@@ -17,10 +18,7 @@
         app:contentPaddingRight="16dp"
         app:contentPaddingLeft="16dp"
         app:contentPaddingBottom="16dp"
-        app:contentPaddingTop="16dp"
-        app:header_card_title="@string/professor_name"
-        app:header_card_subtitle="@string/faculty_name"
-        app:header_card_overline="@string/university_name"/>
+        app:contentPaddingTop="16dp" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView"
@@ -51,8 +49,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Qué tan satisfecho estás con este profesor?"/>
+                android:text="@string/question_7"/>
             <RadioGroup
+                android:id="@+id/satisfaction_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -104,8 +103,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Como consideras su dominio en las materias?"/>
+                android:text="@string/question_1"/>
             <RadioGroup
+                android:id="@+id/domain_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -183,8 +183,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Como consideras que es explicando los temas?"/>
+                android:text="@string/question_2"/>
             <RadioGroup
+                android:id="@+id/clarity_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -262,8 +263,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Qué tan complicada de pasar consideras la materia?"/>
+                android:text="@string/question_3"/>
             <RadioGroup
+                android:id="@+id/complexity_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -322,7 +324,7 @@
                     android:elevation="4dp"
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
-                    android:id="@+id/clarity_btn_very_easy"
+                    android:id="@+id/complexity_btn_very_easy"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -341,8 +343,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Ofrece asesorias?"/>
+                android:text="@string/question_4"/>
             <RadioGroup
+                android:id="@+id/consultancies_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -394,9 +397,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Es justo al calificar?"/>
+                android:text="@string/question_5"/>
 
             <RadioGroup
+                android:id="@+id/fairEvaluation_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -437,8 +441,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:text="¿Aplica examenes?"/>
+                android:text="@string/question_6"/>
             <RadioGroup
+                android:id="@+id/exams_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

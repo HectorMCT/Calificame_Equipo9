@@ -5,15 +5,27 @@ import com.esielkar.calificame.model.User
 object UsersContent {
     private val users = mutableSetOf<User>(
         User("INVITADO", "", ""),
-        User("Esiel15", "esiel_kar@hotmail.com", "123456")
+        User("Hector", "hector@calificame.com", "12345678"),
+        User("Mayra", "mayra@calificame.com", "12345678"),
+        User("Esiel", "esiel_kar@hotmail.com", "12345678"),
     )
 
+    var currentUser : User? = users.elementAt(0)
+
     fun add(user: User) = users.add(user)
-    fun getUser(email: String, password: String): User? {
-        users.forEach {
-            if (it.email == email && it.password == password)
-                return it
-        }
+
+    fun validUsername(username: String): Boolean {
+        return !users.any { it.username == username}
+    }
+
+    fun validUser(email: String, password: String): User? {
+        val usr = users.find { it.email == email }
+        if (usr?.password == password)
+            return usr
         return null
+    }
+
+    fun validEmail(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }
