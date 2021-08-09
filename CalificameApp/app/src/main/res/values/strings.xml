@@ -75,6 +75,7 @@
     <string name="subject_label">Subject</string>
     <string name="subjects_label">Subjects</string>
     <string name="general_stats_label">General Stats</string>
+    <string name="review_label">Review</string>
     <string name="stats_label">Stats</string>
 
     <string name="university_name">Benemérita Universidad Autónoma de Puebla</string>
