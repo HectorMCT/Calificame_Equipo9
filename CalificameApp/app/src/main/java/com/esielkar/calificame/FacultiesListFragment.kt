@@ -40,7 +40,7 @@ class FacultiesListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.headerCV.title = university?.name.toString()
+        binding.headerCV.title = AppContent.currentUniversity?.name.toString()
         val recyclerView = binding.facultiesList
         setupRecyclerView(recyclerView, onClickListener = {
             val bundle = Bundle()

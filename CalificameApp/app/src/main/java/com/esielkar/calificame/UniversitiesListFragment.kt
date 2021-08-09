@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.esielkar.calificame.databinding.FragmentUniversitiesListBinding
 import com.esielkar.calificame.model.University
@@ -30,7 +31,9 @@ class UniversitiesListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        if (AppContent.currentFaculty != null) {
+            findNavController().navigate(R.id.action_universities_list_fragment_to_faculties_list_fragment)
+        }
         setupRecyclerView(binding.universitiesList, onClickListener = {
             val bundle = Bundle()
 

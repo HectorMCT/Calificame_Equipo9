@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
+import com.esielkar.calificame.placeholder.AppContent
 import com.esielkar.calificame.placeholder.UsersContent
 import com.google.android.material.navigation.NavigationView
 
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.toUniversities -> {
+                    AppContent.currentFaculty = null
                     val intent = Intent(this, UniversityFacultiesActivity::class.java)
                     startActivity(intent)
                     finish()

@@ -84,8 +84,7 @@
                         android:layout_gravity="center"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
-                        app:withSubtitle="true"
-                        app:subtitleTextColor="@color/light_blue"/>
+                        app:withSubtitle="true" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -102,10 +101,7 @@
                     android:layout_marginHorizontal="8dp"
                     android:layout_gravity="center"
                     app:cardCornerRadius="16dp"
-                    app:cardElevation="16dp"
-                    app:subtitle="100%"
-                    app:stats="100"
-                    app:subtitleTextColor="@color/light_blue"/>
+                    app:cardElevation="16dp" />
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -121,10 +117,7 @@
                         android:layout_gravity="center"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
-                        app:title="Consultancies"
-                        app:withSubtitle="true"
-                        app:subtitle="Excelente"
-                        app:subtitleTextColor="@color/light_blue"/>
+                        app:withSubtitle="true"/>
                     <com.esielkar.calificame.view.FairEvaluationStatsCardView
                         android:id="@+id/fairEvaluationCV"
                         android:layout_width="match_parent"
@@ -135,10 +128,7 @@
                         android:layout_gravity="center"
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
-                        app:title="Fair evaluation"
-                        app:withSubtitle="true"
-                        app:subtitle="Excelente"
-                        app:subtitleTextColor="@color/light_blue"/>
+                        app:withSubtitle="true"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

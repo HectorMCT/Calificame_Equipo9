@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.esielkar.calificame.databinding.FragmentAddReviewBinding
 import com.esielkar.calificame.model.*
 import com.esielkar.calificame.placeholder.AppContent
@@ -50,6 +53,8 @@ class AddReviewFragment : Fragment() {
                     facility = (satisfaction.getValue() + clarity.getValue() + domain.getValue()) / 3
                 ), Subject("Prueba")
             )
+            Toast.makeText(context, "Stats successfully added", Toast.LENGTH_LONG).show()
+            it.findNavController().popBackStack()
         }
 
     }
