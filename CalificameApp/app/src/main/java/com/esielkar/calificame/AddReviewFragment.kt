@@ -24,33 +24,6 @@ class AddReviewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.satisfactionSpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.satisfaction)
-        )
-
-        binding.domainSpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.score)
-        )
-
-        binding.claritySpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.score)
-        )
-
-        binding.complexitySpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.difficulty)
-        )
-
-        binding.consultanciesSpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.frecuency)
-        )
-
-        binding.fairEvaluationSpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.frecuency)
-        )
-
-        binding.examsSpinner.adapter = ArrayAdapter(requireContext(), R.layout.support_simple_spinner_dropdown_item,
-            resources.getStringArray(R.array.YesNo)
-        )
 
         binding.addReviewButton.setOnClickListener {
             //TODO: ADD REVIEW

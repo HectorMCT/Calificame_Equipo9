@@ -106,37 +106,55 @@
 
 
     <!--ENUMS-->
+    <string name="difficulty_very_easy">Very easy</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_regular">Regular</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_very_hard">Very hard</string>
     <string-array name="difficulty">
-        <item>Very easy</item>
-        <item>Easy</item>
-        <item>Regular</item>
-        <item>Hard</item>
-        <item>Very Hard</item>
+        <item>@string/difficulty_very_easy</item>
+        <item>@string/difficulty_easy</item>
+        <item>@string/difficulty_regular</item>
+        <item>@string/difficulty_hard</item>
+        <item>@string/difficulty_very_hard</item>
     </string-array>
 
+    <string name="frecuency_always">Always</string>
+    <string name="frecuency_sometimes">Sometimes</string>
+    <string name="frecuency_never">Never</string>
     <string-array name="frecuency">
-        <item>Always</item>
-        <item>Sometimes</item>
-        <item>Never</item>
+        <item>@string/frecuency_always</item>
+        <item>@string/frecuency_sometimes</item>
+        <item>@string/frecuency_never</item>
     </string-array>
 
+    <string name="score_excellent">Excellent</string>
+    <string name="score_good">Good</string>
+    <string name="score_regular">Regular</string>
+    <string name="score_bad">Bad</string>
+    <string name="score_terrible">Terrible</string>
     <string-array name="score">
-        <item>Excellent</item>
-        <item>Good</item>
-        <item>Regular</item>
-        <item>Bad</item>
-        <item>Terrible</item>
+        <item>@string/score_excellent</item>
+        <item>@string/score_good</item>
+        <item>@string/score_regular</item>
+        <item>@string/score_bad</item>
+        <item>@string/score_terrible</item>
     </string-array>
 
+    <string name="satisfaction_satisfied">Satisfied</string>
+    <string name="satisfaction_half_satisfied">Half satisfied</string>
+    <string name="satisfaction_dissatisfied">Dissatisfied</string>
     <string-array name="satisfaction">
-        <item>Satisfied</item>
-        <item>Half satisfied</item>
-        <item>Dissatified</item>
+        <item>@string/satisfaction_satisfied</item>
+        <item>@string/satisfaction_half_satisfied</item>
+        <item>@string/satisfaction_dissatisfied</item>
     </string-array>
 
+    <string name="yesNo_yes">Yes</string>
+    <string name="yesNo_no">No</string>
     <string-array name="YesNo">
-        <item>Yes</item>
-        <item>No</item>
+        <item>@string/yesNo_yes</item>
+        <item>@string/yesNo_no</item>
     </string-array>
 
 </resources>

@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.19427083333333334" />
+        <entry key="app/src/main/res/drawable/radio_normal.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/radio_selected.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/radio_selector.xml" value="0.321025641025641" />
+        <entry key="app/src/main/res/drawable/text_color.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13360507246376813" />
         <entry key="app/src/main/res/layout/activity_password_forgotten.xml" value="5.189655386648678" />
