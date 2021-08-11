@@ -69,6 +69,20 @@ object AppContent {
 
                         )
                     ),
+                    Professor("Pedro Bello Lopez") to ProfessorStats(
+                        subjectStats = mapOf(
+                            subject to listOf(
+                                SubjectStats(70.0, 60.0, 10.0, 20.0, 100.0, 50.0, 100.0, 100.0),
+                                SubjectStats(60.0, 50.0, 10.0, 20.0, 100.0, 50.0, 100.0, 100.0),
+                            )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, excelente profesoro. Siempre dispuesto ayudar", 50.0),
+                            )
+
+                        )
+                    ),
                     Professor("Meliza Contreras Gonzales") to ProfessorStats(
                         subjectStats = mapOf(
                             subject to listOf(
@@ -102,20 +116,6 @@ object AppContent {
                                 Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
                                 Review(UsersContent.users.elementAt(2), "Siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
                                 Review(UsersContent.users.elementAt(3), "Muy buenas clases, siempre ayuda cuando se lo pides", 90.0)
-                            )
-
-                        )
-                    ),
-                    Professor("Pedro Bello Lopez") to ProfessorStats(
-                        subjectStats = mapOf(
-                            subject to listOf(
-                                SubjectStats(100.0, 95.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0),
-                                SubjectStats(100.0, 80.0, 90.0, 100.0, 100.0, 100.0, 100.0, 100.0),
-                            )
-                        ),
-                        reviews = mapOf(
-                            subject to listOf(
-                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, excelente profesoro. Siempre dispuesto ayudar", 90.0),
                             )
 
                         )
