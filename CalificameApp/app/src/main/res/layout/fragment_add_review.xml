@@ -113,7 +113,7 @@
                 android:checkedButton="@id/domain_btn_excellent">
                 <RadioButton
                     android:id="@+id/domain_btn_excellent"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1.1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_excellent"
@@ -126,7 +126,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/domain_btn_good"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_good"
@@ -139,7 +139,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/domain_btn_regular"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_regular"
@@ -152,7 +152,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/domain_btn_bad"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_bad"
@@ -165,7 +165,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/domain_btn_terrible"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_terrible"
@@ -193,7 +193,7 @@
                 android:checkedButton="@id/clarity_btn_excellent">
                 <RadioButton
                     android:id="@+id/clarity_btn_excellent"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1.1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_excellent"
@@ -206,7 +206,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/clarity_btn_good"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_good"
@@ -219,7 +219,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/clarity_btn_regular"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_regular"
@@ -232,7 +232,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/clarity_btn_bad"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_bad"
@@ -245,7 +245,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/clarity_btn_terrible"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/score_terrible"
@@ -273,7 +273,7 @@
                 android:checkedButton="@id/complexity_btn_very_hard">
                 <RadioButton
                     android:id="@+id/complexity_btn_very_hard"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/difficulty_very_hard"
@@ -286,7 +286,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/complexity_btn_hard"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/difficulty_hard"
@@ -299,7 +299,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/complexity_btn_regular"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:textAlignment="center"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/complexity_btn_easy"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/difficulty_easy"
@@ -325,7 +325,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/complexity_btn_very_easy"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/difficulty_very_easy"
@@ -409,7 +409,7 @@
                 android:checkedButton="@id/fairEvaluation_btn_yes">
                 <RadioButton
                     android:id="@+id/fairEvaluation_btn_yes"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/yesNo_yes"
@@ -422,7 +422,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/fairEvaluation_btn_no"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/yesNo_no"
@@ -452,7 +452,7 @@
                 android:checkedButton="@id/exams_btn_yes">
                 <RadioButton
                     android:id="@+id/exams_btn_yes"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/yesNo_yes"
@@ -465,7 +465,7 @@
                     android:layout_marginHorizontal="4dp"/>
                 <RadioButton
                     android:id="@+id/exams_btn_no"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/yesNo_no"
