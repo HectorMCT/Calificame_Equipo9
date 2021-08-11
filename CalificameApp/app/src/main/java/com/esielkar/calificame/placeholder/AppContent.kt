@@ -23,7 +23,12 @@ object AppContent {
                     Professor("Hilda Castillo Zacatelco") to ProfessorStats(
                         subjectStats = mapOf(
                             subject to listOf(
-                                SubjectStats(100.0, 90.0, 80.0, 70.0, 60.0, 50.0, 40.0, 30.0, 1)
+                                SubjectStats(100.0, 95.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 80.0, 90.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 100.0, 90.0, 100.0, 90.0, 50.0, 100.0),
+                                SubjectStats(90.0, 90.0, 100.0, 100.0, 100.0, 90.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 90.0, 90.0, 100.0, 100.0, 50.0, 100.0),
+                                SubjectStats(80.0, 80.0, 80.0, 100.0, 100.0, 100.0, 100.0, 100.0)
                             )
                         ),
                         reviews = mapOf(
@@ -31,16 +36,111 @@ object AppContent {
                                 Review(UsersContent.users.elementAt(1), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
                                 Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
                                 Review(UsersContent.users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
-                                Review(UsersContent.users.elementAt(0), "Buenas clases, profesora", 90.0),
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0)
                             )
 
                         )
                     ),
-                    Professor("Ana Patricia Cervantes Marquez") to ProfessorStats(),
-                    Professor("Meliza Contreras Gonzales") to ProfessorStats(),
-                    Professor("Ivan Olmos Pineda") to ProfessorStats(),
-                    Professor("Pedro Bello Lopez") to ProfessorStats(),
-                    Professor("Beatriz Beltran Martinez") to ProfessorStats()
+                    Professor("Ana Patricia Cervantes Marquez") to ProfessorStats(
+                        subjectStats = mapOf(
+                            subject to listOf(
+                                SubjectStats(100.0, 95.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 80.0, 90.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 100.0, 90.0, 100.0, 90.0, 50.0, 100.0),
+                                SubjectStats(90.0, 90.0, 100.0, 100.0, 100.0, 90.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 90.0, 90.0, 100.0, 100.0, 50.0, 100.0),
+                                SubjectStats(80.0, 80.0, 80.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 100.0, 90.0, 100.0, 90.0, 50.0, 100.0),
+                                SubjectStats(90.0, 90.0, 100.0, 100.0, 100.0, 90.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 90.0, 90.0, 100.0, 100.0, 50.0, 100.0),
+                                SubjectStats(80.0, 80.0, 80.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+
+                            )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(1), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
+                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(UsersContent.users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0),
+                                Review(UsersContent.users.elementAt(0), "Excelentes clases, profesora exigente, pero muy buena", 100.0),
+                                Review(UsersContent.users.elementAt(0), "La mejor profesora para aprender a programar", 100.0),
+                            )
+
+                        )
+                    ),
+                    Professor("Meliza Contreras Gonzales") to ProfessorStats(
+                        subjectStats = mapOf(
+                            subject to listOf(
+
+                                SubjectStats(100.0, 100.0, 90.0, 90.0, 100.0, 100.0, 50.0, 100.0),
+                                SubjectStats(80.0, 80.0, 80.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+                            )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 70.0),
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 80.0)
+                            )
+
+                        )
+                    ),
+                    Professor("Ivan Olmos Pineda") to ProfessorStats(
+                        subjectStats = mapOf(
+                            subject to listOf(
+                                SubjectStats(100.0, 95.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 80.0, 90.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 100.0, 90.0, 100.0, 90.0, 50.0, 100.0),
+                                SubjectStats(90.0, 90.0, 100.0, 100.0, 100.0, 90.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 90.0, 90.0, 100.0, 100.0, 50.0, 100.0),
+                                SubjectStats(80.0, 80.0, 80.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+                            )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(1), "Muy buenas clases, excelente profesor. Siempre dispuesto ayudar", 90.0),
+                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(UsersContent.users.elementAt(2), "Siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, siempre ayuda cuando se lo pides", 90.0)
+                            )
+
+                        )
+                    ),
+                    Professor("Pedro Bello Lopez") to ProfessorStats(
+                        subjectStats = mapOf(
+                            subject to listOf(
+                                SubjectStats(100.0, 95.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 80.0, 90.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                            )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, excelente profesoro. Siempre dispuesto ayudar", 90.0),
+                            )
+
+                        )
+                    ),
+                    Professor("Beatriz Beltran Martinez") to ProfessorStats(
+                        subjectStats = mapOf(
+                            subject to listOf(
+                                SubjectStats(100.0, 95.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 80.0, 90.0, 100.0, 100.0, 100.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 100.0, 90.0, 100.0, 90.0, 50.0, 100.0),
+                                SubjectStats(90.0, 90.0, 100.0, 100.0, 100.0, 90.0, 100.0, 100.0),
+                                SubjectStats(100.0, 100.0, 90.0, 90.0, 100.0, 100.0, 50.0, 100.0),
+                                SubjectStats(80.0, 80.0, 80.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+                            )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(1), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
+                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(UsersContent.users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0)
+                            )
+
+                        )
+                    )
                 )
             ),
             Faculty("Facultad de Derecho y Ciencias Sociales",

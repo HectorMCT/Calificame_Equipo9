@@ -75,7 +75,7 @@
     <string name="subjects_label">Materias</string>
     <string name="general_stats_label">Estadísticas Generales</string>
     <string name="review_label">Review</string>
-    <string name="stats_label">Estadísticas</string>
+    <string name="stats_label">"Estad."</string>
     <string name="reviews_label">Reviews</string>
 
     <string name="professor_name">Hilda Castillo Zacatelco</string>
