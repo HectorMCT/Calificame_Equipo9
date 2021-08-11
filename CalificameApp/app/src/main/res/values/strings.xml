@@ -174,14 +174,4 @@
         <item>@string/yesNo_yes</item>
         <item>@string/yesNo_no</item>
     </string-array>
-
-    <!-- Prueba -->
-    <string name="error_Password">Contraseña Incorrecta</string>
-    <string name="error_noPassword">Ingrese su contraseña</string>
-    <string name="error_Email">Correo invalido</string>
-    <string name="error_noEmail">Ingrese su correo</string>
-    <string name="error_Username">Usuario invalido</string>
-    <string name="error_noUsername">Ingrese un usuario</string>
-
-
 </resources>
