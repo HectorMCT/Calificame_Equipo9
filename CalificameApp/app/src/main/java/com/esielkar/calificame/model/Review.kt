@@ -1,5 +1,7 @@
 package com.esielkar.calificame.model
 
+import android.os.Parcel
+import android.os.Parcelable
 import java.util.Date
 
 /**
@@ -15,4 +17,29 @@ data class Review (
     val comment : String,
     val satisfaction : Double,
     private val date : Date = Date()
-)
+): Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readParcelable(User::class.java.classLoader)!!,
+        parcel.readString()!!,
+        parcel.readDouble(),
+        parcel.readSerializable() as Date)
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeParcelable(user, flags)
+        parcel.writeString(comment)
+        parcel.writeDouble(satisfaction)
+        parcel.writeSerializable(date)
+    }
+
+    override fun describeContents(): Int = 0
+
+    companion object CREATOR : Parcelable.Creator<Review> {
+        override fun createFromParcel(parcel: Parcel): Review {
+            return Review(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Review?> {
+            return arrayOfNulls(size)
+        }
+    }
+}

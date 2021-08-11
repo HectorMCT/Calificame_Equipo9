@@ -1,7 +1,7 @@
 <resources>
     <declare-styleable name="StatsCardView">
         <attr name="title" format="string"/>
-        <attr name="subtitle" format="string"/>
-        <attr name="subtitleTextColor" format="color"/>
+        <attr name="withSubtitle" format="boolean"/>
+        <attr name="stats" format="integer"/>
     </declare-styleable>
 </resources>

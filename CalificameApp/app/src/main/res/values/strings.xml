@@ -27,10 +27,12 @@
 
     <!-- Buttons -->
     <string name="forgot_password_text_button">Forgot Password</string>
-    <string name="skip_sign_in_text_button">Skip Login</string>
+    <string name="skip_sign_in_text_button">Skip Sign In</string>
     <string name="skip_sign_up_text_button">Skip Sign Up</string>
     <string name="cancel_label">Cancel</string>
     <string name="send_label">Send</string>
+    <string name="add_review">Add review</string>
+
 
     <!-- Version -->
     <string name="version">Versión 1.0</string>
@@ -42,7 +44,7 @@
 
     <string name="drawer_home">Home</string>
     <string name="drawer_change_university">Change University</string>
-    <string name="drawer_change_faculty">Change University</string>
+    <string name="drawer_change_faculty">Change Faculty</string>
 
     <string name="drawer_help">Help</string>
     <string name="drawer_about_us">About Us</string>
@@ -65,13 +67,15 @@
 
     <!-- Prueba -->
     <string name="university_label">University</string>
-    <string name="teachers_label">Professors</string>
+    <string name="professor_label">Professors</string>
+    <string name="professors_label">Professors</string>
     <string name="universities_label">Universities</string>
     <string name="faculty_label">Faculty</string>
     <string name="faculties_label">Faculties</string>
     <string name="subject_label">Subject</string>
     <string name="subjects_label">Subjects</string>
     <string name="general_stats_label">General Stats</string>
+    <string name="review_label">Review</string>
     <string name="stats_label">Stats</string>
 
     <string name="university_name">Benemérita Universidad Autónoma de Puebla</string>
@@ -82,7 +86,7 @@
     <string name="university_name6">Universidad Autónoma de Nuevo León</string>
     <string name="university_name7">Universidad Autónoma de Guadalajara</string>
     <string name="university_name8">Universidad Autónoma de Sinaloa</string>
-    <string name="university_name9">Colegia de México</string>
+    <string name="university_name9">Colegio de México</string>
     <string name="teacher_name">Luis David Ayala López</string>
     <string name="faculty_name">Facultad de Ciencias de la Computación</string>
     <string name="faculty_name2">Facultad de Derecho y Ciencias Sociales</string>
@@ -98,6 +102,78 @@
     <string name="signature_name7">Sistemas Operativos II</string>
     <string name="signature_name8">Graficación</string>
     <string name="signature_name9">Desarrollo de Aplicaciones Móviles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Ingreso/Registro Mensajes -->
+    <string name="error_password">Contraseña Incorrecta</string>
+    <string name="error_noPassword">Ingrese su contraseña</string>
+    <string name="error_email">Correo invalido</string>
+    <string name="error_noEmail">Ingrese su correo</string>
+    <string name="error_username">Usuario invalido</string>
+    <string name="error_noUsername">Ingrese un usuario</string>
+
+    <!-- Stats Questions-->
+    <string name="question_1">¿Cómo consideras su dominio en la materia?</string>
+    <string name="question_2">¿Cómo consideras que es explicando los temas?</string>
+    <string name="question_3">¿Qué tan complicada crees que fue pasar la materia?</string>
+    <string name="question_4">¿Ofrece acesorías?</string>
+    <string name="question_5">¿Cumple con las rubricas de evaluación?</string>
+    <string name="question_6">¿Aplica examenes?</string>
+    <string name="question_7">¿Qué tan satisfecho estas con este profesor?</string>
+
+    <!--ENUMS-->
+    <string name="difficulty_very_easy">Very easy</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_regular">Regular</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="difficulty_very_hard">Very hard</string>
+    <string-array name="difficulty">
+        <item>@string/difficulty_very_easy</item>
+        <item>@string/difficulty_easy</item>
+        <item>@string/difficulty_regular</item>
+        <item>@string/difficulty_hard</item>
+        <item>@string/difficulty_very_hard</item>
+    </string-array>
+
+    <string name="frecuency_always">Always</string>
+    <string name="frecuency_sometimes">Sometimes</string>
+    <string name="frecuency_never">Never</string>
+    <string-array name="frecuency">
+        <item>@string/frecuency_always</item>
+        <item>@string/frecuency_sometimes</item>
+        <item>@string/frecuency_never</item>
+    </string-array>
+
+    <string name="score_excellent">Excellent</string>
+    <string name="score_good">Good</string>
+    <string name="score_regular">Regular</string>
+    <string name="score_bad">Bad</string>
+    <string name="score_terrible">Terrible</string>
+    <string-array name="score">
+        <item>@string/score_excellent</item>
+        <item>@string/score_good</item>
+        <item>@string/score_regular</item>
+        <item>@string/score_bad</item>
+        <item>@string/score_terrible</item>
+    </string-array>
+
+    <string name="satisfaction_satisfied">Satisfied</string>
+    <string name="satisfaction_half_satisfied">Half satisfied</string>
+    <string name="satisfaction_dissatisfied">Dissatisfied</string>
+    <string-array name="satisfaction">
+        <item>@string/satisfaction_satisfied</item>
+        <item>@string/satisfaction_half_satisfied</item>
+        <item>@string/satisfaction_dissatisfied</item>
+    </string-array>
+
+    <string name="yesNo_yes">Yes</string>
+    <string name="yesNo_no">No</string>
+    <string-array name="YesNo">
+        <item>@string/yesNo_yes</item>
+        <item>@string/yesNo_no</item>
+    </string-array>
 
     <!-- Prueba -->
     <string name="error_Password">Contraseña Incorrecta</string>

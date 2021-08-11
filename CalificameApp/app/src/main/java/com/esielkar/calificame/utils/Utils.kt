@@ -2,6 +2,7 @@ package com.esielkar.calificame.utils
 
 import android.content.Context
 import com.esielkar.calificame.model.Professor
+import com.esielkar.calificame.model.ProfessorStats
 import com.esielkar.calificame.model.Subject
 
 /**
@@ -23,6 +24,14 @@ typealias ProfessorWithInfo = Triple<Professor, Int, Int>
  * second: reviews count
  */
 typealias StatsAndReviews = Pair<Int, Int>
+
+/**
+ * first: professor
+ * second:  professor stats
+ */
+typealias ProfessorAndStats = Pair<Professor, ProfessorStats>
+
+typealias StatsWrapper = Pair<Triple<Double, Double, Double>, Triple<Double, Double, Double>>
 
 class Utils {
     companion object{
