@@ -39,6 +39,10 @@ class GeneralStatsFragment : Fragment() {
         binding.consultanciesCV.stats = stats?.second?.second?.toInt() ?: 0
         binding.fairEvaluationCV.stats = stats?.second?.third?.toInt() ?: 0
 
+        binding.viewReviewButton.setOnClickListener {
+            it.findNavController().navigate(R.id.action_addReviewFragment_to_reviewsListFragment)
+        }
+
         binding.addReviewButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_generalStatsFragment_to_addReviewFragment)
         }

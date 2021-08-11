@@ -133,9 +133,9 @@ open abstract class StatsCardView @JvmOverloads constructor(
 
     private fun textColor(value : Int) {
         when (value) {
-            in 1..25 -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.light_yellow, null))
-            in 26..50 -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.light_orange, null))
-            in 51..75 -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.light_blue, null))
+            in 1..25 -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.red, null))
+            in 26..50 -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.pink_500, null))
+            in 51..75 -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.blue_500, null))
             else -> _statsText?.setTextColor(ResourcesCompat.getColor(resources, R.color.light_green, null))
         }
     }

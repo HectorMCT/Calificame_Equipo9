@@ -10,9 +10,11 @@ import com.esielkar.calificame.utils.ProfessorAndStats
  */
 object AppContent {
 
+
     var currentUniversity: University? = null
     var currentFaculty: Faculty? = null
     var currentProfessorStats : ProfessorAndStats? = null
+    val subject = Subject("GENERAL")
 
     private val _universities = mutableSetOf(
         University("Benemérita Universidad Autónoma de Puebla", setOf(
@@ -20,9 +22,18 @@ object AppContent {
                 mapOf(
                     Professor("Hilda Castillo Zacatelco") to ProfessorStats(
                         subjectStats = mapOf(
-                            Subject("Programación I") to listOf(
+                            subject to listOf(
                                 SubjectStats(100.0, 90.0, 80.0, 70.0, 60.0, 50.0, 40.0, 30.0, 1)
                             )
+                        ),
+                        reviews = mapOf(
+                            subject to listOf(
+                                Review(UsersContent.users.elementAt(1), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
+                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(UsersContent.users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(UsersContent.users.elementAt(0), "Buenas clases, profesora", 90.0),
+                            )
+
                         )
                     ),
                     Professor("Ana Patricia Cervantes Marquez") to ProfessorStats(),

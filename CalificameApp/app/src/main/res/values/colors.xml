@@ -12,7 +12,7 @@
     <color name="transparent">#00000000</color>
     <color name="light_gray">#FFD3D3D3</color>
     <color name="light_green">#FF90EE90</color>
-    <color name="light_yellow">#FFFFFCBB</color>
-    <color name="light_orange">#FFF6CD8B</color>
+    <color name="light_yellow">#FFFFE161</color>
+    <color name="light_orange">#FFDD7538</color>
     <color name="red">#FFA91B0D</color>
 </resources>

@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.esielkar.calificame.databinding.FragmentAddReviewBinding
 import com.esielkar.calificame.model.*
 import com.esielkar.calificame.placeholder.AppContent
+import com.esielkar.calificame.placeholder.UsersContent
 
 class AddReviewFragment : Fragment() {
 
@@ -51,8 +52,18 @@ class AddReviewFragment : Fragment() {
                     applyExams = exams.getValue(),
                     examsCount = 0,
                     facility = (satisfaction.getValue() + clarity.getValue() + domain.getValue()) / 3
-                ), Subject("Prueba")
+                ), AppContent.subject
             )
+            if (binding.comments.text.toString().isNotBlank()){
+                AppContent.currentProfessorStats?.second?.add(
+                    Review(
+                        user = UsersContent.currentUser!!,
+                        comment = binding.comments.text.toString(),
+                        satisfaction = satisfaction.getValue()
+                    ), AppContent.subject
+                )
+            }
+
             Toast.makeText(context, "Stats successfully added", Toast.LENGTH_LONG).show()
             it.findNavController().popBackStack()
         }
@@ -73,11 +84,11 @@ class AddReviewFragment : Fragment() {
             else -> Score.TERRIBLE
         }
 
-        clarity = when (binding.domainGroup.checkedRadioButtonId) {
-            R.id.domain_btn_excellent -> Score.EXCELLENT
-            R.id.domain_btn_good -> Score.GOOD
-            R.id.domain_btn_regular -> Score.REGULAR
-            R.id.domain_btn_bad -> Score.BAD
+        clarity = when (binding.clarityGroup.checkedRadioButtonId) {
+            R.id.clarity_btn_excellent -> Score.EXCELLENT
+            R.id.clarity_btn_good -> Score.GOOD
+            R.id.clarity_btn_regular -> Score.REGULAR
+            R.id.clarity_btn_bad -> Score.BAD
             else -> Score.TERRIBLE
         }
 

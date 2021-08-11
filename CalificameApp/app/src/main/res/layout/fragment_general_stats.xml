@@ -28,13 +28,29 @@
         android:text="@string/general_stats_label"
         android:textSize="24sp"
         android:textStyle="bold" />
-
-    <Button
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:id="@+id/add_review_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_review"/>
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginHorizontal="4dp"
+            android:id="@+id/view_review_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/view_review"/>
+
+        <Button
+            android:layout_marginHorizontal="4dp"
+            android:id="@+id/add_review_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/add_review"/>
+    </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,12 +61,13 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-
+                android:layout_height="200dp"
                 android:layout_marginVertical="8dp"
                 android:orientation="horizontal">
+
                 <com.esielkar.calificame.view.RecommendationStatsCardView
                     android:id="@+id/recommendationCV"
+                    android:layout_marginVertical="8dp"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="match_parent"
@@ -64,6 +81,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <com.esielkar.calificame.view.ComplexityStatsCardView
+                        android:layout_marginTop="8dp"
                         android:id="@+id/complexityCV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -75,6 +93,7 @@
                         app:cardElevation="16dp"
                         app:withSubtitle="true" />
                     <com.esielkar.calificame.view.ClarityStatsCardView
+                        android:layout_marginBottom="8dp"
                         android:id="@+id/clarityCV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -90,11 +109,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="200dp"
                 android:layout_marginVertical="8dp"
                 android:orientation="horizontal">
                 <com.esielkar.calificame.view.DomainStatsCardView
                     android:id="@+id/domainCV"
+                    android:layout_marginVertical="8dp"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="match_parent"
@@ -109,6 +129,7 @@
                     android:orientation="vertical">
                     <com.esielkar.calificame.view.ConsultanciesStatsCardView
                         android:id="@+id/consultanciesCV"
+                        android:layout_marginTop="8dp"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
@@ -120,6 +141,7 @@
                         app:withSubtitle="true"/>
                     <com.esielkar.calificame.view.FairEvaluationStatsCardView
                         android:id="@+id/fairEvaluationCV"
+                        android:layout_marginBottom="8dp"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_marginVertical="4dp"

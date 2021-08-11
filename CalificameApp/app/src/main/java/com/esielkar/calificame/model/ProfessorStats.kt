@@ -83,7 +83,7 @@ class ProfessorStats(
     fun add(review: Review, to : Subject) = _reviews[to]?.add(review) ?: _reviews.put(to, mutableListOf(review))
     fun add(stats: SubjectStats, to : Subject) = _subjectStats[to]?.add(stats) ?: _subjectStats.put(to, mutableListOf(stats))
 
-    fun getSubjectsWithStatsAndReviewsCounts() = signatures.map {
+    private fun getSubjectsWithStatsAndReviewsCounts() = signatures.map {
         SubjectWithInfo(
             it,
             getStats(of = it)?.size ?: 0,

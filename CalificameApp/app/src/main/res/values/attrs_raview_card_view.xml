@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ReviewCardView">
+        <attr name="review_percentage" format="integer"/>
+        <attr name="review_username" format="string"/>
+        <attr name="review_comment" format="string"/>
+    </declare-styleable>
+</resources>

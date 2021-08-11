@@ -31,6 +31,7 @@
     <string name="skip_sign_up_text_button">Skip Sign Up</string>
     <string name="cancel_label">Cancel</string>
     <string name="send_label">Send</string>
+    <string name="view_review">View reviews</string>
     <string name="add_review">Add review</string>
 
 
@@ -54,6 +55,7 @@
     <string name="welcome">Welcome to Califícame!</string>
     <string name="select_teacher">Teachers</string>
     <string name="not_defined_label">Not defined</string>
+    <string name="no_comment_label">No comments</string>
     <string name="select_signature">Select signature:</string>
     <string name="select_university">Select university:</string>
     <string name="select_professor">Select professor:</string>
@@ -77,21 +79,8 @@
     <string name="general_stats_label">General Stats</string>
     <string name="review_label">Review</string>
     <string name="stats_label">Stats</string>
+    <string name="reviews_label">Reviews</string>
 
-    <string name="university_name">Benemérita Universidad Autónoma de Puebla</string>
-    <string name="university_name2">Universidad Autónoma de México</string>
-    <string name="university_name3">Universidad Autónoma de Guerrero</string>
-    <string name="university_name4">Instituto Politécnico Nacional</string>
-    <string name="university_name5">Universidad Autónoma de Oaxaca</string>
-    <string name="university_name6">Universidad Autónoma de Nuevo León</string>
-    <string name="university_name7">Universidad Autónoma de Guadalajara</string>
-    <string name="university_name8">Universidad Autónoma de Sinaloa</string>
-    <string name="university_name9">Colegio de México</string>
-    <string name="teacher_name">Luis David Ayala López</string>
-    <string name="faculty_name">Facultad de Ciencias de la Computación</string>
-    <string name="faculty_name2">Facultad de Derecho y Ciencias Sociales</string>
-    <string name="faculty_name3">Facultad de Cultura Física</string>
-    <string name="faculty_name4">Facultad de Psicología</string>
     <string name="professor_name">Hilda Castillo Zacatelco</string>
     <string name="signature_name">Programación</string>
     <string name="signature_name2">Programación II</string>

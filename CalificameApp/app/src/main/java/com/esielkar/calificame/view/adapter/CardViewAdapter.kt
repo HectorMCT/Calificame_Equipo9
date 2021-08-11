@@ -2,6 +2,9 @@ package com.esielkar.calificame.view.adapter
 
 import android.os.Build
 import android.view.View
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.core.view.updateLayoutParams
 import com.esielkar.calificame.R
 import com.esielkar.calificame.utils.Utils
 import com.google.android.material.card.MaterialCardView
