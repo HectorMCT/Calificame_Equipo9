@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Califícame!</string>
+
+    <!-- Hints -->
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="search_hint">Buscar</string>
+
+    <!-- Labels -->
+    <string name="login_title_label">Bienvenido de vuelta!</string>
+    <string name="sign_up_title_label">Crea una cuenta</string>
+    <string name="account_exists_label">Ya tienes una cuenta?</string>
+    <string name="account_does_not_exist_label">¿No tienes una cuenta?</string>
+    <string name="sign_in_label">Iniciar Sesión</string>
+    <string name="sign_up_label">Registrarse</string>
+    <string name="about_us_label">Acerca de nosotros</string>
+    <string name="forgot_password_label">Olvidaste tu contraseña</string>
+    <string name="registered_reviews">Reviews registradas: %d</string>
+    <string name="registered_stats">Estadisticas registradas: %d</string>
+    <string name="progress_percentage">%d %s</string>
+    <string name="registered_professors">Profesores registrados: %d</string>
+
+    <!-- Texts -->
+    <string name="about_us_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="recov_pass">Escribe tu correo electronico y te enviaremos un link para que recuperes tu cuenta.</string>
+
+    <!-- Buttons -->
+    <string name="forgot_password_text_button">Olvide mi contraseña</string>
+    <string name="skip_sign_in_text_button">Saltar inicio de sesión</string>
+    <string name="skip_sign_up_text_button">Saltar registro</string>
+    <string name="cancel_label">Cancelar</string>
+    <string name="send_label">Enviar</string>
+    <string name="view_review">Ver reviews</string>
+    <string name="add_review">Añadir review</string>
+
+
+    <!-- Version -->
+    <string name="version">Versión 1.0</string>
+
+    <!-- Drawer -->
+    <!-- Header -->
+    <string name="drawer_header_title">Nombre de usuario</string>
+    <string name="drawer_header_subtitle">Correo electronico</string>
+
+    <string name="drawer_home">Home</string>
+    <string name="drawer_change_university">Cambiar universidad</string>
+    <string name="drawer_change_faculty">Cambiar facultad</string>
+
+    <string name="drawer_help">Ayuda</string>
+    <string name="drawer_about_us">Acerca de nosotros</string>
+    <string name="drawer_sign_out">Cerrar sesión</string>
+
+    <!-- More -->
+    <string name="welcome">Bienvenido a Califícame!</string>
+    <string name="select_teacher">Profesores</string>
+    <string name="not_defined_label">No definido</string>
+    <string name="no_comment_label">Sin comentario</string>
+    <string name="select_signature">Selecciona una materia:</string>
+    <string name="select_university">Selecciona una universidad:</string>
+    <string name="select_professor">Selecciona un profesor:</string>
+    <string name="select_faculty">Selecciona una facultad:</string>
+    <string name="faculties">Facultades</string>
+
+
+    <!-- Prueba -->
+    <string name="university_label">Universidad</string>
+    <string name="professor_label">Profesor</string>
+    <string name="professors_label">Profesores</string>
+    <string name="universities_label">Universidades</string>
+    <string name="faculty_label">Facultad</string>
+    <string name="faculties_label">Facultadess</string>
+    <string name="subject_label">Materia</string>
+    <string name="subjects_label">Materias</string>
+    <string name="general_stats_label">Estadísticas Generales</string>
+    <string name="review_label">Review</string>
+    <string name="stats_label">Estadísticas</string>
+    <string name="reviews_label">Reviews</string>
+
+    <string name="professor_name">Hilda Castillo Zacatelco</string>
+    <string name="signature_name">Programación</string>
+    <string name="signature_name2">Programación II</string>
+    <string name="signature_name3">Sistemas Operativos I</string>
+    <string name="signature_name4">Matemáticas</string>
+    <string name="signature_name5">Álgebra Superior</string>
+    <string name="signature_name6">Redes Inalámbrica</string>
+    <string name="signature_name7">Sistemas Operativos II</string>
+    <string name="signature_name8">Graficación</string>
+    <string name="signature_name9">Desarrollo de Aplicaciones Móviles</string>
+
+
+    <!-- Ingreso/Registro Mensajes -->
+    <string name="error_password">Contraseña Incorrecta</string>
+    <string name="error_noPassword">Ingrese su contraseña</string>
+    <string name="error_email">Correo invalido</string>
+    <string name="error_noEmail">Ingrese su correo</string>
+    <string name="error_username">Usuario invalido</string>
+    <string name="error_noUsername">Ingrese un usuario</string>
+
+    <!-- Stats Questions-->
+    <string name="question_1">¿Cómo consideras su dominio de cualquier materia?</string>
+    <string name="question_2">¿Cómo consideras que es explicando los temas?</string>
+    <string name="question_3">¿Qué tan complicada crees que es pasar cualquier materia?</string>
+    <string name="question_4">¿Ofrece acesorías?</string>
+    <string name="question_5">¿Cumple con las rubricas de evaluación?</string>
+    <string name="question_6">¿Aplica examenes?</string>
+    <string name="question_7">¿Qué tan satisfecho estas con este profesor?</string>
+
+    <!--ENUMS-->
+    <string name="difficulty_very_easy">Muy fácil</string>
+    <string name="difficulty_easy">Fácil</string>
+    <string name="difficulty_regular">Regular</string>
+    <string name="difficulty_hard">Difícil</string>
+    <string name="difficulty_very_hard">Muy difícil</string>
+    <string-array name="difficulty">
+        <item>@string/difficulty_very_easy</item>
+        <item>@string/difficulty_easy</item>
+        <item>@string/difficulty_regular</item>
+        <item>@string/difficulty_hard</item>
+        <item>@string/difficulty_very_hard</item>
+    </string-array>
+
+    <string name="frecuency_always">Siempre</string>
+    <string name="frecuency_sometimes">A veces</string>
+    <string name="frecuency_never">Nunca</string>
+    <string-array name="frecuency">
+        <item>@string/frecuency_always</item>
+        <item>@string/frecuency_sometimes</item>
+        <item>@string/frecuency_never</item>
+    </string-array>
+
+    <string name="score_excellent">Excelente</string>
+    <string name="score_good">Bueno</string>
+    <string name="score_regular">Regular</string>
+    <string name="score_bad">Malo</string>
+    <string name="score_terrible">Terrible</string>
+    <string-array name="score">
+        <item>@string/score_excellent</item>
+        <item>@string/score_good</item>
+        <item>@string/score_regular</item>
+        <item>@string/score_bad</item>
+        <item>@string/score_terrible</item>
+    </string-array>
+
+    <string name="satisfaction_satisfied">Satisfecho</string>
+    <string name="satisfaction_half_satisfied">Medianamente satisfecho</string>
+    <string name="satisfaction_dissatisfied">Insatisfecho</string>
+    <string-array name="satisfaction">
+        <item>@string/satisfaction_satisfied</item>
+        <item>@string/satisfaction_half_satisfied</item>
+        <item>@string/satisfaction_dissatisfied</item>
+    </string-array>
+
+    <string name="yesNo_yes">Si</string>
+    <string name="yesNo_no">No</string>
+    <string-array name="YesNo">
+        <item>@string/yesNo_yes</item>
+        <item>@string/yesNo_no</item>
+    </string-array>
+</resources>
