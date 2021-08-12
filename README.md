@@ -59,6 +59,20 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [x] Añadir reviews. [HectorMCT](https://github.com/HectorMCT), [MayraJM](https://github.com/MayraJM)
 - [x] Reviews. [Esiel15](https://github.com/Esiel15)
 
+### Validaciones
+Se generaron validaciones dentro tanto para el ingreso de un usuario a la aplicación, como para el registro de un nuevo usuario. Por el momento no se tiene conexión a ninguna base de datos, la cual se encargara tanto de alojar a nuestros usuarios, como las estadísticas y comentarios que generen sobre los profesores. Toda esta información sera moldeada con el [proyecto](https://github.com/HectorMCT/Kotlin_Intermedio_Equipo19/tree/main/CalificameApp/app/src/main/java/com/esielkar/calificame/model) que creamos en el módulo anterior.
+
+Se han creado 4 usuarios para la validación del inicio de sesión como para el registro de usuarios.
+
+Username | correo | password
+------------ | ------------- | -------------
+Invitado |  | 
+Hector | hector@calificame.com | 12345678
+Mayra | mayra@calificame.com | 12345678
+Esiel | esiel_kar@hotmail.com | 12345678
+
+
+Por otra parte, también se tienen los botones de Skip Sign In y Skip Sign Up, con el propósito de que al probar la app, no se tengan que realizar estas actividades que se pueden hacer tediosas.
 
 ## More...
-coming soon. (Maybe, next week!)
+coming soon. (Maybe, next module! We hope)
