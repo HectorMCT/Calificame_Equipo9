@@ -114,20 +114,21 @@
     <string name="difficulty_hard">Difícil</string>
     <string name="difficulty_very_hard">Muy difícil</string>
     <string-array name="difficulty">
-        <item>@string/difficulty_very_easy</item>
-        <item>@string/difficulty_easy</item>
-        <item>@string/difficulty_regular</item>
-        <item>@string/difficulty_hard</item>
         <item>@string/difficulty_very_hard</item>
+        <item>@string/difficulty_hard</item>
+        <item>@string/difficulty_regular</item>
+        <item>@string/difficulty_easy</item>
+        <item>@string/difficulty_very_easy</item>
     </string-array>
 
     <string name="frecuency_always">Siempre</string>
     <string name="frecuency_sometimes">A veces</string>
     <string name="frecuency_never">Nunca</string>
     <string-array name="frecuency">
-        <item>@string/frecuency_always</item>
-        <item>@string/frecuency_sometimes</item>
         <item>@string/frecuency_never</item>
+        <item>@string/frecuency_sometimes</item>
+        <item>@string/frecuency_always</item>
+
     </string-array>
 
     <string name="score_excellent">Excelente</string>
@@ -136,26 +137,26 @@
     <string name="score_bad">Malo</string>
     <string name="score_terrible">Terrible</string>
     <string-array name="score">
-        <item>@string/score_excellent</item>
-        <item>@string/score_good</item>
-        <item>@string/score_regular</item>
-        <item>@string/score_bad</item>
         <item>@string/score_terrible</item>
+        <item>@string/score_bad</item>
+        <item>@string/score_regular</item>
+        <item>@string/score_good</item>
+        <item>@string/score_excellent</item>
     </string-array>
 
     <string name="satisfaction_satisfied">Satisfecho</string>
     <string name="satisfaction_half_satisfied">Medianamente satisfecho</string>
     <string name="satisfaction_dissatisfied">Insatisfecho</string>
     <string-array name="satisfaction">
-        <item>@string/satisfaction_satisfied</item>
-        <item>@string/satisfaction_half_satisfied</item>
         <item>@string/satisfaction_dissatisfied</item>
+        <item>@string/satisfaction_half_satisfied</item>
+        <item>@string/satisfaction_satisfied</item>
     </string-array>
 
     <string name="yesNo_yes">Si</string>
     <string name="yesNo_no">No</string>
     <string-array name="YesNo">
-        <item>@string/yesNo_yes</item>
         <item>@string/yesNo_no</item>
+        <item>@string/yesNo_yes</item>
     </string-array>
 </resources>
