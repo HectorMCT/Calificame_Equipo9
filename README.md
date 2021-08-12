@@ -64,7 +64,7 @@ Se generaron validaciones dentro tanto para el ingreso de un usuario a la aplica
 
 Se han creado 4 usuarios para la validación del inicio de sesión como para el registro de usuarios.
 
-Username | correo | password
+Nombre de usuario | Correo electrónico | Contraseña
 ------------ | ------------- | -------------
 Invitado |  | 
 Hector | hector@calificame.com | 12345678
