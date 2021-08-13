@@ -78,7 +78,7 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(3), "Muy buenas clases, excelente profesoro. Siempre dispuesto ayudar", 50.0),
+                                Review(UsersContent.users.elementAt(3), "Casi nunca se presenta a las clases y los temas son muy complicados", 50.0),
                             )
 
                         )
