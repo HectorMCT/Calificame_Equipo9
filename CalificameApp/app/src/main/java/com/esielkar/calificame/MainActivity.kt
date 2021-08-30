@@ -1,8 +1,11 @@
 package com.esielkar.calificame
 
+import android.app.ActivityOptions
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.TransitionInflater
+import android.view.View
 import android.widget.TextView
 import androidx.customview.widget.Openable
 import androidx.drawerlayout.widget.DrawerLayout
@@ -26,7 +29,12 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navController = navHostFragment.navController
 
+        val transitionExitXml = TransitionInflater.from(this).inflateTransition(R.transition.transition_out)
 
+        val transitionEnterXml = TransitionInflater.from(this).inflateTransition(R.transition.transition_in)
+
+        window.exitTransition = transitionExitXml
+        window.enterTransition = transitionEnterXml
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -45,21 +53,21 @@ class MainActivity : AppCompatActivity() {
                 R.id.toUniversities -> {
                     AppContent.currentFaculty = null
                     val intent = Intent(this, UniversityFacultiesActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                     finish()
                     true
                 }
 
                 R.id.toFaculties -> {
                     val intent = Intent(this, UniversityFacultiesActivity::class.java)
-                    startActivity(intent) //Enviar university
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) //Enviar university
                     finish()
                     true
                 }
 
                 R.id.toSignOut -> {
                     val intent : Intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
                     finish()
                     true
                 }
@@ -77,7 +85,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
