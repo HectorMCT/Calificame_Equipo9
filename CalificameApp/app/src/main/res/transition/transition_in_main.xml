@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transitionSet
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <slide
-        android:slideEdge="bottom">
-        <targets>
-            <target
-                android:targetId="@+id/universities_list"/>
-        </targets>
-    </slide>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:interpolator="@android:interpolator/accelerate_decelerate">
+    <fade android:fadingMode="fade_in"
+        android:duration="1000"/>
 </transitionSet>
 
 

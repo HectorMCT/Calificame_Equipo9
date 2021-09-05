@@ -9,18 +9,18 @@
         <action
             android:id="@+id/action_sign_in_fragment_to_sign_up_fragment"
             app:destination="@id/sign_up_fragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/nav_exit"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_bottom"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_bottom"
             app:popUpTo="@id/login_nav_graph"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_sign_in_fragment_to_password_forgotten_fragment"
             app:destination="@id/password_forgotten_fragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/nav_exit"
-            app:popExitAnim="@anim/nav_exit" />
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_bottom"
+            app:popExitAnim="@anim/nav_to_bottom" />
         <argument
             android:name="username"
             app:argType="string"
@@ -37,10 +37,10 @@
         <action
             android:id="@+id/action_sign_up_fragment_to_sign_in_fragment"
             app:destination="@id/sign_in_fragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/nav_exit"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_bottom"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_bottom"
             app:popUpTo="@id/login_nav_graph"
             app:popUpToInclusive="true" />
         <argument
@@ -58,10 +58,10 @@
         android:name="com.esielkar.calificame.PasswordForgottenFragment">
         <action
             android:id="@+id/action_password_forgotten_fragment_to_sign_in_fragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/pass_nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/pass_nav_exit"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top"
             app:popUpTo="@id/sign_in_fragment" />
         <argument
             android:name="username"
@@ -74,10 +74,10 @@
         <action
             android:id="@+id/action_password_forgotten_fragment_to_sign_up_fragment"
             app:destination="@id/sign_up_fragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/pass_nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/pass_nav_exit"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top"
             app:popUpTo="@id/login_nav_graph"
             app:popUpToInclusive="true" />
     </fragment>

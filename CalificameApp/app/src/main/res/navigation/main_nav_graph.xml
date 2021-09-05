@@ -12,10 +12,10 @@
         <action
             android:id="@+id/action_professorStatsListFragment_to_generalStatsFragment"
             app:destination="@id/generalStatsFragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/pass_nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/pass_nav_exit" />
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_decrement"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_decrement" />
     </fragment>
     <fragment
         android:id="@+id/generalStatsFragment"
@@ -24,17 +24,17 @@
         <action
             android:id="@+id/action_generalStatsFragment_to_addReviewFragment"
             app:destination="@id/addReviewFragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/pass_nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/pass_nav_exit" />
+            app:enterAnim="@anim/nav_increment"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top" />
         <action
             android:id="@+id/action_addReviewFragment_to_reviewsListFragment"
             app:destination="@id/reviewsListFragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/pass_nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/pass_nav_exit" />
+            app:enterAnim="@anim/nav_top_to_bottom"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top" />
     </fragment>
     <fragment
         android:id="@+id/addReviewFragment"
@@ -43,10 +43,10 @@
         <action
             android:id="@+id/action_addReviewFragment_to_subjectsListFragment"
             app:destination="@id/subjectsListFragment"
-            app:enterAnim="@anim/nav_enter"
-            app:exitAnim="@anim/pass_nav_exit"
-            app:popEnterAnim="@anim/nav_enter"
-            app:popExitAnim="@anim/pass_nav_exit" />
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top" />
 
     </fragment>
     <fragment
@@ -60,11 +60,11 @@
     <action
         android:id="@+id/action_global_aboutUsFragment"
         app:destination="@id/aboutUsFragment"
-        app:enterAnim="@anim/nav_enter"
-        app:exitAnim="@anim/nav_exit"
+        app:enterAnim="@anim/nav_right_to_left"
+        app:exitAnim="@anim/nav_to_bottom"
         app:launchSingleTop="true"
-        app:popEnterAnim="@anim/nav_enter"
-        app:popExitAnim="@anim/pass_nav_exit"
+        app:popEnterAnim="@anim/nav_right_to_left"
+        app:popExitAnim="@anim/nav_to_top"
         app:popUpTo="@id/professors_reviews_nav_graph" />
     <fragment
         android:id="@+id/reviewsListFragment"
