@@ -1,4 +1,4 @@
-# Kotlin Intermedio : Equipo 19
+# Kotlin Intermedio : Equipo 9
  Aquí se encontraran todo lo relacionado al proyecto del modulo de Kotlin Intermedio Santander 2021
  ### Integrantes 🧑🏻‍💻
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
@@ -52,6 +52,7 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [x] Registro. [Esiel15](https://github.com/Esiel15)
 - [x] Recuperar contraseña. [HectorMCT](https://github.com/HectorMCT)
 - [x] Menú principal (Drawer). [Esiel15](https://github.com/Esiel15)
+- [x] Perfil de usuario. [Esiel15](https://github.com/Esiel15)
 - [x] Universidades. [Esiel15](https://github.com/Esiel15)
 - [x] Facultades. [MayraJM](https://github.com/MayraJM)
 - [x] Profesores. [deividshido](https://github.com/deividshido)
