@@ -11,26 +11,30 @@
         tools:layout="@layout/fragment_professor_stats_list" >
         <action
             android:id="@+id/action_professorStatsListFragment_to_generalStatsFragment"
-            app:destination="@id/generalStatsFragment" />
+            app:destination="@id/generalStatsFragment"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_decrement"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_decrement" />
     </fragment>
     <fragment
         android:id="@+id/generalStatsFragment"
         android:name="com.esielkar.calificame.GeneralStatsFragment"
         tools:layout="@layout/fragment_general_stats" >
         <action
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_generalStatsFragment_to_addReviewFragment"
-            app:destination="@id/addReviewFragment" />
+            app:destination="@id/addReviewFragment"
+            app:enterAnim="@anim/nav_increment"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top" />
         <action
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_addReviewFragment_to_reviewsListFragment"
-            app:destination="@id/reviewsListFragment" />
+            app:destination="@id/reviewsListFragment"
+            app:enterAnim="@anim/nav_top_to_bottom"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top" />
     </fragment>
     <fragment
         android:id="@+id/addReviewFragment"
@@ -38,7 +42,11 @@
         tools:layout="@layout/fragment_add_review" >
         <action
             android:id="@+id/action_addReviewFragment_to_subjectsListFragment"
-            app:destination="@id/subjectsListFragment" />
+            app:destination="@id/subjectsListFragment"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_top"
+            app:popEnterAnim="@anim/nav_right_to_left"
+            app:popExitAnim="@anim/nav_to_top" />
 
     </fragment>
     <fragment
@@ -49,17 +57,30 @@
         android:id="@+id/aboutUsFragment"
         android:name="com.esielkar.calificame.AboutUsFragment"
         tools:layout="@layout/fragment_about_us" />
-    <action
-        android:id="@+id/action_global_aboutUsFragment"
-        app:destination="@id/aboutUsFragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
-        app:launchSingleTop="true"
-        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim"
-        app:popUpTo="@id/professors_reviews_nav_graph" />
     <fragment
         android:id="@+id/reviewsListFragment"
         android:name="com.esielkar.calificame.ReviewsListFragment" />
+    <fragment
+        android:id="@+id/userInformationFragment"
+        android:name="com.esielkar.calificame.UserInformationFragment"
+        tools:layout="@layout/fragment_user_information" />
+    <action
+        android:id="@+id/action_global_aboutUsFragment"
+        app:destination="@id/aboutUsFragment"
+        app:enterAnim="@anim/nav_right_to_left"
+        app:exitAnim="@anim/nav_to_bottom"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/nav_right_to_left"
+        app:popExitAnim="@anim/nav_to_top" />
+
+    <action
+        android:id="@+id/action_global_userInformationFragment"
+        app:destination="@id/userInformationFragment"
+        app:enterAnim="@anim/nav_right_to_left"
+        app:exitAnim="@anim/nav_to_bottom"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/nav_right_to_left"
+        app:popExitAnim="@anim/nav_to_top" />
+
 
 </navigation>

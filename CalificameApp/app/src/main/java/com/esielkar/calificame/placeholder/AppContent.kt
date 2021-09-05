@@ -7,9 +7,10 @@ import com.esielkar.calificame.utils.ProfessorAndStats
  * Android template wizards.
  *
  * TODO: Replace all uses of this class before publishing your app.
+ * TODO ESTO ES PROVICIONAL Y SE ELIMINARA CUANDO SE OCUPE LA PERSISTENCIA DE DATOS
  */
 object AppContent {
-
+    const val PREFS_NAME = "com.esielkar.calificame"
 
     var currentUniversity: University? = null
     var currentFaculty: Faculty? = null
