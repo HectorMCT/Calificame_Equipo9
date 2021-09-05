@@ -2,7 +2,17 @@ package com.esielkar.calificame.placeholder
 
 import com.esielkar.calificame.model.User
 
+/**
+ * TODO ESTO ES PROVICIONAL Y SE ELIMINARA CUANDO SE OCUPE LA PERSISTENCIA DE DATOS
+ */
+
 object UsersContent {
+
+    const val SP_IS_LOGGED = "isLogged"
+    const val SP_EMAIL = "email"
+    const val SP_PASSWORD = "password"
+    const val SP_IMAGE = "profile_image"
+
     private val _users = mutableSetOf<User>(
         User("Invitado", "", ""),
         User("Hector", "hector@calificame.com", "12345678"),

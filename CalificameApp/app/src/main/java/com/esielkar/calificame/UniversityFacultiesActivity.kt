@@ -10,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.esielkar.calificame.placeholder.AppContent
 
 class UniversityFacultiesActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -19,12 +20,12 @@ class UniversityFacultiesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_university_faculties)
 
         val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            supportFragmentManager.findFragmentById(R.id.nav_host_list_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         //definiendo el tipo de transición
         val transition = Slide(Gravity.BOTTOM).apply {
-            duration = 500
+            duration = 350
         }
 
         window.enterTransition = transition
@@ -34,8 +35,10 @@ class UniversityFacultiesActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+        val navController = findNavController(R.id.nav_host_list_fragment)
+        return if (navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()){
+            AppContent.currentFaculty = null
+            true
+        } else false
     }
 }

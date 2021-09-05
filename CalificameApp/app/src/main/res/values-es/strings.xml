@@ -5,6 +5,8 @@
     <!-- Hints -->
     <string name="username_hint">Nombre de usuario</string>
     <string name="email_hint">Correo electrónico</string>
+    <string name="change_image_hint">Cambiar imagen</string>
+    <string name="change_password_hint">Cambiar contraseña</string>
     <string name="password_hint">Contraseña</string>
     <string name="search_hint">Buscar</string>
 
