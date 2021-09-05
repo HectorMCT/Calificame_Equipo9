@@ -9,10 +9,10 @@
         <action
             android:id="@+id/action_universities_list_fragment_to_faculties_list_fragment"
             app:destination="@id/faculties_list_fragment"
-            app:enterAnim="@animator/nav_default_enter_anim"
-            app:exitAnim="@animator/nav_default_exit_anim"
-            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
-            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/pass_nav_exit"
+            app:popEnterAnim="@anim/nav_enter"
+            app:popExitAnim="@anim/pass_nav_exit" />
     </fragment>
     <fragment
         android:id="@+id/faculties_list_fragment"

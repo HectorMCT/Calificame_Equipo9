@@ -11,26 +11,30 @@
         tools:layout="@layout/fragment_professor_stats_list" >
         <action
             android:id="@+id/action_professorStatsListFragment_to_generalStatsFragment"
-            app:destination="@id/generalStatsFragment" />
+            app:destination="@id/generalStatsFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/pass_nav_exit"
+            app:popEnterAnim="@anim/nav_enter"
+            app:popExitAnim="@anim/pass_nav_exit" />
     </fragment>
     <fragment
         android:id="@+id/generalStatsFragment"
         android:name="com.esielkar.calificame.GeneralStatsFragment"
         tools:layout="@layout/fragment_general_stats" >
         <action
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_generalStatsFragment_to_addReviewFragment"
-            app:destination="@id/addReviewFragment" />
+            app:destination="@id/addReviewFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/pass_nav_exit"
+            app:popEnterAnim="@anim/nav_enter"
+            app:popExitAnim="@anim/pass_nav_exit" />
         <action
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim"
             android:id="@+id/action_addReviewFragment_to_reviewsListFragment"
-            app:destination="@id/reviewsListFragment" />
+            app:destination="@id/reviewsListFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/pass_nav_exit"
+            app:popEnterAnim="@anim/nav_enter"
+            app:popExitAnim="@anim/pass_nav_exit" />
     </fragment>
     <fragment
         android:id="@+id/addReviewFragment"
@@ -38,7 +42,11 @@
         tools:layout="@layout/fragment_add_review" >
         <action
             android:id="@+id/action_addReviewFragment_to_subjectsListFragment"
-            app:destination="@id/subjectsListFragment" />
+            app:destination="@id/subjectsListFragment"
+            app:enterAnim="@anim/nav_enter"
+            app:exitAnim="@anim/pass_nav_exit"
+            app:popEnterAnim="@anim/nav_enter"
+            app:popExitAnim="@anim/pass_nav_exit" />
 
     </fragment>
     <fragment
@@ -52,11 +60,11 @@
     <action
         android:id="@+id/action_global_aboutUsFragment"
         app:destination="@id/aboutUsFragment"
-        app:enterAnim="@anim/nav_default_enter_anim"
-        app:exitAnim="@anim/nav_default_exit_anim"
+        app:enterAnim="@anim/nav_enter"
+        app:exitAnim="@anim/nav_exit"
         app:launchSingleTop="true"
-        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popEnterAnim="@anim/nav_enter"
+        app:popExitAnim="@anim/pass_nav_exit"
         app:popUpTo="@id/professors_reviews_nav_graph" />
     <fragment
         android:id="@+id/reviewsListFragment"
