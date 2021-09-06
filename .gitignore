@@ -66,3 +66,4 @@ fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
 .DS_Store
+CalificameApp/.idea/misc.xml
