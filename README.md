@@ -29,8 +29,6 @@ Contener un amplio repositorio de instituciones de nivel superior, profesores y 
 Debido a que los estudiantes generalmente son autónomos en la toma de decisiones de profesores hasta alcanzar el nivel superior de estudios, la aplicación se limitará únicamente a tener información de universidades y posiblemente posgrados.
 
 No todas las instituciones que ofrecen educación superior cuentan con una gran oferta de profesores para impartir sus cursos, generalmente son las instituciones públicas y algunas pocas privadas, por lo que la aplicación sería de más utilidad para dichas universidades y carecería de utilidad en instituciones con baja densidad de alumnos y profesores.
-
-
  
 ## Roadmap 📦
 
@@ -59,6 +57,9 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 - [x] Estadisticas Generales.[Esiel15](https://github.com/Esiel15)
 - [x] Añadir reviews. [HectorMCT](https://github.com/HectorMCT), [MayraJM](https://github.com/MayraJM)
 - [x] Reviews. [Esiel15](https://github.com/Esiel15)
+
+### Animaciones y Transiciones
+Con el objetivo de que el usuario tenga una mejor experiencia, se añadieron transiciones entre fragments y entre activities. Para su implementación, se tomaron en cuenta los temas vistos recientemente en el curso. Se hace uso de un navigation component, donde se implementaron de una manera más sencilla las transiciones debido a la forma con la que se ha trabajado la aplicación. Por otro lado, algunas animaciones se implementaron cuando se hace uso del menú que aparece en la vista de Profesores.
 
 ### Validaciones
 Se generaron validaciones dentro tanto para el ingreso de un usuario a la aplicación, como para el registro de un nuevo usuario. Por el momento no se tiene conexión a ninguna base de datos, la cual se encargara tanto de alojar a nuestros usuarios, como las estadísticas y comentarios que generen sobre los profesores. Toda esta información sera moldeada con el [proyecto](https://github.com/HectorMCT/Kotlin_Intermedio_Equipo19/tree/main/CalificameApp/app/src/main/java/com/esielkar/calificame/model) que creamos en el módulo anterior.
