@@ -1,4 +1,5 @@
 package com.esielkar.calificame.placeholder
+
 import com.esielkar.calificame.model.*
 import com.esielkar.calificame.utils.ProfessorAndStats
 
@@ -166,7 +167,7 @@ object AppContent {
                 )
             ),
         )),
-        University("Universidad Autónoma de México", setOf(
+        University("Universidad Autónoma de México", faculties = setOf(
             Faculty("Facultad de Ingeniería",
                 mapOf(
                     Professor("Hilda Castillo Zacatelco") to ProfessorStats(),

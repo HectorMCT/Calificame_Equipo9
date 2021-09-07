@@ -2,8 +2,13 @@ package com.esielkar.calificame.view.adapter
 
 import android.view.View
 import android.view.ViewGroup
+import com.esielkar.calificame.api.ApiUtils
 import com.esielkar.calificame.model.University
+import com.esielkar.calificame.objects.UniResponse
 import com.esielkar.calificame.view.UniversityCardView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class UniversitiesAdapter(
     universities : Set<University>,
@@ -12,6 +17,21 @@ class UniversitiesAdapter(
     class UniversityViewHolder(universityCardView: UniversityCardView) : BindableViewHolder<University>(universityCardView) {
         override fun bind(item: University) {
             (itemView as UniversityCardView).universityName = item.name
+            //Asincrona
+            ApiUtils.api.getUni().enqueue(object : Callback<UniResponse> {
+                override fun onResponse(call: Call<UniResponse>, response: Response<UniResponse>) {
+                    if (response.isSuccessful) {
+                        response.body()?.uniList?.items?.find {
+                            it.title == item.name
+                        }?.thumbnail?.let {
+                            (itemView as UniversityCardView).setImage(it)
+                        }
+                    } else (itemView as UniversityCardView).setDefaultUniversityImage()
+                }
+                override fun onFailure(call: Call<UniResponse>, t: Throwable) {
+                    (itemView as UniversityCardView).setDefaultUniversityImage()
+                }
+            })
         }
     }
 

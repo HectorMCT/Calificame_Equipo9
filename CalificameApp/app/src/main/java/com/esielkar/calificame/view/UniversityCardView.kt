@@ -3,9 +3,10 @@ package com.esielkar.calificame.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import androidx.core.content.res.ResourcesCompat
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.UniversityCardViewBinding
-import com.google.android.material.card.MaterialCardView
+import com.squareup.picasso.Picasso
 
 class UniversityCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -25,4 +26,12 @@ class UniversityCardView @JvmOverloads constructor(
     var universityName
     set(value) { binding.universityName.text = value }
     get() = binding.universityName.text
+
+    fun setImage(imageURL : String) {
+        Picasso.get().load(imageURL).into(binding.universityImage)
+    }
+
+    fun setDefaultUniversityImage() {
+        binding.universityImage.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.ic_outline_apartment_24, null))
+    }
 }
