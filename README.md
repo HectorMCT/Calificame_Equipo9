@@ -61,6 +61,12 @@ Se tienen generado el Mockup de la App, el cual nos servirá de guía para el de
 ### Animaciones y Transiciones
 Con el objetivo de que el usuario tenga una mejor experiencia, se añadieron transiciones entre fragments y entre activities. Para su implementación, se tomaron en cuenta los temas vistos recientemente en el curso. Se hace uso de un navigation component, donde se implementaron de una manera más sencilla las transiciones debido a la forma con la que se ha trabajado la aplicación. Por otro lado, algunas animaciones se implementaron cuando se hace uso del menú que aparece en la vista de Profesores.
 
+### API
+Con el objetivo de implementar una API util para la aplicación. Se creo una API utilizando Amazon AWS en donde se guarda información unicamente relacionada con las Universidades, en ella se podra encontrar su nombre y una imagen la cual es utilizada en la aplicación.
+
+### Cámara y SharedPreferences
+Ahora los usuarios podrán cambiar la foto de su perfil utilizando la cámara de su dispositivo android, se implemento de manera muy similar a lo visto en la sesión 3. Adicionalmente, referente a la sesión 4, se implemento SharedPreferences para saber si el usuario ya esta loggeado en la aplicación, y en ese caso no tener que iniciar sesión o registrase cada vez que abra la aplicación. Sin embargo, el mecanismo utilizado no es el recomendable, por lo que en futuras sesiones avanzadas, se pretende cambiar por un mecanismo seguro. Para el caso del uso de las bases de datos vista en la sesión 4, se opto por no implementarlo, debido a que la aplicación requiere una base de datos externa y no embebida.
+
 ### Validaciones
 Se generaron validaciones dentro tanto para el ingreso de un usuario a la aplicación, como para el registro de un nuevo usuario. Por el momento no se tiene conexión a ninguna base de datos, la cual se encargara tanto de alojar a nuestros usuarios, como las estadísticas y comentarios que generen sobre los profesores. Toda esta información sera moldeada con el [proyecto](https://github.com/HectorMCT/Kotlin_Intermedio_Equipo19/tree/main/CalificameApp/app/src/main/java/com/esielkar/calificame/model) que creamos en el módulo anterior.
 
