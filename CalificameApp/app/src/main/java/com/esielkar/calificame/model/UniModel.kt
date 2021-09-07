@@ -12,7 +12,7 @@ import io.reactivex.schedulers.Schedulers
 class UniModel : UniContract.Model {
     var TAG = "UniModel"
     override fun getUni(listener: UniContract.Model.OnFinishedListener?) {
-        ApiUtils.api.getUni()
+        /*ApiUtils.api.getUni()
             .toObservable()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -29,6 +29,6 @@ class UniModel : UniContract.Model {
                 }
 
                 override fun onComplete() {}
-            })
+            })*/
     }
 }

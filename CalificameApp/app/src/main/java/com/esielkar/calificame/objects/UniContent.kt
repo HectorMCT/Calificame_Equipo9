@@ -2,9 +2,7 @@ package com.esielkar.calificame.objects
 
 import com.google.gson.annotations.SerializedName
 
-class UniContent {
+data class UniContent(
     @SerializedName("Items")
-    private var items: List<UniItem>? = null
-
-
-}
+    val items: List<UniItem>? = null
+)
