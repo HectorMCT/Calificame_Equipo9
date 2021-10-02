@@ -1,4 +1,4 @@
-package com.esielkar.calificame
+package com.esielkar.calificame.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +10,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
+import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentUniversitiesListBinding
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.placeholder.AppContent

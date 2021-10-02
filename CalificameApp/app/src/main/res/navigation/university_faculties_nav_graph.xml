@@ -5,7 +5,7 @@
     app:startDestination="@id/universities_list_fragment">
     <fragment
         android:id="@+id/universities_list_fragment"
-        android:name="com.esielkar.calificame.UniversitiesListFragment">
+        android:name="com.esielkar.calificame.view.UniversitiesListFragment">
         <action
             android:id="@+id/action_universities_list_fragment_to_faculties_list_fragment"
             app:destination="@id/faculties_list_fragment"
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/faculties_list_fragment"
-        android:name="com.esielkar.calificame.FacultiesListFragment">
+        android:name="com.esielkar.calificame.view.FacultiesListFragment">
         <argument
             android:name="university"
             app:argType="com.esielkar.calificame.model.University" />

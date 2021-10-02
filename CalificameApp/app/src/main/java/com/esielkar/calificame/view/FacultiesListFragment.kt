@@ -1,4 +1,4 @@
-package com.esielkar.calificame
+package com.esielkar.calificame.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import com.esielkar.calificame.MainActivity
+import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentFacultiesListBinding
 import com.esielkar.calificame.model.Faculty
 import com.esielkar.calificame.model.University

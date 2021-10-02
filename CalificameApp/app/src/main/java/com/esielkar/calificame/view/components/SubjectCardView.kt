@@ -1,11 +1,10 @@
-package com.esielkar.calificame.view
+package com.esielkar.calificame.view.components
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.SubjectCardViewBinding
-import com.google.android.material.card.MaterialCardView
 
 class SubjectCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

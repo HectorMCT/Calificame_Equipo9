@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/professorStatsListFragment"
-        android:name="com.esielkar.calificame.ProfessorStatsListFragment"
+        android:name="com.esielkar.calificame.view.ProfessorStatsListFragment"
         tools:layout="@layout/fragment_professor_stats_list" >
         <action
             android:id="@+id/action_professorStatsListFragment_to_generalStatsFragment"
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/generalStatsFragment"
-        android:name="com.esielkar.calificame.GeneralStatsFragment"
+        android:name="com.esielkar.calificame.view.GeneralStatsFragment"
         tools:layout="@layout/fragment_general_stats" >
         <action
             android:id="@+id/action_generalStatsFragment_to_addReviewFragment"
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/addReviewFragment"
-        android:name="com.esielkar.calificame.AddReviewFragment"
+        android:name="com.esielkar.calificame.view.AddReviewFragment"
         tools:layout="@layout/fragment_add_review" >
         <action
             android:id="@+id/action_addReviewFragment_to_subjectsListFragment"
@@ -51,18 +51,18 @@
     </fragment>
     <fragment
         android:id="@+id/subjectsListFragment"
-        android:name="com.esielkar.calificame.SubjectsListFragment"
+        android:name="com.esielkar.calificame.view.SubjectsListFragment"
         tools:layout="@layout/fragment_subjects_list" />
     <fragment
         android:id="@+id/aboutUsFragment"
-        android:name="com.esielkar.calificame.AboutUsFragment"
+        android:name="com.esielkar.calificame.view.AboutUsFragment"
         tools:layout="@layout/fragment_about_us" />
     <fragment
         android:id="@+id/reviewsListFragment"
-        android:name="com.esielkar.calificame.ReviewsListFragment" />
+        android:name="com.esielkar.calificame.view.ReviewsListFragment" />
     <fragment
         android:id="@+id/userInformationFragment"
-        android:name="com.esielkar.calificame.UserInformationFragment"
+        android:name="com.esielkar.calificame.view.UserInformationFragment"
         tools:layout="@layout/fragment_user_information" />
     <action
         android:id="@+id/action_global_aboutUsFragment"

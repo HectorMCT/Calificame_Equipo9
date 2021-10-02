@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import com.esielkar.calificame.api.ApiUtils
 import com.esielkar.calificame.model.University
 import com.esielkar.calificame.objects.UniResponse
-import com.esielkar.calificame.view.UniversityCardView
+import com.esielkar.calificame.view.components.UniversityCardView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

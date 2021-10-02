@@ -1,4 +1,4 @@
-package com.esielkar.calificame
+package com.esielkar.calificame.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentPasswordForgottenBinding
 
 class PasswordForgottenFragment : Fragment() {

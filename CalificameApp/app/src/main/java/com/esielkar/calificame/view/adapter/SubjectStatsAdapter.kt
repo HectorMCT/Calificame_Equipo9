@@ -3,7 +3,7 @@ package com.esielkar.calificame.view.adapter
 import android.view.View
 import android.view.ViewGroup
 import com.esielkar.calificame.utils.SubjectWithInfo
-import com.esielkar.calificame.view.SubjectStatsCardView
+import com.esielkar.calificame.view.components.SubjectStatsCardView
 
 class SubjectStatsAdapter(
     subjectsWithInfo : List<SubjectWithInfo>,

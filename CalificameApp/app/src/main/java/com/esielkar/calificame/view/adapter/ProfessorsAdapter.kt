@@ -4,9 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.esielkar.calificame.model.Professor
 import com.esielkar.calificame.model.ProfessorStats
-import com.esielkar.calificame.utils.ProfessorWithInfo
-import com.esielkar.calificame.view.ProfessorCardView
-import kotlin.random.Random
+import com.esielkar.calificame.view.components.ProfessorCardView
 
 class ProfessorsAdapter(
     professorStats : List<Pair<Professor, ProfessorStats>>,

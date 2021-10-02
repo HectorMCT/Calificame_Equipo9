@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import com.esielkar.calificame.R
 import com.esielkar.calificame.model.Frecuency
+import com.esielkar.calificame.view.components.StatsCardView
 
 class ConsultanciesStatsCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0

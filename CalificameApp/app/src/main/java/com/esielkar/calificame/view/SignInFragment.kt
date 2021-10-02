@@ -1,4 +1,4 @@
-package com.esielkar.calificame
+package com.esielkar.calificame.view
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import com.esielkar.calificame.R
+import com.esielkar.calificame.UniversityFacultiesActivity
 import com.esielkar.calificame.databinding.FragmentSignInBinding
 import com.esielkar.calificame.placeholder.AppContent
 import com.esielkar.calificame.placeholder.UsersContent

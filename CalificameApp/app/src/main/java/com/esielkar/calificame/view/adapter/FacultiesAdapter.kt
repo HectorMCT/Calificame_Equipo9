@@ -3,7 +3,7 @@ package com.esielkar.calificame.view.adapter
 import android.view.View
 import android.view.ViewGroup
 import com.esielkar.calificame.model.Faculty
-import com.esielkar.calificame.view.FacultyCardView
+import com.esielkar.calificame.view.components.FacultyCardView
 
 class FacultiesAdapter(
     faculties : Set<Faculty>,

@@ -7,9 +7,9 @@
     android:layout_marginVertical="24dp"
     android:layout_marginHorizontal="16dp"
     android:orientation="vertical"
-    tools:context=".GeneralStatsFragment">
+    tools:context=".view.GeneralStatsFragment">
 
-    <com.esielkar.calificame.view.HeaderCardView
+    <com.esielkar.calificame.view.components.HeaderCardView
         android:id="@+id/headerCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_marginVertical="8dp"
                 android:orientation="horizontal">
 
-                <com.esielkar.calificame.view.RecommendationStatsCardView
+                <com.esielkar.calificame.view.components.RecommendationStatsCardView
                     android:id="@+id/recommendationCV"
                     android:layout_marginVertical="8dp"
                     android:layout_width="0dp"
@@ -80,7 +80,7 @@
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <com.esielkar.calificame.view.ComplexityStatsCardView
+                    <com.esielkar.calificame.view.components.ComplexityStatsCardView
                         android:layout_marginTop="8dp"
                         android:id="@+id/complexityCV"
                         android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
                         app:withSubtitle="true" />
-                    <com.esielkar.calificame.view.ClarityStatsCardView
+                    <com.esielkar.calificame.view.components.ClarityStatsCardView
                         android:layout_marginBottom="8dp"
                         android:id="@+id/clarityCV"
                         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                 android:layout_height="200dp"
                 android:layout_marginVertical="8dp"
                 android:orientation="horizontal">
-                <com.esielkar.calificame.view.DomainStatsCardView
+                <com.esielkar.calificame.view.components.DomainStatsCardView
                     android:id="@+id/domainCV"
                     android:layout_marginVertical="8dp"
                     android:layout_width="0dp"
@@ -139,7 +139,7 @@
                         app:cardCornerRadius="16dp"
                         app:cardElevation="16dp"
                         app:withSubtitle="true"/>
-                    <com.esielkar.calificame.view.FairEvaluationStatsCardView
+                    <com.esielkar.calificame.view.components.FairEvaluationStatsCardView
                         android:id="@+id/fairEvaluationCV"
                         android:layout_marginBottom="8dp"
                         android:layout_width="match_parent"

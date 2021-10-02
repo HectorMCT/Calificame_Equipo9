@@ -1,4 +1,4 @@
-package com.esielkar.calificame
+package com.esielkar.calificame.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentGeneralStatsBinding
 import com.esielkar.calificame.placeholder.AppContent
 

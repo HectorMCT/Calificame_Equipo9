@@ -7,9 +7,9 @@
     android:layout_marginVertical="24dp"
     android:layout_marginHorizontal="16dp"
     android:orientation="vertical"
-    tools:context=".GeneralStatsFragment">
+    tools:context=".view.GeneralStatsFragment">
 
-    <com.esielkar.calificame.view.HeaderCardView
+    <com.esielkar.calificame.view.components.HeaderCardView
         android:id="@+id/headerCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,6 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".ReviewsListFragment" />
+        tools:context=".view.ReviewsListFragment" />
 
 </LinearLayout>

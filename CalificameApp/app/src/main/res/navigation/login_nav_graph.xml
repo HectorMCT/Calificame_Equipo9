@@ -5,7 +5,7 @@
     app:startDestination="@id/sign_in_fragment">
     <fragment
         android:id="@+id/sign_in_fragment"
-        android:name="com.esielkar.calificame.SignInFragment">
+        android:name="com.esielkar.calificame.view.SignInFragment">
         <action
             android:id="@+id/action_sign_in_fragment_to_sign_up_fragment"
             app:destination="@id/sign_up_fragment"
@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/sign_up_fragment"
-        android:name="com.esielkar.calificame.SignUpFragment">
+        android:name="com.esielkar.calificame.view.SignUpFragment">
         <action
             android:id="@+id/action_sign_up_fragment_to_sign_in_fragment"
             app:destination="@id/sign_in_fragment"
@@ -55,7 +55,7 @@
 
     <fragment
         android:id="@+id/password_forgotten_fragment"
-        android:name="com.esielkar.calificame.PasswordForgottenFragment">
+        android:name="com.esielkar.calificame.view.PasswordForgottenFragment">
         <action
             android:id="@+id/action_password_forgotten_fragment_to_sign_in_fragment"
             app:enterAnim="@anim/nav_right_to_left"

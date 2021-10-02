@@ -1,4 +1,4 @@
-package com.esielkar.calificame.view
+package com.esielkar.calificame.view.components
 
 import android.content.Context
 import android.os.Build
@@ -7,7 +7,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import com.esielkar.calificame.R
-import com.google.android.material.card.MaterialCardView
 
 /**
  * A custom CardView with a <code>Gradient</code>, title, subtitle and overline.

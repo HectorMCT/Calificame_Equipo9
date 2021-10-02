@@ -1,11 +1,10 @@
-package com.esielkar.calificame.view
+package com.esielkar.calificame.view.components
 
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.LinearLayout
-import androidx.annotation.ColorInt
 import androidx.core.content.res.ResourcesCompat
 import com.esielkar.calificame.R
 import com.google.android.material.textview.MaterialTextView

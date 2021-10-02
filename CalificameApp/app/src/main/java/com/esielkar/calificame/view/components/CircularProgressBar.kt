@@ -1,4 +1,4 @@
-package com.esielkar.calificame.view
+package com.esielkar.calificame.view.components
 
 import android.content.Context
 import android.os.Build
