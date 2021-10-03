@@ -17,6 +17,7 @@ import com.esielkar.calificame.UniversityFacultiesActivity
 import com.esielkar.calificame.databinding.FragmentSignInBinding
 import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.utils.UIUtils
+import com.esielkar.calificame.utils.UsersContent
 import com.esielkar.calificame.viewmodel.UserViewModel
 
 class SignInFragment : Fragment() {
@@ -53,6 +54,7 @@ class SignInFragment : Fragment() {
                     }
                 }
                 user.observe(this) {
+                    UsersContent.currentUser = it
                     toUniversityFacultiesActivity()
                 }
             }

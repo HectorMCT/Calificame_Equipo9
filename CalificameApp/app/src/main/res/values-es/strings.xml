@@ -162,6 +162,7 @@
         <item>@string/yesNo_yes</item>
     </string-array>
     <string name="error_login">No hay registro de este usuario</string>
+    <string name="error_signup">Ya existe registro de esta infroamción</string>
     <string name="understood">OK</string>
 
     <!-- textos para la push simple -->

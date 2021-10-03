@@ -9,8 +9,13 @@ class UserRepository(
     private val userDao: UserDao,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) {
+    suspend fun signup(user : User) = userDao.insertUser(user)
     suspend fun login(email : String, password : String) : User? {
         return userDao.getUserByEmailAndPassword(email, password)
+    }
+
+    suspend fun findUser(email: String) : User? {
+        return userDao.getUserByEmail(email)
     }
 
     suspend fun populateUsers(users: List<User>) = withContext(ioDispatcher) {

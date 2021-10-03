@@ -22,7 +22,7 @@ object UsersContent {
 
     val users get() = _users.toSet()
 
-    var currentUser : User? = _users.elementAt(0)
+    var currentUser : User? = User(0, "Invitado", "", "")
 
     fun add(user: User) = _users.add(user)
 

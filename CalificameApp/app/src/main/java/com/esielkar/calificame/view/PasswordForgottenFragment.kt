@@ -11,19 +11,11 @@ import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentPasswordForgottenBinding
 
 class PasswordForgottenFragment : Fragment() {
-    private var username : String? = null
-    private var email : String? = null
-    private var password : String? = null
     private var _binding: FragmentPasswordForgottenBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            username = it.getString(SignInFragment.ARG_USERNAME)
-            email = it.getString(SignInFragment.ARG_EMAIL)
-            password = it.getString(SignInFragment.ARG_PASSWORD)
-        }
         (requireActivity() as AppCompatActivity).supportActionBar?.show()
     }
 
@@ -42,21 +34,12 @@ class PasswordForgottenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.emailEditText.setText(email)
 
         binding.signUpButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString(SignUpFragment.ARG_USERNAME, username)
-            bundle.putString(SignUpFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
-            bundle.putString(SignUpFragment.ARG_PASSWORD, password)
-            it.findNavController().navigate(R.id.action_password_forgotten_fragment_to_sign_up_fragment, bundle)
+            it.findNavController().navigate(R.id.action_password_forgotten_fragment_to_sign_up_fragment)
         }
         binding.cancelButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString(SignInFragment.ARG_USERNAME, username)
-            bundle.putString(SignInFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
-            bundle.putString(SignInFragment.ARG_PASSWORD, password)
-            it.findNavController().navigate(R.id.action_password_forgotten_fragment_to_sign_in_fragment, bundle)
+            it.findNavController().navigate(R.id.action_password_forgotten_fragment_to_sign_in_fragment)
         }
 
         binding.sendButton.setOnClickListener {

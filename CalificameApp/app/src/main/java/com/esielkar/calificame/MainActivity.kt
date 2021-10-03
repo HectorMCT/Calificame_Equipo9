@@ -6,6 +6,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.transition.TransitionInflater
+import android.view.View
 import android.widget.TextView
 import androidx.customview.widget.Openable
 import androidx.drawerlayout.widget.DrawerLayout
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val navController = navHostFragment.navController
 
-        /*val transitionExitXml = TransitionInflater.from(this).inflateTransition(R.transition.transition_out_main).apply {
+        val transitionExitXml = TransitionInflater.from(this).inflateTransition(R.transition.transition_out_main).apply {
             excludeTarget(window.decorView.findViewById<View>(R.id.action_bar_container), true)
             excludeTarget(android.R.id.statusBarBackground, true)
             excludeTarget(android.R.id.navigationBarBackground, true)
@@ -46,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         window.exitTransition = transitionExitXml
-        window.enterTransition = transitionEnterXml */
+        window.enterTransition = transitionEnterXml
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)

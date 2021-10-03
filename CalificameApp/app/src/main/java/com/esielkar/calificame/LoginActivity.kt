@@ -20,6 +20,7 @@ import java.util.concurrent.Executors
 class LoginActivity : AppCompatActivity() {
     private val application by lazy { applicationContext as CalificameApplication }
     private val userViewModel : UserViewModel by lazy { UserViewModel(application.userRepository) }
+
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var preferences: SharedPreferences
 
@@ -39,11 +40,10 @@ class LoginActivity : AppCompatActivity() {
                 .apply()
             Log.d("BASEDEDATOS","SE VA A PREPOBLAR")
         }else {
-            Log.d("BASEDEDATOS","YA FUE PREPOBLADA")
+            Log.d("BASEDEDATOS", "YA FUE PREPOBLADA")
         }
-
         if (preferences.getBoolean(UsersContent.SP_IS_LOGGED, false)) {
-            val user = UsersContent.validUser(
+            val user =  UsersContent.validUser(
                 preferences.getString(UsersContent.SP_EMAIL, "")!!,
                 preferences.getString(UsersContent.SP_PASSWORD, "")!!
             )

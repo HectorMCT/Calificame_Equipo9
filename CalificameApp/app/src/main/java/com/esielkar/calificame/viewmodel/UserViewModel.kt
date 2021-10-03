@@ -28,6 +28,9 @@ class UserViewModel(
         get() = _user
 
     fun signup() {
+        viewModelScope.launch {
+            signup(username.value!!, email.value!!, password.value!!)
+        }
 
     }
 
@@ -55,6 +58,7 @@ class UserViewModel(
         when {
             password.isNotBlank() && email.isNotBlank() -> {
                 val vEmail = UsersContent.validEmail(email)
+
                 val vUser = userRepository.login(email, password)
                 if(vEmail && vUser != null) {
                     _user.value = vUser!!
@@ -72,9 +76,39 @@ class UserViewModel(
         }
     }
 
-    suspend fun getUser(email: String, password: String) : User? {
-            return userRepository.login(email, password);
+    private suspend fun signup(username: String, email: String, password: String) {
+        when {
+            username.isNotBlank() && password.isNotBlank() && email.isNotBlank() -> {
+                var vEmail = UsersContent.validEmail(email)
+                val vUser = userRepository.findUser(email)
 
+                if(vEmail && vUser == null) {
+                    userRepository.signup(User(
+                        username = username,
+                        email = email,
+                        password = password)
+                    )
+                    UsersContent.currentUser = userRepository.login(email, password)
+                    /*preferences.edit()
+                        .putString(UsersContent.SP_EMAIL, email)
+                        .putString(UsersContent.SP_PASSWORD, password)
+                        .putBoolean(UsersContent.SP_IS_LOGGED, true)
+                        .apply()
+                    return true*/
+                }else{
+                    if(vUser == null) _error.value = R.string.error_username
+                    else if (!vEmail) _error.value = R.string.error_email
+                    else _error.value = R.string.error_signup
+                }
+            }
+            else -> {
+                if (email.isBlank()) _error.value = R.string.error_noEmail
+                else if (username.isBlank()) _error.value = R.string.error_noUsername
+                else if (password.isBlank()) _error.value = R.string.error_noPassword
+            }
+        }
     }
+
+
 
 }
