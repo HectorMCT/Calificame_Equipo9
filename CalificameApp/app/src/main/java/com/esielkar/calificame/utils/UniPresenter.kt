@@ -1,8 +1,8 @@
-package com.esielkar.calificame.presenter
+package com.esielkar.calificame.utils
 
-import com.esielkar.calificame.contract.UniContract
+import com.esielkar.calificame.utils.UniContract
 import com.esielkar.calificame.model.UniModel
-import com.esielkar.calificame.objects.UniResponse
+import com.esielkar.calificame.utils.UniResponse
 
 class UniPresenter : UniContract.Presenter, UniContract.Model.OnFinishedListener {
     private var uniView: UniContract.View? = null

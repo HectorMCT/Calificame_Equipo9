@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentReviewsListBinding
-import com.esielkar.calificame.placeholder.AppContent
+import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.view.adapter.ReviewsAdapter
 
 class ReviewsListFragment : Fragment() {
@@ -45,7 +45,9 @@ class ReviewsListFragment : Fragment() {
                 setDrawable(it)
             })
         }
-        recyclerView.adapter = ReviewsAdapter(AppContent.currentProfessorStats?.second?.getReviews(AppContent.subject) ?: listOf(), onClickListener)
+        recyclerView.adapter = ReviewsAdapter(
+            AppContent.currentProfessorStats?.second?.getReviews(
+                AppContent.subject) ?: listOf(), onClickListener)
     }
 
     override fun onDestroyView() {

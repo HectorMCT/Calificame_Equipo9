@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentProfessorStatsListBinding
 import com.esielkar.calificame.model.Faculty
-import com.esielkar.calificame.placeholder.AppContent
+import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.utils.ProfessorAndStats
 import com.esielkar.calificame.view.adapter.ProfessorsAdapter
 

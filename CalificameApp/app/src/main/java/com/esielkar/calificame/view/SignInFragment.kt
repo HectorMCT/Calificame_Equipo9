@@ -9,29 +9,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.esielkar.calificame.CalificameApplication
 import com.esielkar.calificame.R
 import com.esielkar.calificame.UniversityFacultiesActivity
 import com.esielkar.calificame.databinding.FragmentSignInBinding
-import com.esielkar.calificame.placeholder.AppContent
-import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.utils.AppContent
+import com.esielkar.calificame.utils.UIUtils
+import com.esielkar.calificame.viewmodel.UserViewModel
 
 class SignInFragment : Fragment() {
-    private var username : String? = null
-    private var email : String? = null
-    private var password : String? = null
     private lateinit var preferences: SharedPreferences
     private var _binding: FragmentSignInBinding? = null
     private val binding get() = _binding!!
 
+    private val application by lazy { requireActivity().applicationContext as CalificameApplication }
+    private val userViewModel : UserViewModel by lazy { UserViewModel(application.userRepository) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         preferences = requireActivity().getSharedPreferences(AppContent.PREFS_NAME, Context.MODE_PRIVATE)
-        arguments?.let {
-            username = it.getString(ARG_USERNAME)
-            email = it.getString(ARG_EMAIL)
-            password = it.getString(ARG_PASSWORD)
-        }
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
     }
 
@@ -39,39 +37,49 @@ class SignInFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSignInBinding.inflate(inflater, container, false)
+        _binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_sign_in, container, false)
+        binding.lifecycleOwner = this
+
+        binding.apply {
+            lifecycleOwner = this@SignInFragment
+            this.viewModel = userViewModel
+        }
+
+        userViewModel.apply {
+            with(viewLifecycleOwner) {
+                error.observe(this) {
+                    if (it != null) {
+                        UIUtils.showSnackbar(requireView(), it, R.string.understood)
+                    }
+                }
+                user.observe(this) {
+                    toUniversityFacultiesActivity()
+                }
+            }
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.emailEditText.setText(email)
-        binding.passwordEditText.setText(password)
 
         binding.signUpTextButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString(SignUpFragment.ARG_USERNAME, username)
-            bundle.putString(SignUpFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
-            bundle.putString(SignUpFragment.ARG_PASSWORD, binding.passwordEditText.text?.toString())
-            it.findNavController().navigate(R.id.action_sign_in_fragment_to_sign_up_fragment, bundle)
+            it.findNavController().navigate(R.id.action_sign_in_fragment_to_sign_up_fragment)
         }
 
         binding.forgotPasswordTextButton.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString(PasswordForgottenFragment.ARG_USERNAME, username)
             bundle.putString(PasswordForgottenFragment.ARG_EMAIL, binding.emailEditText.text?.toString())
             bundle.putString(PasswordForgottenFragment.ARG_PASSWORD, binding.passwordEditText.text?.toString())
             it.findNavController().navigate(R.id.action_sign_in_fragment_to_password_forgotten_fragment, bundle)
         }
 
         binding.signInButton.setOnClickListener {
-            //TODO: VALIDAR SIGN IN (EL USUARIO EXISTE)
-            if (validateData(binding.emailEditText.text.toString(), binding.passwordEditText.text.toString()))
-                toUniversityFacultiesActivity()
+            userViewModel.signin()
         }
 
         binding.skipSignInTextButton.setOnClickListener {
-            //TODO: ENTRO COMO INVITADO
             toUniversityFacultiesActivity()
         }
     }
@@ -100,32 +108,5 @@ class SignInFragment : Fragment() {
                     putString(ARG_PASSWORD, password)
                 }
             }
-    }
-
-
-    private fun validateData(email: String, password: String): Boolean{
-        return when {
-            password.isNotBlank() && email.isNotBlank() -> {
-                var vEmail = UsersContent.validEmail(email)
-                var vUser = UsersContent.validUser(email, password)
-                if(vEmail && vUser != null) {
-                    UsersContent.currentUser = vUser
-                    preferences.edit()
-                        .putString(UsersContent.SP_EMAIL, email)
-                        .putString(UsersContent.SP_PASSWORD, password)
-                        .putBoolean(UsersContent.SP_IS_LOGGED, true)
-                        .apply()
-                    true
-                }else{
-                    if(vUser == null) binding.passwordEditText.error = getString(R.string.error_password)
-                    if (!vEmail) binding.emailEditText.error = getString(R.string.error_email)
-                    false
-                }
-            }else -> {
-                binding.emailEditText.error = getString(R.string.error_noEmail)
-                binding.passwordEditText.error = getString(R.string.error_noPassword)
-                false
-            }
-        }
     }
 }

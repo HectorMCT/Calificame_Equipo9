@@ -1,4 +1,4 @@
-package com.esielkar.calificame.placeholder
+package com.esielkar.calificame.utils
 
 import com.esielkar.calificame.model.User
 
@@ -14,10 +14,10 @@ object UsersContent {
     const val SP_IMAGE = "profile_image"
 
     private val _users = mutableSetOf<User>(
-        User("Invitado", "", ""),
-        User("Hector", "hector@calificame.com", "12345678"),
-        User("Mayra", "mayra@calificame.com", "12345678"),
-        User("Esiel", "esiel_kar@hotmail.com", "12345678"),
+        User(0, "Invitado", "", ""),
+        User(1, "Hector", "hector@calificame.com", "12345678"),
+        User(2, "Mayra", "mayra@calificame.com", "12345678"),
+        User(3, "Esiel", "esiel_kar@hotmail.com", "12345678"),
     )
 
     val users get() = _users.toSet()

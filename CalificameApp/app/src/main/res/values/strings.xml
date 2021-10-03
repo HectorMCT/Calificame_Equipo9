@@ -161,6 +161,6 @@
         <item>@string/yesNo_no</item>
         <item>@string/yesNo_yes</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_login">There\'s no register of this user</string>
+    <string name="understood">OK</string>
 </resources>

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentUniversitiesListBinding
 import com.esielkar.calificame.model.University
-import com.esielkar.calificame.placeholder.AppContent
+import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.view.adapter.UniversitiesAdapter
 
 class UniversitiesListFragment : Fragment() {

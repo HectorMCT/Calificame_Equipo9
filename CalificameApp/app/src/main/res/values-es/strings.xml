@@ -161,4 +161,6 @@
         <item>@string/yesNo_no</item>
         <item>@string/yesNo_yes</item>
     </string-array>
+    <string name="error_login">No hay registro de este usuario</string>
+    <string name="understood">OK</string>
 </resources>

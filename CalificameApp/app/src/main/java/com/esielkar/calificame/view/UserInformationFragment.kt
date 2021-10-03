@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.esielkar.calificame.CameraActivity
 import com.esielkar.calificame.databinding.FragmentUserInformationBinding
-import com.esielkar.calificame.placeholder.AppContent
-import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.utils.AppContent
+import com.esielkar.calificame.utils.UsersContent
 import java.io.File
 
 class UserInformationFragment : Fragment() {

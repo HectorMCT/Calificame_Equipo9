@@ -1,4 +1,4 @@
-package com.esielkar.calificame.objects
+package com.esielkar.calificame.utils
 
 import com.google.gson.annotations.SerializedName
 

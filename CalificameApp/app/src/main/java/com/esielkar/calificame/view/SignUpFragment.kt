@@ -14,8 +14,8 @@ import com.esielkar.calificame.R
 import com.esielkar.calificame.UniversityFacultiesActivity
 import com.esielkar.calificame.databinding.FragmentSignUpBinding
 import com.esielkar.calificame.model.User
-import com.esielkar.calificame.placeholder.AppContent
-import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.utils.AppContent
+import com.esielkar.calificame.utils.UsersContent
 
 class SignUpFragment : Fragment() {
     private var username : String? = null
@@ -104,7 +104,11 @@ class SignUpFragment : Fragment() {
                 var vEmail = UsersContent.validEmail(email)
 
                 if(vUsername && vEmail){
-                    UsersContent.add(User(username, email, password))
+                    UsersContent.add(User(
+                        username = username,
+                        email = email,
+                        password = password)
+                    )
                     UsersContent.currentUser = UsersContent.validUser(email, password)
                     preferences.edit()
                         .putString(UsersContent.SP_EMAIL, email)

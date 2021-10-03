@@ -1,17 +1,17 @@
-package com.esielkar.calificame.placeholder
+package com.esielkar.calificame.utils
 
 import com.esielkar.calificame.model.*
-import com.esielkar.calificame.utils.ProfessorAndStats
 
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
  *
- * TODO: Replace all uses of this class before publishing your app.
- * TODO ESTO ES PROVICIONAL Y SE ELIMINARA CUANDO SE OCUPE LA PERSISTENCIA DE DATOS
+ * TODO ESTO ES PROVICIONAL Y SE ELIMINARA CUANDO SE OCUPE LA PERSISTENCIA DE DATOS REMOTA
  */
 object AppContent {
     const val PREFS_NAME = "com.esielkar.calificame"
+    const val PREPOPULATE = "prepopulate"
+
 
     var currentUniversity: University? = null
     var currentFaculty: Faculty? = null

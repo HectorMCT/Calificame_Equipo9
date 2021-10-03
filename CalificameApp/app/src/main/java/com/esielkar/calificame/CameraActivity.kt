@@ -13,8 +13,8 @@ import android.widget.Toast
 import androidx.camera.core.*
 import androidx.core.app.ActivityCompat
 import com.esielkar.calificame.databinding.ActivityCameraBinding
-import com.esielkar.calificame.placeholder.AppContent.PREFS_NAME
-import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.utils.AppContent.PREFS_NAME
+import com.esielkar.calificame.utils.UsersContent
 import java.io.File
 import java.util.concurrent.Executors
 

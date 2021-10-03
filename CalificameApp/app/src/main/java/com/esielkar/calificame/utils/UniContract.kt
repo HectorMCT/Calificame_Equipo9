@@ -1,6 +1,4 @@
-package com.esielkar.calificame.contract
-
-import com.esielkar.calificame.objects.UniResponse
+package com.esielkar.calificame.utils
 
 interface UniContract {
 

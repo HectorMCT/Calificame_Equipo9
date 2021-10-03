@@ -1,6 +1,6 @@
 package com.esielkar.calificame.api
 
-import com.esielkar.calificame.objects.UniResponse
+import com.esielkar.calificame.utils.UniResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

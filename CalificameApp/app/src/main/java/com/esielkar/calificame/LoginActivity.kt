@@ -5,19 +5,21 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.transition.Slide
-import android.transition.TransitionInflater
-import android.view.Gravity
-import android.view.View
+import android.util.Log
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.esielkar.calificame.placeholder.AppContent
-import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.utils.AppContent
+import com.esielkar.calificame.utils.UsersContent
+import com.esielkar.calificame.viewmodel.UserViewModel
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class LoginActivity : AppCompatActivity() {
+    private val application by lazy { applicationContext as CalificameApplication }
+    private val userViewModel : UserViewModel by lazy { UserViewModel(application.userRepository) }
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var preferences: SharedPreferences
 
@@ -25,6 +27,21 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         preferences = getSharedPreferences(AppContent.PREFS_NAME, Context.MODE_PRIVATE)
+
+        //Prepoblar la base de datos en la primer ejecución
+        if (preferences.getBoolean(AppContent.PREPOPULATE, true)) {
+            val executor: ExecutorService = Executors.newSingleThreadExecutor()
+            executor.execute{
+                userViewModel.prepopulate()
+            }
+            preferences.edit()
+                .putBoolean(AppContent.PREPOPULATE, false)
+                .apply()
+            Log.d("BASEDEDATOS","SE VA A PREPOBLAR")
+        }else {
+            Log.d("BASEDEDATOS","YA FUE PREPOBLADA")
+        }
+
         if (preferences.getBoolean(UsersContent.SP_IS_LOGGED, false)) {
             val user = UsersContent.validUser(
                 preferences.getString(UsersContent.SP_EMAIL, "")!!,

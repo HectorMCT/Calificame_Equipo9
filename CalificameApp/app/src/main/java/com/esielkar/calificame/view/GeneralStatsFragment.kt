@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentGeneralStatsBinding
-import com.esielkar.calificame.placeholder.AppContent
+import com.esielkar.calificame.utils.AppContent
 
 class GeneralStatsFragment : Fragment() {
 

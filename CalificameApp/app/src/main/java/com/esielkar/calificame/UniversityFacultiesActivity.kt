@@ -4,13 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.Slide
 import android.view.Gravity
-import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.esielkar.calificame.placeholder.AppContent
+import com.esielkar.calificame.utils.AppContent
 
 class UniversityFacultiesActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration

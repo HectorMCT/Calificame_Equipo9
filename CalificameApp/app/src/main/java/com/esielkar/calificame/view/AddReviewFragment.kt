@@ -10,8 +10,8 @@ import androidx.navigation.findNavController
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentAddReviewBinding
 import com.esielkar.calificame.model.*
-import com.esielkar.calificame.placeholder.AppContent
-import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.utils.AppContent
+import com.esielkar.calificame.utils.UsersContent
 
 class AddReviewFragment : Fragment() {
 
