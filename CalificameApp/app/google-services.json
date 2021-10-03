@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "718448582361",
+    "project_id": "practicasandcur",
+    "storage_bucket": "practicasandcur.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718448582361:android:75dc8010733624558de8c8",
+        "android_client_info": {
+          "package_name": "com.esielkar.calificame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718448582361-8rhpovtlfo2cp1tk9h2pe39ugc3ajc59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqx_EiwrGM7CH0EkiOhogszmpZbfQoHyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718448582361-8rhpovtlfo2cp1tk9h2pe39ugc3ajc59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718448582361:android:fab7a09bd37d34f88de8c8",
+        "android_client_info": {
+          "package_name": "org.hector.firenotif"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718448582361-8rhpovtlfo2cp1tk9h2pe39ugc3ajc59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqx_EiwrGM7CH0EkiOhogszmpZbfQoHyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718448582361-8rhpovtlfo2cp1tk9h2pe39ugc3ajc59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
