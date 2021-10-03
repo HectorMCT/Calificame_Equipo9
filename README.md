@@ -1,10 +1,10 @@
-# Kotlin Intermedio : Equipo 9
+# Kotlin Avanzado : Equipo 9
  Aquí se encontraran todo lo relacionado al proyecto del modulo de Kotlin Intermedio Santander 2021
  ### Integrantes 🧑🏻‍💻
  - [Esiel Kevin Arizmendi Ramírez](https://github.com/Esiel15)
  - [Héctor Manuel Chávez Troncoso](https://github.com/HectorMCT)
  - [Mayra Jimenez Maldonado](https://github.com/MayraJM)
- - [Luis David Ayala López](https://github.com/deividshido)
+ - [Luis David Ayala López]
  
 ### Requisitos ⚙️
 - Android Studio 4.2 o superior
@@ -67,8 +67,14 @@ Con el objetivo de implementar una API util para la aplicación, se creo una API
 ### Cámara y SharedPreferences
 Ahora los usuarios podrán cambiar la foto de su perfil utilizando la cámara de su dispositivo android, se implemento de manera muy similar a lo visto en la sesión 3. Adicionalmente, referente a la sesión 4, se implemento SharedPreferences para saber si el usuario ya esta loggeado en la aplicación, y en ese caso no tener que iniciar sesión o registrase cada vez que abra la aplicación. Sin embargo, el mecanismo utilizado no es el recomendable, por lo que en futuras sesiones avanzadas, se pretende cambiar por un mecanismo seguro. Para el caso del uso de las bases de datos vista en la sesión 4, se opto por no implementarlo, debido a que la aplicación requiere una base de datos externa y no embebida.
 
-### Validaciones
+### Validaciones 
 Se generaron validaciones dentro tanto para el ingreso de un usuario a la aplicación, como para el registro de un nuevo usuario. Por el momento no se tiene conexión a ninguna base de datos, la cual se encargara tanto de alojar a nuestros usuarios, como las estadísticas y comentarios que generen sobre los profesores. Toda esta información sera moldeada con el [proyecto](https://github.com/HectorMCT/Kotlin_Intermedio_Equipo19/tree/main/CalificameApp/app/src/main/java/com/esielkar/calificame/model) que creamos en el módulo anterior.
+
+### Tests 
+Se generarion test para corroborar el correcto funcionamiento del LogIn de la aplicación datos de los usuarios, así como los datos dentro de la base de datos. Con testValidUsername() y testAssertValidUsername(), ponemos a prueba el nombre del usuario; Por otro lado, con testValidUser(), testAssertValidUser() y testFalseValidUser(), validamos todos los datos del usuarios. (ID, username, correo, contraseña)
+
+### Notificaciones
+Se creo una notificación dentro de la aplicación, la cual se activa cada vez que este registra una nueva reseña hacia algun profesor/a. Esta solo se despliega con un mensaje siemple, que contiene el nombre de a quien acaba hacerle la reseña.
 
 Se han creado 4 usuarios para la validación del inicio de sesión como para el registro de usuarios.
 
