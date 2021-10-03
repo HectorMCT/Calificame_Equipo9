@@ -1,9 +1,11 @@
 package com.esielkar.calificame.view
 
-import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +15,6 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.esielkar.calificame.R
@@ -21,6 +22,7 @@ import com.esielkar.calificame.databinding.FragmentAddReviewBinding
 import com.esielkar.calificame.model.*
 import com.esielkar.calificame.placeholder.AppContent
 import com.esielkar.calificame.placeholder.UsersContent
+import com.esielkar.calificame.view.breceiver.NotificationReceiver
 
 class AddReviewFragment : Fragment() {
 
@@ -60,7 +62,8 @@ class AddReviewFragment : Fragment() {
 
         binding.addReviewButton.setOnClickListener {
             updateStats()
-            simpleNotification()
+            buttonNotification(AppContent.currentProfessorStats?.first?.name.toString())
+            //simpleNotification()
             AppContent.currentProfessorStats?.second?.add(
                 SubjectStats(
                     recommendation = satisfaction.getValue(),
@@ -137,22 +140,6 @@ class AddReviewFragment : Fragment() {
         }
     }
 
-    @SuppressLint("ResourceAsColor")
-    private fun simpleNotification(){
-
-        var builder = NotificationCompat.Builder(thiscontext, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_review) //seteamos el ícono de la push notification
-            .setColor(ContextCompat.getColor(thiscontext, R.color.light_blue)) //definimos el color del ícono y el título de la notificación
-            .setContentTitle(getString(R.string.simple_title)) //seteamos el título de la notificación
-            .setContentText(getString(R.string.simple_body)) //seteamos el cuerpo de la notificación
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT) //Ponemos una prioridad por defecto
-
-        //lanzamos la notificación
-        with(NotificationManagerCompat.from(thiscontext)) {
-            notify(20, builder.build()) //en este caso pusimos un id genérico
-        }
-    }
-
     @RequiresApi(Build.VERSION_CODES.O)
     private fun setNotificationChannel(){
         val channel = NotificationChannel(CHANNEL_ID, getString(R.string.channel_courses), NotificationManager.IMPORTANCE_DEFAULT).apply {
@@ -164,8 +151,40 @@ class AddReviewFragment : Fragment() {
         notificationManager.createNotificationChannel(channel)
     }
 
+    private fun buttonNotification(proffName: String) {
+
+        //Similar al anterior, definimos un intent comunicándose con NotificationReceiver
+        val acceptIntent = Intent(thiscontext, NotificationReceiver::class.java).apply {
+            action = ACTION_RECEIVED
+        }
+        //creamos un PendingIntent que describe el pending anterior
+        val acceptPendingIntent: PendingIntent =
+            PendingIntent.getBroadcast(thiscontext, 0, acceptIntent, 0)
+
+        val builder = NotificationCompat.Builder(thiscontext, CHANNEL_ID)
+            .setSmallIcon(R.drawable.ic_review)
+            .setContentTitle(getString(R.string.button_title) + " " + proffName)
+            .setContentText(getString(R.string.button_body))
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .addAction(R.drawable.ic_review, getString(R.string.button_text), acceptPendingIntent)
+
+        with(NotificationManagerCompat.from(thiscontext)) {
+            notify(getNextNotificationId(thiscontext), builder.build())
+        }
+
+    }
+
+    fun getNextNotificationId(context: Context) : Int {
+        val sp = context.getSharedPreferences("your_shared_preferences_key", MODE_PRIVATE)
+        val id = sp.getInt("notification_id_key", 0)
+        sp.edit().putInt("notification_id_key", (id + 1) % Int.MAX_VALUE).apply()
+
+        return id
+    }
+
     companion object {
         const val CHANNEL_ID = "CHANNEL_ID"
+        const val ACTION_RECEIVED = "ACTION_RECEIVED"
         @JvmStatic
         fun newInstance() = AddReviewFragment()
     }
