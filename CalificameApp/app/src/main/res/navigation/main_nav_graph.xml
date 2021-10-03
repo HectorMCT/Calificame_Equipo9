@@ -13,9 +13,9 @@
             android:id="@+id/action_professorStatsListFragment_to_generalStatsFragment"
             app:destination="@id/generalStatsFragment"
             app:enterAnim="@anim/nav_right_to_left"
-            app:exitAnim="@anim/nav_decrement"
+            app:exitAnim="@anim/nav_to_left"
             app:popEnterAnim="@anim/nav_right_to_left"
-            app:popExitAnim="@anim/nav_decrement" />
+            app:popExitAnim="@anim/nav_to_left" />
     </fragment>
     <fragment
         android:id="@+id/generalStatsFragment"
@@ -24,17 +24,17 @@
         <action
             android:id="@+id/action_generalStatsFragment_to_addReviewFragment"
             app:destination="@id/addReviewFragment"
-            app:enterAnim="@anim/nav_increment"
-            app:exitAnim="@anim/nav_to_top"
+            app:enterAnim="@anim/nav_right_to_left"
+            app:exitAnim="@anim/nav_to_left"
             app:popEnterAnim="@anim/nav_right_to_left"
-            app:popExitAnim="@anim/nav_to_top" />
+            app:popExitAnim="@anim/nav_to_left" />
         <action
             android:id="@+id/action_addReviewFragment_to_reviewsListFragment"
             app:destination="@id/reviewsListFragment"
             app:enterAnim="@anim/nav_top_to_bottom"
-            app:exitAnim="@anim/nav_to_top"
+            app:exitAnim="@anim/nav_to_left"
             app:popEnterAnim="@anim/nav_right_to_left"
-            app:popExitAnim="@anim/nav_to_top" />
+            app:popExitAnim="@anim/nav_to_left" />
     </fragment>
     <fragment
         android:id="@+id/addReviewFragment"
@@ -44,9 +44,9 @@
             android:id="@+id/action_addReviewFragment_to_subjectsListFragment"
             app:destination="@id/subjectsListFragment"
             app:enterAnim="@anim/nav_right_to_left"
-            app:exitAnim="@anim/nav_to_top"
+            app:exitAnim="@anim/nav_to_left"
             app:popEnterAnim="@anim/nav_right_to_left"
-            app:popExitAnim="@anim/nav_to_top" />
+            app:popExitAnim="@anim/nav_to_left" />
 
     </fragment>
     <fragment
@@ -80,7 +80,7 @@
         app:exitAnim="@anim/nav_to_bottom"
         app:launchSingleTop="true"
         app:popEnterAnim="@anim/nav_right_to_left"
-        app:popExitAnim="@anim/nav_to_top" />
+        app:popExitAnim="@anim/nav_to_left" />
 
 
 </navigation>
