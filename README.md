@@ -66,10 +66,10 @@ Con el objetivo de implementar una API util para la aplicación, se creo una API
 ### Cámara
 Ahora los usuarios podrán cambiar la foto de su perfil utilizando la cámara de su dispositivo android, se implemento de manera muy similar a lo visto en la sesión 3.
 
-###Shared Preferences y Persistencia de datos
+### Shared Preferences y Persistencia de datos
 Se implemento SharedPreferences para saber si el usuario ya esta loggeado en la aplicación, y en ese caso no tener que iniciar sesión o registrase cada vez que abra la aplicación. Sin embargo, el mecanismo utilizado no es el recomendable, por lo que en futuras sesiones avanzadas, se pretende cambiar por un mecanismo seguro. Para el caso del uso de las bases de datos vista en la sesión 4, se opto por implementar unicamente una pequeña base de datos con solamente la tabla Users, teniendo el registro de todos los usuarios, sin embargo, esta base de datos es embebida, por lo que carece de utilidad. En sesiones posteriores se pretende utilizar los módulos Firebase Authentication y Cloud Firestore.
 
-###Patrones de Arquitectura
+### Patrones de Arquitectura
 Se implemento el patrón de arquitectura MVVM unicamente para manejar los cambios de los usuarios mediante el ViewModel de los usuarios, además de implementar DataBinding y ViewBinding.
 
 ### Validaciones 
