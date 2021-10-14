@@ -18,6 +18,8 @@ import androidx.navigation.ui.*
 import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.utils.UsersContent
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.crashlytics.CustomKeysAndValues
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -54,6 +56,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         //findViewById<NavigationView>(R.id.nav_view).setupWithNavController(navController)
         setupNavigationView(navController)
+
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
     }
 
     private fun setupNavigationView(navController : NavController) {
@@ -69,6 +73,12 @@ class MainActivity : AppCompatActivity() {
         header.findViewById<TextView>(R.id.header_username).text = UsersContent.currentUser?.username
         header.findViewById<TextView>(R.id.header_email).text = UsersContent.currentUser?.email
         //NavigationUI.setupWithNavController(navView, navController)
+
+        FirebaseCrashlytics.getInstance().setCustomKeys(CustomKeysAndValues.Builder()
+            .putString("NAME", "Activity_Main")
+            .putString("USER", UsersContent.currentUser?.username.toString())
+            .build())
+
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.toUniversities -> {
@@ -107,6 +117,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

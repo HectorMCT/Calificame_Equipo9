@@ -25,6 +25,9 @@ import com.esielkar.calificame.model.*
 import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.utils.NotificationReceiver
 import com.esielkar.calificame.utils.UsersContent
+import com.google.firebase.crashlytics.CustomKeysAndValues
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+
 class AddReviewFragment : Fragment() {
 
     private var _binding: FragmentAddReviewBinding? = null
@@ -85,6 +88,20 @@ class AddReviewFragment : Fragment() {
                     ), AppContent.subject
                 )
             }
+
+            FirebaseCrashlytics.getInstance().setCustomKeys(CustomKeysAndValues.Builder()
+                .putString("Name", "Add Review Fragment")
+                .putString("Professor", AppContent.currentProfessorStats?.first?.name.toString())
+                .putString("Faculty", AppContent.currentFaculty?.name.toString())
+                .putString("University", AppContent.currentUniversity?.name.toString())
+                .putString("Satisfaction ", satisfaction.getValue().toString())
+                .putString("clarity", clarity.getValue().toString())
+                .putString("complexity", complexity.getValue().toString())
+                .putString("exams", domain.getValue().toString())
+                .putString("Action", fairEvaluation.getValue().toString())
+                .putBoolean("LogIn", true)
+                .build())
+
             Toast.makeText(context, "Stats successfully added", Toast.LENGTH_LONG).show()
             it.findNavController().popBackStack()
         }
@@ -165,7 +182,7 @@ class AddReviewFragment : Fragment() {
 
     }
 
-    fun getNextNotificationId(context: Context) : Int {
+    private fun getNextNotificationId(context: Context) : Int {
         val sp = context.getSharedPreferences("your_shared_preferences_key", MODE_PRIVATE)
         val id = sp.getInt("notification_id_key", 0)
         sp.edit().putInt("notification_id_key", (id + 1) % Int.MAX_VALUE).apply()

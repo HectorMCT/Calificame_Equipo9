@@ -15,6 +15,7 @@ import androidx.core.app.ActivityCompat
 import com.esielkar.calificame.databinding.ActivityCameraBinding
 import com.esielkar.calificame.utils.AppContent.PREFS_NAME
 import com.esielkar.calificame.utils.UsersContent
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import java.io.File
 import java.util.concurrent.Executors
 
@@ -39,6 +40,7 @@ class CameraActivity : AppCompatActivity() {
         else {
             requestPermissions()
         }
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
     }
 
     override fun onRequestPermissionsResult(

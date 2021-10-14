@@ -14,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.utils.UsersContent
 import com.esielkar.calificame.viewmodel.UserViewModel
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -38,9 +39,9 @@ class LoginActivity : AppCompatActivity() {
             preferences.edit()
                 .putBoolean(AppContent.PREPOPULATE, false)
                 .apply()
-            Log.d("BASEDEDATOS","SE VA A PREPOBLAR")
+            FirebaseCrashlytics.getInstance().log("BASEDEDATOS. SE VA A PREPOBLAR")
         }else {
-            Log.d("BASEDEDATOS", "YA FUE PREPOBLADA")
+            FirebaseCrashlytics.getInstance().log("BASEDEDATOS. YA FUE PREPOBLADA")
         }
         if (preferences.getBoolean(UsersContent.SP_IS_LOGGED, false)) {
             val user =  UsersContent.validUser(
@@ -57,10 +58,10 @@ class LoginActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_login_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-
-
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
     }
 
     override fun onSupportNavigateUp(): Boolean {
