@@ -10,11 +10,7 @@ object UIUtils {
             view,
             textId,
             Snackbar.LENGTH_LONG
-        )
-            .setAction(
-                actionTextId
-            ) { }
-            .show()
+        ).setAction(actionTextId){ }.show()
     }
 
 }
