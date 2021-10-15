@@ -12,6 +12,8 @@ import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentReviewsListBinding
 import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.view.adapter.ReviewsAdapter
+import com.google.firebase.crashlytics.CustomKeysAndValues
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class ReviewsListFragment : Fragment() {
     private var _binding: FragmentReviewsListBinding? = null
@@ -34,6 +36,15 @@ class ReviewsListFragment : Fragment() {
 
         val recyclerView = binding.reviewsList
         setupRecyclerView(recyclerView)
+
+        FirebaseCrashlytics.getInstance().setCustomKeys(
+            CustomKeysAndValues.Builder()
+                .putString("Name", "Review List Fragment")
+                .putString("Professor", AppContent.currentProfessorStats?.first?.name.toString())
+                .putString("Faculty", AppContent.currentFaculty?.name.toString())
+                .putString("University", AppContent.currentUniversity?.name.toString())
+                .putBoolean("LogIn", true)
+                .build())
     }
 
     private fun setupRecyclerView(

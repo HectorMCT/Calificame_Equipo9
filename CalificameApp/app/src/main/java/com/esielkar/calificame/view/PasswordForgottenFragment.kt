@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentPasswordForgottenBinding
+import com.esielkar.calificame.utils.AppContent
+import com.google.firebase.crashlytics.CustomKeysAndValues
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class PasswordForgottenFragment : Fragment() {
     private var _binding: FragmentPasswordForgottenBinding? = null
@@ -44,6 +47,12 @@ class PasswordForgottenFragment : Fragment() {
 
         binding.sendButton.setOnClickListener {
             //TODO: METODO PARA RECUPERAR LA CONTRASEÑA: FUERA DEL ALCANCE ACTUAL DE LA APLICACIÓN
+            FirebaseCrashlytics.getInstance().setCustomKeys(
+                CustomKeysAndValues.Builder()
+                    .putString("Name", "Password Forgotten Fragment")
+                    .putString("Data User", arguments.toString())
+                    .putBoolean("LogIn", false)
+                    .build())
         }
     }
 
