@@ -17,11 +17,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.*
 import com.esielkar.calificame.utils.AppContent
 import com.esielkar.calificame.utils.UsersContent
+import com.esielkar.calificame.viewmodel.UserViewModel
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.crashlytics.CustomKeysAndValues
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class MainActivity : AppCompatActivity() {
+    private val application by lazy { applicationContext as CalificameApplication }
+    private val userViewModel : UserViewModel by lazy { UserViewModel(application.userRepository) }
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var preferences: SharedPreferences
 
@@ -97,13 +100,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.toSignOut -> {
+                    userViewModel.signOut()
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
-                    preferences.edit()
-                        .putBoolean(UsersContent.SP_IS_LOGGED, false)
-                        .remove(UsersContent.SP_EMAIL)
-                        .remove(UsersContent.SP_PASSWORD)
-                        .apply()
                     finish()
                     true
                 }

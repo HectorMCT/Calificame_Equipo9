@@ -1,24 +1,56 @@
 package com.esielkar.calificame.model.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.map
 import com.esielkar.calificame.model.User
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-class UserRepository(
-    private val userDao: UserDao,
-    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
-) {
-    suspend fun signup(user : User) = userDao.insertUser(user)
-    suspend fun login(email : String, password : String) : User? {
-        return userDao.getUserByEmailAndPassword(email, password)
+
+class UserRepository() {
+    private val auth : FirebaseAuth = Firebase.auth
+    private val fUser = MutableLiveData<FirebaseUser?>()
+    val user : LiveData<User?>
+        get() {
+            return fUser.map {
+                it?.let {
+                    User(it.displayName!!, it.email!!)
+                }
+            }
+        }
+
+
+    fun signUp(username : String, email : String, password : String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    auth.currentUser?.updateProfile(
+                        UserProfileChangeRequest.Builder()
+                            .setDisplayName(username).build()
+                    )?.addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            fUser.postValue(auth.currentUser)
+                        }
+                    }
+                }
+            }
     }
 
-    suspend fun findUser(email: String) : User? {
-        return userDao.getUserByEmail(email)
+    fun signIn(email : String, password : String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    fUser.postValue(auth.currentUser)
+                }
+            }
+
     }
 
-    suspend fun populateUsers(users: List<User>) = withContext(ioDispatcher) {
-        return@withContext userDao.insertAll(users)
+    fun signOut() {
+        auth.signOut()
     }
 }

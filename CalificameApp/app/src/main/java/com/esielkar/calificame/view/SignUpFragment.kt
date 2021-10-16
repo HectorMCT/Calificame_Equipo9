@@ -72,7 +72,7 @@ class SignUpFragment : Fragment() {
         }
 
         binding.signUpButton.setOnClickListener {
-            userViewModel.signup()
+            userViewModel.signUp()
         }
 
         binding.skipSignUpTextButton.setOnClickListener {
@@ -89,39 +89,5 @@ class SignUpFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun validateData(username: String, email: String, password: String): Boolean{
-        return when {
-            username.isNotBlank() && password.isNotBlank() && email.isNotBlank() -> {
-                var vUsername = UsersContent.validUsername(username)
-                var vEmail = UsersContent.validEmail(email)
-
-                if(vUsername && vEmail){
-                    UsersContent.add(User(
-                        username = username,
-                        email = email,
-                        password = password)
-                    )
-                    UsersContent.currentUser = UsersContent.validUser(email, password)
-                    preferences.edit()
-                        .putString(UsersContent.SP_EMAIL, email)
-                        .putString(UsersContent.SP_PASSWORD, password)
-                        .putBoolean(UsersContent.SP_IS_LOGGED, true)
-                        .apply()
-                    return true
-                }else{
-                    if (!vUsername) binding.usernameEditText.error = getString(R.string.error_username)
-                    if (!vEmail) binding.emailEditText.error = getString(R.string.error_email)
-                    false
-                }
-            }
-            else -> {
-                binding.usernameEditText.error = getString(R.string.error_noUsername)
-                binding.emailEditText.error = getString(R.string.error_noEmail)
-                binding.passwordEditText.error = getString(R.string.error_noPassword)
-                false
-            }
-        }
     }
 }

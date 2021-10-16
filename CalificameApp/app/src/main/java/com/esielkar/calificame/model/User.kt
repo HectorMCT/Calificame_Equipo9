@@ -15,10 +15,7 @@ import kotlinx.parcelize.Parcelize
  * @property password Contraseña
  */
 
-@Entity(tableName = "Users")
 @Parcelize
 data class User(
-    @PrimaryKey(autoGenerate = true) val id : Int = 0,
-    @ColumnInfo val username : String,
-    @ColumnInfo val email : String,
-    @ColumnInfo val password : String) : Parcelable
+    val username : String,
+    val email : String) : Parcelable

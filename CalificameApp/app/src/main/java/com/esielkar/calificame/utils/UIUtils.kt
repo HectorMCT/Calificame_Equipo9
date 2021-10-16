@@ -10,7 +10,11 @@ object UIUtils {
             view,
             textId,
             Snackbar.LENGTH_LONG
+<<<<<<< Updated upstream
         ).setAction(actionTextId){ }.show()
+=======
+        ).setAction(actionTextId) { }.show()
+>>>>>>> Stashed changes
     }
 
 }

@@ -3,6 +3,7 @@ package com.esielkar.calificame
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.Slide
+import android.util.Log
 import android.view.Gravity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -34,6 +35,7 @@ class UniversityFacultiesActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
+        Log.d("ACTIVITY", "UF IS CREATED")
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -14,27 +14,20 @@ object UsersContent {
     const val SP_IMAGE = "profile_image"
 
     private val _users = mutableSetOf<User>(
-        User(0, "Invitado", "", ""),
-        User(1, "Hector", "hector@calificame.com", "12345678"),
-        User(2, "Mayra", "mayra@calificame.com", "12345678"),
-        User(3, "Esiel", "esiel_kar@hotmail.com", "12345678"),
+        User("Invitado", "")
     )
 
     val users get() = _users.toSet()
 
-    var currentUser : User? = User(0, "Invitado", "", "")
+    var currentUser : User? = users.elementAt(0)
 
-    fun add(user: User) = _users.add(user)
 
     fun validUsername(username: String): Boolean {
         return !_users.any { it.username == username}
     }
 
     fun validUser(email: String, password: String): User? {
-        val usr = _users.find { it.email == email }
-        if (usr?.password == password)
-            return usr
-        return null
+        return _users.find { it.email == email }
     }
 
     fun validEmail(email: String): Boolean {
