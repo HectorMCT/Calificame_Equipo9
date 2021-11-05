@@ -16,9 +16,16 @@ class UserViewModel(
     val email = MutableLiveData("")
     val password = MutableLiveData("")
 
+    private val _warning = MutableLiveData<Int>()
+    val warning: LiveData<Int?>
+        get() = _warning
+
     private val _error = MutableLiveData<Int>()
     val error: LiveData<Int?>
         get() = _error
+
+    val fError: LiveData<String?>
+        get() = userRepository.fError
 
     val user : LiveData<User?>
         get() = userRepository.user
@@ -32,14 +39,14 @@ class UserViewModel(
                     userRepository.signUp(username.value!!, email.value!!, password.value!!)
                     UsersContent.currentUser = userRepository.user.value
                 }else{
-                    if (!vEmail) _error.value = R.string.error_email
-                    else _error.value = R.string.error_signup
+                    _error.value = R.string.error_email
+                    //_error.value = R.string.error_signup
                 }
             }
             else -> {
-                if (email.value!!.isBlank()) _error.value = R.string.error_noEmail
-                else if (username.value!!.isBlank()) _error.value = R.string.error_noUsername
-                else if (password.value!!.isBlank()) _error.value = R.string.error_noPassword
+                if (email.value!!.isBlank()) _warning.value = R.string.error_noEmail
+                else if (username.value!!.isBlank()) _warning.value = R.string.error_noUsername
+                else if (password.value!!.isBlank()) _warning.value = R.string.error_noPassword
             }
         }
 
@@ -52,14 +59,14 @@ class UserViewModel(
                 if(vEmail) {
                     userRepository.signIn(email.value!!, password.value!!)
                 } else {
-                    if (!vEmail) _error.value = R.string.error_email
-                    else _error.value = R.string.error_login
+                    _error.value = R.string.error_email
+                    //_error.value = R.string.error_login
                 }
             } else -> {
                 if (email.value!!.isBlank())
-                    _error.value = R.string.error_noEmail
+                    _warning.value = R.string.error_noEmail
                 else if (password.value!!.isBlank())
-                    _error.value = R.string.error_noPassword
+                    _warning.value = R.string.error_noPassword
             }
         }
     }

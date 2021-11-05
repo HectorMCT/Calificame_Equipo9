@@ -109,6 +109,9 @@
     <string name="question_6">¿Aplica examenes?</string>
     <string name="question_7">¿Qué tan satisfecho estas con este profesor?</string>
 
+    <!-- Stats added -->
+    <string name="stats_added">Review añadida correctamente</string>
+
     <!--ENUMS-->
     <string name="difficulty_very_easy">Muy fácil</string>
     <string name="difficulty_easy">Fácil</string>

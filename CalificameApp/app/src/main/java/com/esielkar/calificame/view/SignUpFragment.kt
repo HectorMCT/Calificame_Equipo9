@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -15,10 +16,7 @@ import com.esielkar.calificame.CalificameApplication
 import com.esielkar.calificame.R
 import com.esielkar.calificame.UniversityFacultiesActivity
 import com.esielkar.calificame.databinding.FragmentSignUpBinding
-import com.esielkar.calificame.model.User
-import com.esielkar.calificame.utils.AppContent
-import com.esielkar.calificame.utils.UIUtils
-import com.esielkar.calificame.utils.UsersContent
+import com.esielkar.calificame.utils.*
 import com.esielkar.calificame.viewmodel.UserViewModel
 
 class SignUpFragment : Fragment() {
@@ -50,11 +48,24 @@ class SignUpFragment : Fragment() {
 
         userViewModel.apply {
             with(viewLifecycleOwner) {
-                error.observe(this) {
+                warning.observe(this) {
                     if (it != null) {
-                        UIUtils.showSnackbar(requireView(), it, R.string.understood)
+                        showToasty(requireContext(), WARNING, getString(it), Toast.LENGTH_SHORT, true, null, null)
                     }
                 }
+                error.observe(this) {
+                    if (it != null) {
+                        showToasty(requireContext(), ERROR, getString(it), Toast.LENGTH_SHORT, true, null, null)
+                        //showSnackbar(requireView(), it, R.string.understood)
+                    }
+                }
+
+                fError.observe(this) {
+                    if (it != null) {
+                        showToasty(requireContext(), ERROR, it, Toast.LENGTH_SHORT, true, null, null)
+                    }
+                }
+
                 user.observe(this) {
                     UsersContent.currentUser = it
                     toUniversityFacultiesActivity()

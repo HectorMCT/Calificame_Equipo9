@@ -1,6 +1,5 @@
 package com.esielkar.calificame.view
 
-import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -16,15 +15,12 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.esielkar.calificame.R
 import com.esielkar.calificame.databinding.FragmentAddReviewBinding
 import com.esielkar.calificame.model.*
-import com.esielkar.calificame.utils.AppContent
-import com.esielkar.calificame.utils.NotificationReceiver
-import com.esielkar.calificame.utils.UsersContent
+import com.esielkar.calificame.utils.*
 import com.google.firebase.crashlytics.CustomKeysAndValues
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 
@@ -102,7 +98,8 @@ class AddReviewFragment : Fragment() {
                 .putBoolean("LogIn", true)
                 .build())
 
-            Toast.makeText(context, "Stats successfully added", Toast.LENGTH_LONG).show()
+            showToasty(requireContext(), SUCCESS, getString(R.string.stats_added), Toast.LENGTH_LONG, true, null, null)
+            //Toast.makeText(context, "Stats successfully added", Toast.LENGTH_LONG).show()
             it.findNavController().popBackStack()
         }
     }

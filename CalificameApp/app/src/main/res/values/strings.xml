@@ -109,6 +109,9 @@
     <string name="question_6">He or she applies exams?</string>
     <string name="question_7">How satisfied are you with this professor?</string>
 
+    <!-- Stats added -->
+    <string name="stats_added">Stats successfully added</string>
+
     <!--ENUMS-->
     <string name="difficulty_very_easy">Very easy</string>
     <string name="difficulty_easy">Easy</string>

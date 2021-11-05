@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -16,9 +16,7 @@ import com.esielkar.calificame.CalificameApplication
 import com.esielkar.calificame.R
 import com.esielkar.calificame.UniversityFacultiesActivity
 import com.esielkar.calificame.databinding.FragmentSignInBinding
-import com.esielkar.calificame.utils.AppContent
-import com.esielkar.calificame.utils.UIUtils
-import com.esielkar.calificame.utils.UsersContent
+import com.esielkar.calificame.utils.*
 import com.esielkar.calificame.viewmodel.UserViewModel
 
 class SignInFragment : Fragment() {
@@ -49,9 +47,20 @@ class SignInFragment : Fragment() {
 
         userViewModel.apply {
             with(viewLifecycleOwner) {
+                warning.observe(this) {
+                    if (it != null) {
+                        showToasty(requireContext(), WARNING, getString(it), Toast.LENGTH_SHORT, true, null, null)
+                    }
+                }
                 error.observe(this) {
                     if (it != null) {
-                        UIUtils.showSnackbar(requireView(), it, R.string.understood)
+                        showToasty(requireContext(), ERROR, getString(it), Toast.LENGTH_SHORT, true, null, null)
+                        //showSnackbar(requireView(), it, R.string.understood)
+                    }
+                }
+                fError.observe(this) {
+                    if (it != null) {
+                        showToasty(requireContext(), ERROR, it, Toast.LENGTH_SHORT, true, null, null)
                     }
                 }
                 user.observe(this) {

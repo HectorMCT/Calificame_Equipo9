@@ -13,6 +13,7 @@ import com.google.firebase.ktx.Firebase
 
 class UserRepository() {
     private val auth : FirebaseAuth = Firebase.auth
+
     private val fUser = MutableLiveData<FirebaseUser?>()
     val user : LiveData<User?>
         get() {
@@ -23,6 +24,9 @@ class UserRepository() {
             }
         }
 
+    private val _fError = MutableLiveData<String?>()
+    val fError : LiveData<String?>
+        get() = _fError
 
     fun signUp(username : String, email : String, password : String) {
         auth.createUserWithEmailAndPassword(email, password)
@@ -35,6 +39,8 @@ class UserRepository() {
                         if (it.isSuccessful) {
                             fUser.postValue(auth.currentUser)
                         }
+                    }?.addOnFailureListener {
+                        _fError.postValue(it.message)
                     }
                 }
             }
@@ -46,8 +52,9 @@ class UserRepository() {
                 if (it.isSuccessful) {
                     fUser.postValue(auth.currentUser)
                 }
+            }.addOnFailureListener {
+                _fError.postValue(it.message)
             }
-
     }
 
     fun signOut() {
