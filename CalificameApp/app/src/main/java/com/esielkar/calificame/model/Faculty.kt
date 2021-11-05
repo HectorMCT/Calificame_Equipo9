@@ -53,15 +53,6 @@ data class Faculty (val name : String) : Parcelable{
      */
     fun remove(professor : Professor) = _professors.remove(professor)
 
-    private fun <K : Parcelable, V : Parcelable> writeParcelableMap(
-        parcel : Parcel, flags : Int, map : Map<K, V>) {
-        parcel.writeInt(map.size)
-        map.entries.forEach { entry ->
-            parcel.writeParcelable(entry.key, flags)
-            parcel.writeParcelable(entry.value, flags)
-        }
-    }
-
     private inline fun <reified K : Parcelable, reified V : Parcelable> readParcelableMap(
         parcel : Parcel, flags : Int) : MutableMap<K, V> {
         val map = mutableMapOf<K, V>()
@@ -71,6 +62,15 @@ data class Faculty (val name : String) : Parcelable{
             map.put(key!!, value!!)
         }
         return map
+    }
+
+    private fun <K : Parcelable, V : Parcelable> writeParcelableMap(
+        parcel : Parcel, flags : Int, map : Map<K, V>) {
+        parcel.writeInt(map.size)
+        map.entries.forEach { entry ->
+            parcel.writeParcelable(entry.key, flags)
+            parcel.writeParcelable(entry.value, flags)
+        }
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

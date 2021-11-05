@@ -45,16 +45,17 @@ class FacultiesListFragment : Fragment() {
         binding.headerCV.title = AppContent.currentUniversity?.name.toString()
         val recyclerView = binding.facultiesList
         setupRecyclerView(recyclerView, onClickListener = {
-            val bundle = Bundle()
+            /*val bundle = Bundle()
             //TODO: PARCELABLE
             bundle.putString(ProfessorStatsListFragment.ARG_UNI_NAME, university?.name)
-            bundle.putParcelable(ProfessorStatsListFragment.ARG_FAC, it.tag as Faculty)
+            bundle.putParcelable(ProfessorStatsListFragment.ARG_FAC, it.tag as Faculty)*/
 
             //TODO: CONTENT
             AppContent.currentFaculty = it.tag as Faculty
             //Intent
             var intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent, bundle)
+            //startActivity(intent, bundle)
+            startActivity(intent)
             requireActivity().finish()
         })
     }

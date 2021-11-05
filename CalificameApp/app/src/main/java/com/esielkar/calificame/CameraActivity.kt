@@ -71,7 +71,7 @@ class CameraActivity : AppCompatActivity() {
 
     fun startCamera() {
         val previewConfig = PreviewConfig.Builder().apply {
-            setTargetResolution(Size(640, 480)) //ajustando resolucción
+            setTargetResolution(Size(640, 480)) //ajustando resolución
         }.build()
 
         val preview = Preview(previewConfig)
