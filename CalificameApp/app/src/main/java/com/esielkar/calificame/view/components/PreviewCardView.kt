@@ -120,7 +120,7 @@ class PreviewCardView @JvmOverloads constructor(
             }
         )
         rl.setPadding(contentPaddingLeft, contentPaddingTop, contentPaddingRight, paddingBottom)
-        setContentPadding(0,0,0,0)
+        setContentPadding(0,Utils.dpToPx(16, context),0,Utils.dpToPx(16, context))
 
         addView(rl, RelativeLayout.LayoutParams(
             RelativeLayout.LayoutParams.MATCH_PARENT,

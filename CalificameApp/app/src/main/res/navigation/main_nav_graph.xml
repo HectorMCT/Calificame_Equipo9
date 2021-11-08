@@ -58,6 +58,10 @@
         android:name="com.esielkar.calificame.view.AboutUsFragment"
         tools:layout="@layout/fragment_about_us" />
     <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.esielkar.calificame.view.HelpFragment"
+        tools:layout="@layout/fragment_help" />
+    <fragment
         android:id="@+id/reviewsListFragment"
         android:name="com.esielkar.calificame.view.ReviewsListFragment" />
     <fragment
@@ -74,6 +78,15 @@
         app:popExitAnim="@anim/nav_to_top" />
 
     <action
+        android:id="@+id/action_global_helpFragment"
+        app:destination="@id/helpFragment"
+        app:enterAnim="@anim/nav_right_to_left"
+        app:exitAnim="@anim/nav_to_bottom"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/nav_right_to_left"
+        app:popExitAnim="@anim/nav_to_top" />
+
+    <action
         android:id="@+id/action_global_userInformationFragment"
         app:destination="@id/userInformationFragment"
         app:enterAnim="@anim/nav_right_to_left"
@@ -81,6 +94,4 @@
         app:launchSingleTop="true"
         app:popEnterAnim="@anim/nav_right_to_left"
         app:popExitAnim="@anim/nav_to_left" />
-
-
 </navigation>

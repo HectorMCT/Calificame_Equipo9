@@ -38,7 +38,7 @@ class LoginActivityTest {
         //when
         val result = validUser(email, pass)
         //then --- ID : 1 to PASS
-        assertEquals(User(10,"Hector", "hector@calificame.com", "12345678"), result)
+        assertEquals(User("Hector", "hector@calificame.com"), result)
     }
 
     @Test
@@ -60,7 +60,7 @@ class LoginActivityTest {
         //when
         val result = validUser(email, pass)
         //then --- ID : 1 to PASS
-        assertEquals(User(10,"Invitado", "", ""), result)
+        assertEquals(User("Invitado", "Invitado"), result)
     }
 
 }

@@ -15,6 +15,16 @@ object AppContent {
     var currentProfessorStats : ProfessorAndStats? = null
     val subject = Subject("GENERAL")
 
+    private val _users = setOf(
+        User("Esiel15", "esiel_kar@hotmail.com"),
+        User("Hector", "usuario2@hotmail.com"),
+        User("Mayra", "usuario3@hotmail.com"),
+        User("Jose GL", "usuario4@hotmail.com"),
+        User("David LP", "usuario5@hotmail.com")
+    )
+
+
+
     private val _universities = mutableSetOf(
         University("Benemérita Universidad Autónoma de Puebla", setOf(
             Faculty("Facultad de Ciencias de la Computación",
@@ -32,10 +42,10 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
-                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
-                                Review(UsersContent.users.elementAt(0), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0)
+                                Review(_users.elementAt(1), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
+                                Review(_users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(_users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(_users.elementAt(3), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0)
                             )
 
                         )
@@ -58,17 +68,18 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
-                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
-                                Review(UsersContent.users.elementAt(0), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0),
-                                Review(UsersContent.users.elementAt(0), "Excelentes clases, profesora exigente, pero muy buena", 100.0),
                                 Review(UsersContent.users.elementAt(0), "La mejor profesora para aprender a programar", 100.0),
+                                Review(_users.elementAt(2), "La profesora siempre esta al pendiente del aprendizaje de los alumnos y deja trabajos acorde al aprendizaje", 100.0),
+                                Review(_users.elementAt(3), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0),
+                                Review(_users.elementAt(4), "Excelentes clases, profesora exigente, pero muy buena", 100.0),
+                                Review(_users.elementAt(0), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
+                                Review(_users.elementAt(1), "Excelentes clases, excelente profesore", 100.0),
+
                             )
 
                         )
                     ),
-                    Professor("Pedro Bello Lopez") to ProfessorStats(
+                    Professor("Elsa Chavira Martínez") to ProfessorStats(
                         subjectStats = mapOf(
                             subject to listOf(
                                 SubjectStats(70.0, 60.0, 10.0, 20.0, 100.0, 50.0, 100.0, 100.0),
@@ -77,7 +88,8 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(0), "Casi nunca se presenta a las clases y los temas son muy complicados", 50.0),
+                                Review(_users.elementAt(2), "Casi nunca se presenta a las clases y los temas son muy complicados", 50.0),
+                                Review(_users.elementAt(3), "Los trabajos son algo complicados y su puntualidad deja mucho que desear", 70.0),
                             )
 
                         )
@@ -92,8 +104,8 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(0), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 70.0),
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 80.0)
+                                Review(_users.elementAt(0), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 70.0),
+                                Review(_users.elementAt(2), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 80.0)
                             )
 
                         )
@@ -111,10 +123,10 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, excelente profesor. Siempre dispuesto ayudar", 90.0),
-                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
-                                Review(UsersContent.users.elementAt(0), "Siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, siempre ayuda cuando se lo pides", 90.0)
+                                Review(_users.elementAt(0), "Muy buenas clases, excelente profesor. Siempre dispuesto ayudar", 90.0),
+                                Review(_users.elementAt(3), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(_users.elementAt(2), "Siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(_users.elementAt(1), "Muy buenas clases, siempre ayuda cuando se lo pides", 90.0)
                             )
 
                         )
@@ -132,10 +144,10 @@ object AppContent {
                         ),
                         reviews = mapOf(
                             subject to listOf(
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
-                                Review(UsersContent.users.elementAt(0), "Excelentes clases, de que aprendes, aprendes", 100.0),
-                                Review(UsersContent.users.elementAt(0), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
-                                Review(UsersContent.users.elementAt(0), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0)
+                                Review(_users.elementAt(2), "Muy buenas clases, excelente profesora. Siempre dispuesta ayudar", 90.0),
+                                Review(_users.elementAt(3), "Excelentes clases, de que aprendes, aprendes", 100.0),
+                                Review(_users.elementAt(1), "La profesora siempre esta al pendiente del aprendizaje de los alumnos", 100.0),
+                                Review(_users.elementAt(0), "Muy buenas clases, la profesora siempre ayuda cuando se lo pides", 90.0)
                             )
 
                         )

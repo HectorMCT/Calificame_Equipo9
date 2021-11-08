@@ -18,6 +18,7 @@
     <string name="sign_in_label">Sign In</string>
     <string name="sign_up_label">Sign Up</string>
     <string name="about_us_label">About Us</string>
+    <string name="help_label">Help</string>
     <string name="forgot_password_label">Forgot Password</string>
     <string name="registered_reviews">Reviews registered: %d</string>
     <string name="registered_stats">Stats registered: %d</string>
@@ -25,7 +26,7 @@
     <string name="registered_professors">Professors registered: %d</string>
 
     <!-- Texts -->
-    <string name="about_us_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="about_us_text"> We are focused on developing a system that will provide college students with extra, detailed and complete information regarding professors under universities.In the same way, providing a space to share previous experiences with those professors, thus generating a space by and for the students.</string>
     <string name="recov_pass">Write you email and we\'ll send you a link to get back your account.</string>
 
     <!-- Buttons -->
@@ -37,6 +38,14 @@
     <string name="view_review">View reviews</string>
     <string name="add_review">Add review</string>
 
+    <!-- FAQ -->
+    <string name="faq_text">In this section you will answer to your FAQs</string>
+    <string name="faq_1">How to use the app?</string>
+    <string name="faq_2">How to find my university?</string>
+    <string name="faq_3">How to find my faculty?</string>
+    <string name="faq_4">How to find my professor?</string>
+    <string name="faq_5">How to add a review?</string>
+    <string name="faq_6">Can I leave a review?</string>
 
     <!-- Version -->
     <string name="version">Version 1.0</string>
@@ -59,9 +68,9 @@
     <string name="select_teacher">Teachers</string>
     <string name="not_defined_label">Not defined</string>
     <string name="no_comment_label">No comments</string>
-    <string name="select_signature">Select signature:</string>
-    <string name="select_university">Select university:</string>
-    <string name="select_professor">Select professor:</string>
+    <string name="select_signature">Select a subject:</string>
+    <string name="select_university">Select a university:</string>
+    <string name="select_professor">Select a professor:</string>
     <string name="select_faculty">Select faculty:</string>
     <string name="faculties">Faculties</string>
 
@@ -186,8 +195,5 @@
     <!-- CANAL CURSOS -->
     <string name="channel_courses">review</string>
     <string name="courses_description">New Review Notification</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

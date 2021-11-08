@@ -18,6 +18,7 @@
     <string name="sign_in_label">Iniciar Sesión</string>
     <string name="sign_up_label">Registrarse</string>
     <string name="about_us_label">Acerca de nosotros</string>
+    <string name="help_label">Ayuda</string>
     <string name="forgot_password_label">Olvidaste tu contraseña</string>
     <string name="registered_reviews">Reviews registradas: %d</string>
     <string name="registered_stats">Estadisticas registradas: %d</string>
@@ -25,7 +26,7 @@
     <string name="registered_professors">Profesores registrados: %d</string>
 
     <!-- Texts -->
-    <string name="about_us_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="about_us_text"> Estamos enfocados en desarrollar un sistema que provea a los universitarios de información más detalla y completa sobre el desempeño de los profesores de su institución. De igual forma, proveer un espacio para compartir previas experiencias con dichos profesores y generar así un espacio por y para los estudiantes. </string>
     <string name="recov_pass">Escribe tu correo electronico y te enviaremos un link para que recuperes tu cuenta.</string>
 
     <!-- Buttons -->
@@ -37,6 +38,14 @@
     <string name="view_review">Ver reviews</string>
     <string name="add_review">Añadir review</string>
 
+    <!-- FAQ -->
+    <string name="faq_text">En esta sección encontraras solución a la preguntas frecuentes que otras personas han tenido con el uso de la aplicación.</string>
+    <string name="faq_1">¿Cómo usar la aplicación?</string>
+    <string name="faq_2">¿Cómo encontrar mi universidad?</string>
+    <string name="faq_3">¿Cómo encontrar mi facultad o departamento?</string>
+    <string name="faq_4">¿Cómo encontrar mi profesor?</string>
+    <string name="faq_5">¿Cómo agregar una review?</string>
+    <string name="faq_6">¿Puedo aportar una review?</string>
 
     <!-- Version -->
     <string name="version">Versión 1.0</string>
