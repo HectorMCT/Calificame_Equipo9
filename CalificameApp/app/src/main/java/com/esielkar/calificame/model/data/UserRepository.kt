@@ -11,7 +11,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 
-class UserRepository() {
+class UserRepository {
     private val auth : FirebaseAuth = Firebase.auth
 
     private val fUser = MutableLiveData<FirebaseUser?>()

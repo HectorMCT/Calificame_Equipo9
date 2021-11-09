@@ -92,6 +92,7 @@ class SignInFragment : Fragment() {
         }
 
         binding.skipSignInTextButton.setOnClickListener {
+            UsersContent.currentUser = UsersContent.users.first()
             toUniversityFacultiesActivity()
         }
     }
