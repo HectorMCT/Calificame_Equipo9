@@ -12,7 +12,7 @@ class DomainStatsCardView @JvmOverloads constructor(
     private var domain : Score
 
     init {
-        title = "Domain"
+        title = resources.getString(R.string.label_domain)
         domain = when (stats){
             in 0..19 -> Score.TERRIBLE
             in 20..39 -> Score.BAD

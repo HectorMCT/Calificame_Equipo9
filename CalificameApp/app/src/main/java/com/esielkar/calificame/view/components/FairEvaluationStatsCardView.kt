@@ -12,7 +12,7 @@ class FairEvaluationStatsCardView @JvmOverloads constructor(
     private var fairEvaluation : Frecuency
 
     init {
-        title = "Fair Evaluation"
+        title = resources.getString(R.string.label_fair_evaluation)
 
         fairEvaluation = when (stats) {
             in 0..33 -> Frecuency.NEVER
@@ -23,9 +23,9 @@ class FairEvaluationStatsCardView @JvmOverloads constructor(
     }
 
     override fun subtitle(): CharSequence? = when (fairEvaluation) {
-        Frecuency.ALWAYS -> resources.getTextArray(R.array.frecuency)[0]
-        Frecuency.SOMETIMES -> resources.getTextArray(R.array.frecuency)[1]
-        Frecuency.NEVER -> resources.getTextArray(R.array.frecuency)[2]
+        Frecuency.ALWAYS -> resources.getTextArray(R.array.frequency)[0]
+        Frecuency.SOMETIMES -> resources.getTextArray(R.array.frequency)[1]
+        Frecuency.NEVER -> resources.getTextArray(R.array.frequency)[2]
     }
 
 }

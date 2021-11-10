@@ -39,7 +39,7 @@
     <string name="add_review">Add review</string>
 
     <!-- FAQ -->
-    <string name="faq_text">In this section you will answer to your FAQs</string>
+    <string name="faq_text">In this section you will find the answers to FAQs</string>
     <string name="faq_1">How to use the app?</string>
     <string name="faq_2">How to find my university?</string>
     <string name="faq_3">How to find my faculty?</string>
@@ -113,13 +113,20 @@
     <string name="question_1">How would you consider he or she domains in any subject?</string>
     <string name="question_2">How would you consider he or she is explaining any topic?</string>
     <string name="question_3">How complicated you consider that is passing any subject with this professor?</string>
-    <string name="question_4">He or she offers consulytancies?</string>
-    <string name="question_5">He or sheevaluates fairly?</string>
-    <string name="question_6">He or she applies exams?</string>
+    <string name="question_4">Does he or she offer consultancies?</string>
+    <string name="question_5">Does he or she evaluate fairly?</string>
+    <string name="question_6">Does he or she apply exams?</string>
     <string name="question_7">How satisfied are you with this professor?</string>
 
     <!-- Stats added -->
     <string name="stats_added">Stats successfully added</string>
+
+    <string name="label_complexity">Complexity</string>
+    <string name="label_clarity">Clarity</string>
+    <string name="label_domain">Domain</string>
+    <string name="label_fair_evaluation">Fair evaluation</string>
+    <string name="label_consultancies">Consultancies</string>
+    <string name="label_recommendation">Recommendation</string>
 
     <!--ENUMS-->
     <string name="difficulty_very_easy">Very easy</string>
@@ -135,13 +142,13 @@
         <item>@string/difficulty_very_easy</item>
     </string-array>
 
-    <string name="frecuency_always">Always</string>
-    <string name="frecuency_sometimes">Sometimes</string>
-    <string name="frecuency_never">Never</string>
-    <string-array name="frecuency">
-        <item>@string/frecuency_never</item>
-        <item>@string/frecuency_sometimes</item>
-        <item>@string/frecuency_always</item>
+    <string name="frequency_always">Always</string>
+    <string name="frequency_sometimes">Sometimes</string>
+    <string name="frequency_never">Never</string>
+    <string-array name="frequency">
+        <item>@string/frequency_never</item>
+        <item>@string/frequency_sometimes</item>
+        <item>@string/frequency_always</item>
 
     </string-array>
 
@@ -183,7 +190,7 @@
 
     <!-- textos para la push con acción -->
     <string name="action_title">New Review to: </string>
-    <string name="action_body">¡Thanks for your feedback! We apreciate your support </string>
+    <string name="action_body">¡Thanks for your feedback! We appreciate your support </string>
 
     <!-- textos para la push con botón -->
     <string name="button_title">New Review to: </string>

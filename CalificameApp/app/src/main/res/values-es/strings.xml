@@ -20,7 +20,7 @@
     <string name="about_us_label">Acerca de nosotros</string>
     <string name="help_label">Ayuda</string>
     <string name="forgot_password_label">Olvidaste tu contraseña</string>
-    <string name="registered_reviews">Reviews registradas: %d</string>
+    <string name="registered_reviews">Reseñas registradas: %d</string>
     <string name="registered_stats">Estadisticas registradas: %d</string>
     <string name="progress_percentage">%d %s</string>
     <string name="registered_professors">Profesores registrados: %d</string>
@@ -35,8 +35,8 @@
     <string name="skip_sign_up_text_button">Saltar registro</string>
     <string name="cancel_label">Cancelar</string>
     <string name="send_label">Enviar</string>
-    <string name="view_review">Ver reviews</string>
-    <string name="add_review">Añadir review</string>
+    <string name="view_review">Ver reseñas</string>
+    <string name="add_review">Añadir reseña</string>
 
     <!-- FAQ -->
     <string name="faq_text">En esta sección encontraras solución a la preguntas frecuentes que otras personas han tenido con el uso de la aplicación.</string>
@@ -44,8 +44,8 @@
     <string name="faq_2">¿Cómo encontrar mi universidad?</string>
     <string name="faq_3">¿Cómo encontrar mi facultad o departamento?</string>
     <string name="faq_4">¿Cómo encontrar mi profesor?</string>
-    <string name="faq_5">¿Cómo agregar una review?</string>
-    <string name="faq_6">¿Puedo aportar una review?</string>
+    <string name="faq_5">¿Cómo agregar una reseña?</string>
+    <string name="faq_6">¿Puedo aportar una reseña?</string>
 
     <!-- Version -->
     <string name="version">Versión 1.0</string>
@@ -85,9 +85,9 @@
     <string name="subject_label">Materia</string>
     <string name="subjects_label">Materias</string>
     <string name="general_stats_label">Estadísticas Generales</string>
-    <string name="review_label">Review</string>
+    <string name="review_label">Reseña</string>
     <string name="stats_label">"Estad."</string>
-    <string name="reviews_label">Reviews</string>
+    <string name="reviews_label">Reseñas</string>
 
     <string name="professor_name">Hilda Castillo Zacatelco</string>
     <string name="signature_name">Programación</string>
@@ -115,11 +115,19 @@
     <string name="question_3">¿Qué tan complicada crees que es pasar cualquier materia?</string>
     <string name="question_4">¿Ofrece acesorías?</string>
     <string name="question_5">¿Cumple con las rubricas de evaluación?</string>
-    <string name="question_6">¿Aplica examenes?</string>
+    <string name="question_6">¿Aplica exámenes?</string>
     <string name="question_7">¿Qué tan satisfecho estas con este profesor?</string>
 
     <!-- Stats added -->
     <string name="stats_added">Review añadida correctamente</string>
+
+    <!-- Cards -->
+    <string name="label_complexity">Complejidad</string>
+    <string name="label_clarity">Claridad</string>
+    <string name="label_domain">Dominio</string>
+    <string name="label_fair_evaluation">Evaluación justa</string>
+    <string name="label_consultancies">Asesoramiento</string>
+    <string name="label_recommendation">Recomendación</string>
 
     <!--ENUMS-->
     <string name="difficulty_very_easy">Muy fácil</string>
@@ -135,14 +143,13 @@
         <item>@string/difficulty_very_easy</item>
     </string-array>
 
-    <string name="frecuency_always">Siempre</string>
-    <string name="frecuency_sometimes">A veces</string>
-    <string name="frecuency_never">Nunca</string>
-    <string-array name="frecuency">
-        <item>@string/frecuency_never</item>
-        <item>@string/frecuency_sometimes</item>
-        <item>@string/frecuency_always</item>
-
+    <string name="frequency_always">Siempre</string>
+    <string name="frequency_sometimes">A veces</string>
+    <string name="frequency_never">Nunca</string>
+    <string-array name="frequency">
+        <item>@string/frequency_never</item>
+        <item>@string/frequency_sometimes</item>
+        <item>@string/frequency_always</item>
     </string-array>
 
     <string name="score_excellent">Excelente</string>

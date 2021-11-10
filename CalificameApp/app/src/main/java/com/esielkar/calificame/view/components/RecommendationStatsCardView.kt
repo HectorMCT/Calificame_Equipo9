@@ -12,7 +12,7 @@ class RecommendationStatsCardView @JvmOverloads constructor(
     private var recommendation : YesNo
 
     init {
-        title = "Recommendation"
+        title = resources.getString(R.string.label_recommendation)
 
         recommendation = when (stats) {
             0 -> YesNo.NO

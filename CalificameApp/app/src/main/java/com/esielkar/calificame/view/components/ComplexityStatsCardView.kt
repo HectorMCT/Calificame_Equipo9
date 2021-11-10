@@ -13,7 +13,7 @@ class ComplexityStatsCardView @JvmOverloads constructor(
     private var complexity : Difficulty
 
     init {
-        title = "Complexity"
+        title = resources.getString(R.string.label_complexity)
         complexity = when (stats){
             in 0..19 -> Difficulty.VERY_EASY
             in 20..39 -> Difficulty.EASY

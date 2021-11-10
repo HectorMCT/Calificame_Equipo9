@@ -12,7 +12,7 @@ class ClarityStatsCardView @JvmOverloads constructor(
     private var clarity : Score
 
     init {
-        title = "Clarity"
+        title = resources.getString(R.string.label_clarity)
         clarity = when (stats){
             in 0..19 -> Score.TERRIBLE
             in 20..39 -> Score.BAD

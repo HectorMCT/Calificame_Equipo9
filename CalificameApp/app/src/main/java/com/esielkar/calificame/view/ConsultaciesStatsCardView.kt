@@ -12,7 +12,7 @@ class ConsultanciesStatsCardView @JvmOverloads constructor(
 
     private var consultancies : Frecuency
     init {
-        title = "Consultancies"
+        title = resources.getString(R.string.label_consultancies)
 
         consultancies = when (stats) {
             in 0..33 -> Frecuency.NEVER
@@ -23,9 +23,9 @@ class ConsultanciesStatsCardView @JvmOverloads constructor(
     }
 
     override fun subtitle(): CharSequence? = when (consultancies) {
-        Frecuency.ALWAYS -> resources.getTextArray(R.array.frecuency)[0]
-        Frecuency.SOMETIMES -> resources.getTextArray(R.array.frecuency)[1]
-        Frecuency.NEVER -> resources.getTextArray(R.array.frecuency)[2]
+        Frecuency.ALWAYS -> resources.getTextArray(R.array.frequency)[0]
+        Frecuency.SOMETIMES -> resources.getTextArray(R.array.frequency)[1]
+        Frecuency.NEVER -> resources.getTextArray(R.array.frequency)[2]
     }
 
 }
